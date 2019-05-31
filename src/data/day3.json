@@ -1,0 +1,31 @@
+[
+  {
+      "title": "Discover Vegas",
+      "page": "HPE Product Page",
+      "presenter": "Alex M",
+      "content": "The amount of margin around the component. An object can be specified to distinguish horizontal margin, vertical margin, and margin on a particular side.",
+      "presentationlink": "https://v2.grommet.io/anchor",
+      "videoLink": "https://v2.grommet.io/anchor",
+      "image": "../img/BrickWallImage.png"
+  },
+
+  {
+      "title": "Grommet",
+      "page": "HPE Product Page",
+      "presenter": "Eric S",
+      "content": "Hack Shack Challenge with HPE SimpliVity: Build a solution to inject user scripts before and after a backup.",
+      "presentationlink": "Presenter Link",
+      "videoLink": "Video Link",
+      "image": "../img/BrickWallImage.png"
+  },
+  {
+      "title": "Design Research",
+      "page": "HPE Product Page",
+      "presenter": "Dana",
+      "content": "Hack Shack Challenge with HPE SimpliVity: Create the most powerful backup script.",
+      "presentationlink": "Presenter Link",
+      "videoLink": "Video Link",
+      "image": ""
+
+  }
+]
