@@ -6,9 +6,9 @@ import {
 import theme from './theme';
 import Header from '../components/Header';
 import TabLayout from '../components/CardLayout/index';
-import Day1 from '../data/day1.json';
-import Day2 from '../data/day2.json';
-import Day3 from '../data/day3.json';
+import Day1 from '../../../data/day1.json';
+import Day2 from '../../../data/day2.json';
+import Day3 from '../../../data/day3.json';
 
 export default class LandingPage extends Component {
   constructor(props) {
