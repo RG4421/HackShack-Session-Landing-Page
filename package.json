@@ -3,7 +3,7 @@
   "private": true,
   "repository": "https://github.com/HewlettPackard/hpe-hack-shack-lv-19.git",
   "scripts": {
-    "dev": "concurrently --names \"LANDING_PAGE, LEADER_BOARD\" -k \"(cd landing-page && yarn start)\" \"(cd leader-board && yarn start)\" "
+    "dev": "concurrently --names \"LANDING_PAGE, LEADER_BOARD\" -k \"(cd landing-page && yarn start)\" \"(cd leader-board && yarn dev)\" "
   },
   "license": "MIT",
   "dependencies": {

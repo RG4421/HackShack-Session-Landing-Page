@@ -1,7 +1,7 @@
 {
   "name": "discover-2019-game-frontend",
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 3002",
     "build": "next build",
     "start": "next build && next start"
   },
