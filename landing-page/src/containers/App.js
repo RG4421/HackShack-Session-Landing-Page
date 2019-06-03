@@ -10,6 +10,9 @@ import Day1 from '../data/day1.json';
 import Day2 from '../data/day2.json';
 import Day3 from '../data/day3.json';
 
+console.log('NODE_ENV:', process.env.NODE_ENV);
+console.log('PUBLIC_URL:', process.env.PUBLIC_URL);
+
 export default class LandingPage extends Component {
   constructor(props) {
     super(props);
