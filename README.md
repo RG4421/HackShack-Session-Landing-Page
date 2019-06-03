@@ -13,3 +13,4 @@ Hackshack Landing Page for workshops to be listed to view.
 - Modify container logic to consume modified json structure
 - Set up env variables and remove hardcoded references in package.json files
 - Ensure hack shack hero image `/img/HackShackImage.png` scales responsively
+- Remove /frontend from https://github.com/HewlettPackard/hpe-hack-shack-attack and begin using this repo as source.
