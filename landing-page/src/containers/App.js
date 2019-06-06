@@ -6,9 +6,13 @@ import {
 import theme from './theme';
 import Header from '../components/Header';
 import TabLayout from '../components/CardLayout/index';
-import Day1 from '../data/day1.json';
-import Day2 from '../data/day2.json';
-import Day3 from '../data/day3.json';
+// import Day1 from '../../../data/day1.json';
+// import Day2 from '../../../data/day2.json';
+// import Day3 from '../../../data/day3.json';
+import eventSchedule from '../../../data/hpe-discover-events.json';
+const Day1 = eventSchedule.filter(session => session.date === 'Tuesday, June 18, 2019');
+const Day2 = eventSchedule.filter(session => session.date === 'Wednesday, June 19, 2019');
+const Day3 = eventSchedule.filter(session => session.date === 'Thursday, June 20, 2019');
 
 export default class LandingPage extends Component {
   constructor(props) {
