@@ -85,7 +85,7 @@ export default class Leaderboard extends Component {
               color="white"
               size="xlarge"
               level={1}
-            >
+            >   
               {' '}
               upcoming sessions{' '}
             </Heading>
