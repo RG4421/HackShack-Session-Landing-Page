@@ -8,8 +8,5 @@
   "license": "MIT",
   "dependencies": {
     "concurrently": "^4.1.0"
-  },
-  "devDependencies": {
-    "eslint": "^5.16.0"
   }
 }
