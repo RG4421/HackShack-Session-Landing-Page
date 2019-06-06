@@ -7,35 +7,7 @@ import {
 } from 'grommet';
 import { Config } from '../config';
 import PostData from '../../data/events.json';
-
-const theme = {
-  global: {
-    font: {
-      family: "'Metric', Arial, sans-serif",
-      face: `
-      @font-face {
-        font-family: "Metric";
-        src: url("https://hpefonts.s3.amazonaws.com/web/MetricHPE-Web-Regular.woff") format('woff');
-      }
-      @font-face {
-        font-family: "Metric";
-        src: url("https://hpefonts.s3.amazonaws.com/web/MetricHPE-Web-Bold.woff") format('woff');
-        font-weight: 700;
-      }
-      @font-face {
-        font-family: "Metric";
-        src: url("https://hpefonts.s3.amazonaws.com/web/MetricHPE-Web-Semibold.woff") format('woff');
-        font-weight: 600;
-      }
-      @font-face {
-        font-family: "Metric";
-        src: url("https://hpefonts.s3.amazonaws.com/web/MetricHPE-Web-Light.woff") format('woff');
-        font-weight: 100;
-      }
-    `,
-    },
-  },
-};
+import theme from '../components/Main/theme';
 
 export default class Leaderboard extends Component {
   constructor(props) {
@@ -113,7 +85,7 @@ export default class Leaderboard extends Component {
               color="white"
               size="xlarge"
               level={1}
-            >
+            >   
               {' '}
               upcoming sessions{' '}
             </Heading>

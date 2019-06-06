@@ -1,3 +1,4 @@
+/* (C) Copyright 2019 Hewlett Packard Enterprise Development LP. */
 /* eslint-disable */
 const path = require('path')
 const glob = require('glob')
