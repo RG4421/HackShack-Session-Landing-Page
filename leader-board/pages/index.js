@@ -1,5 +1,5 @@
 /* (C) Copyright 2019 Hewlett Packard Enterprise Development LP. */
-
+// make a carousel
 import React from 'react';
 import Link from 'next/link';
 
