@@ -7,7 +7,7 @@ import {
 } from 'grommet';
 import { Config } from '../config';
 import PostData from '../../data/events.json';
-import theme from '../components/Leaderboard/theme';
+import theme from '../components/Main/theme';
 
 export default class Leaderboard extends Component {
   constructor(props) {
