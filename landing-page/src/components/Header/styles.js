@@ -12,7 +12,9 @@ export const ImageContainer = styled(Box)`
   }
   @media (max-width: 960px){
     img {
-      height:  
+      width: auto;
+      max-width: 100%;
+      height: 110%;
     }
   }
 `;
