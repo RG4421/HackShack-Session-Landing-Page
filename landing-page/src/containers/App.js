@@ -32,7 +32,7 @@ export default class LandingPage extends Component {
     const defaultImage = '../img/defaultImage.png';
     return (
       <Grommet theme={theme}>
-        <Header />
+        <Header /> 
         <Box margin="medium" pad="medium">
           <Heading margin="xsmall" size="large">
             <strong> Sessions </strong>
