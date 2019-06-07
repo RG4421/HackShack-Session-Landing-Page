@@ -5,14 +5,15 @@ import theme from "./theme";
 import Header from "../components/Header";
 import TabLayout from "../components/CardLayout/index";
 import eventSchedule from "../../../data/hpe-discover-events.json";
+
 const Day1 = eventSchedule.filter(
-  session => session.date === "Tuesday, June 18, 2019"
+  session => new Date(session.datetimeStart).getDate() === 18
 );
 const Day2 = eventSchedule.filter(
-  session => session.date === "Wednesday, June 19, 2019"
+  session => new Date(session.datetimeStart).getDate() === 19
 );
 const Day3 = eventSchedule.filter(
-  session => session.date === "Thursday, June 20, 2019"
+  session => new Date(session.datetimeStart).getDate() === 20
 );
 
 export default class LandingPage extends Component {
@@ -62,8 +63,8 @@ export default class LandingPage extends Component {
                   presentationlink,
                   videoLink,
                   image,
-                  date,
-                  time
+                  datetimeStart,
+                  datetimeEnd,
                 }) => (
                   <TabLayout
                     key={title}
@@ -74,8 +75,9 @@ export default class LandingPage extends Component {
                     content={content}
                     presenterLink={presentationlink}
                     videoLink={videoLink}
-                    date={date}
-                    time={time}
+                    date={datetimeStart}
+                    timeStart={datetimeStart}
+                    timeEnd={datetimeEnd}
                   />
                 )
               )}
@@ -103,8 +105,8 @@ export default class LandingPage extends Component {
                   presentationlink,
                   videoLink,
                   image,
-                  date,
-                  time
+                  datetimeStart,
+                  datetimeEnd,
                 }) => (
                   <TabLayout
                     key={title}
@@ -115,8 +117,9 @@ export default class LandingPage extends Component {
                     content={content}
                     presenterLink={presentationlink}
                     videoLink={videoLink}
-                    date={date}
-                    time={time}
+                    date={datetimeStart}
+                    timeStart={datetimeStart}
+                    timeEnd={datetimeEnd}
                   />
                 )
               )}
@@ -144,8 +147,8 @@ export default class LandingPage extends Component {
                   presentationlink,
                   videoLink,
                   image,
-                  date,
-                  time
+                  datetimeStart,
+                  datetimeEnd,
                 }) => (
                   <TabLayout
                     key={title}
@@ -156,8 +159,9 @@ export default class LandingPage extends Component {
                     content={content}
                     presenterLink={presentationlink}
                     videoLink={videoLink}
-                    date={date}
-                    time={time}
+                    date={datetimeStart}
+                    timeStart={datetimeStart}
+                    timeEnd={datetimeEnd}
                   />
                 )
               )}
