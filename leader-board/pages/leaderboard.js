@@ -6,8 +6,6 @@ import {
   Box, Heading, Text, Grommet,
 } from 'grommet';
 import { Config } from '../config';
-import PostData from '../../data/events.json';
-import theme from '../components/Main/theme';
 
 export default class Leaderboard extends Component {
   constructor(props) {
@@ -74,7 +72,7 @@ export default class Leaderboard extends Component {
     ));
 
     return (
-      <Grommet full theme={theme}>
+      <Grommet full>
         <Box width="large" direction="column" fill flex>
           <Box basis="1/2" background="brand">
             <Heading

@@ -1,11 +1,8 @@
 /* (C) Copyright 2019 Hewlett Packard Enterprise Development LP. */
-
 import React, { Component } from 'react';
-import {
-  Box, Heading, Image, Text, Grommet,
-} from 'grommet';
+import { Box, Heading, Image } from 'grommet';
 import { Config } from '../config';
-import { SSL_OP_NO_TICKET } from 'constants';
+import { StyledImage } from '../components/StyledComponents/styles';
 
 export default class LeaderboardNew extends Component {
   constructor(props) {
@@ -32,33 +29,19 @@ export default class LeaderboardNew extends Component {
     const { hiScores, ranks, colors } = this.state;
     return (
       <Box
-        pad={
-          {
-            top: 'xlarge', bottom: 'none', left: 'xlarge', right: 'xlarge',
-          }}
         className="leaderboard-container"
         background="#000000"
         direction="column"
-        fillsa
+        pad="medium"
+        fill
       >
-        <Box
-          className="leaderboard-title"
-          align="center"
-        >
-          <Box
-            width="936px"
-            height="296px"
-          >
-            <Image fit="contain" src="../static/hackshackattack.png" />
-          </Box>
-          <Box
-            margin="large"
-            width="553px"
-            height="96px"
-          >
-            <Image fit="contain" src="../static/highscoretext.png" />
+        {/* HackShack Attack title and HighScore text */}
+        <Box align="center">
+          <Box>
+            <StyledImage src="../static/hackshackattack.png" />
           </Box>
         </Box>
+        {/* Rank/Name/Score columns */}
         <Box
           className="highscore-container"
           direction="row"
@@ -89,6 +72,7 @@ export default class LeaderboardNew extends Component {
             {hiScores.map(hiScore => <Heading margin={{ top: 'small', bottom: 'small' }} color="light-1">{hiScore.score}</Heading>)}
           </Box>
         </Box>
+        {/* ItMonster image */}
         <Box align="end">
           <Box
             width="752px"
