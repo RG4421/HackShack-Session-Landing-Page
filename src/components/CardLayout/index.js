@@ -3,6 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Box, Heading, Paragraph, Text } from "grommet";
 import { StyledAnchor, StyledHeading, StyledParagraph } from "./styles";
+import Moment from 'react-moment';
 
 export const CardLayout = ({
   image,
@@ -13,7 +14,8 @@ export const CardLayout = ({
   presentationLink,
   videoLink,
   date,
-  time,
+  timeStart,
+  timeEnd,
   ...rest
 }) => (
   <Box
@@ -37,7 +39,11 @@ export const CardLayout = ({
         {title}
       </StyledHeading>
       <Heading level="2" size="medium">
-        {time}
+        <Moment format="dddd" date={timeStart} />
+        ,&nbsp;
+        <Moment format="h:mm a" date={timeStart} /> 
+        &nbsp;-&nbsp; 
+        <Moment format="h:mm a" date={timeEnd} />
       </Heading>
       <Text size="large" color="brand" weight="bold">
         {page}
