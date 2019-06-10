@@ -1,12 +1,44 @@
 {
-  "version": "0.1.0",
+  "name": "hackshack-leaderboard",
+  "version": "0.4.0",
   "private": true,
-  "repository": "https://github.com/HewlettPackard/hpe-hack-shack-lv-19.git",
-  "scripts": {
-    "dev": "concurrently --names \"LANDING_PAGE, LEADER_BOARD\" -k \"(cd landing-page && yarn start)\" \"(cd leader-board && yarn dev)\" "
-  },
-  "license": "MIT",
   "dependencies": {
-    "concurrently": "^4.1.0"
+    "axios": "^0.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "grommet": "^2.7.1",
+    "mongoose": "^5.5.12",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "^3.0.0",
+    "serverless-http": "^2.0.2",
+    "styled-components": "^4.2.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start:lambda": "netlify-lambda serve src/lambda",
+    "build": "run-p build:**",
+    "build:app": "react-scripts build",
+    "build:lambda": "netlify-lambda build src/lambda",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@babel/plugin-transform-object-assign": "^7.0.0",
+    "babel-loader": "8.0.5",
+    "http-proxy-middleware": "^0.19.0",
+    "netlify-lambda": "^1.4.5",
+    "npm-run-all": "^4.1.5"
   }
 }
