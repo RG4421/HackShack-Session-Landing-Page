@@ -30,11 +30,13 @@ export default class Sessions extends Component {
             top: 'none', bottom: 'large', left: 'large', right: 'large',
           }}
       >
+        {/* Sessions title image and text */}
         <Box margin={{ bottom: 'large' }} className="sessions-title" align="center">
           <Box>
             <StyledImage src="../static/hackshacktitle.png" />
           </Box>
         </Box>
+        {/* Upcoming sessions */}
         <Box align="start" className="upcoming-sessions-container">
           <Text
             margin={{ top: 'large', bottom: 'large' }}
