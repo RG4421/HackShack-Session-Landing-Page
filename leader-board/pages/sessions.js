@@ -39,17 +39,17 @@ export default class Sessions extends Component {
         {/* Upcoming sessions */}
         <Box align="start" className="upcoming-sessions-container">
           <Text
-            margin={{ top: 'large', bottom: 'large' }}
+            margin={{ top: 'large', bottom: 'xlarge' }}
             className="upcoming-sessions-title"
           >
             Upcoming Sessions
           </Text>
           {sessionData.map((session) => {
             return <Box direction="column">
-              <Box direction="row" gap="small">
-                <Text weight="bold">{session.time}</Text>
-                <Text weight="100">{session.session_id}</Text>
-                <Text>{session.title}</Text>
+              <Box direction="row" gap="large">
+                <Text className="session-text" weight="bold">{session.time}</Text>
+                <Text className="session-text" weight="100">{session.session_id}</Text>
+                <Text className="session-text">{session.title}</Text>
               </Box>
               <Box
                 background="dark-2"
@@ -61,7 +61,7 @@ export default class Sessions extends Component {
           })}
         </Box>
         <Box align="center">
-          <Text weight="bold" color="accent-2">Not seeing a session? Ask us!</Text>
+          <Text className="session-text" weight="bold" color="accent-2">Not seeing a session? Ask us!</Text>
         </Box>
       </SessionsLayout>
     );

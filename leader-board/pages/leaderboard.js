@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Box, Heading, Text } from 'grommet';
 import { Config } from '../config';
 import { StyledImage } from '../components/StyledComponents/styles';
+import { LeaderboardLayout } from '../components/Leaderboard/styles';
 
 export default class Leaderboard extends Component {
   constructor(props) {
@@ -28,7 +29,8 @@ export default class Leaderboard extends Component {
   render() {
     const { hiScores, ranks, colors } = this.state;
     return (
-      <Box
+      <LeaderboardLayout
+        justify="between"
         className="leaderboard-container"
         background="#000000"
         direction="column"
@@ -42,8 +44,8 @@ export default class Leaderboard extends Component {
           <Box>
             <StyledImage src="../static/hackshackattack.png" />
           </Box>
-          <Box width="large" margin={{ top: 'large', bottom: 'large' }} pad={{ left: 'large', right: 'large' }}>
-            <StyledImage src="../static/highscoretext.png" />
+          <Box margin={{ top: 'large', bottom: 'xlarge' }}>
+            <Text className="highscore-title">High Scores</Text>
           </Box>
         </Box>
         {/* Rank/Name/Score columns */}
@@ -57,8 +59,8 @@ export default class Leaderboard extends Component {
             direction="column"
             className="rank-column"
           >
-            <Text color="dark-3">Rank</Text>
-            {ranks.map(rank => <Text margin={{ top: 'small', bottom: 'small' }} color="light-1">{rank}</Text>)}
+            <Text color="dark-3" className="highscore-text">Rank</Text>
+            {ranks.map(rank => <Text margin={{ top: 'large', bottom: 'medium' }} color="light-1" className="highscore-text">{rank}</Text>)}
           </Box>
           <Box
             align="start"
@@ -66,8 +68,8 @@ export default class Leaderboard extends Component {
             direction="column"
             className="name-column"
           >
-            <Text color="dark-3">Name</Text>
-            {hiScores.map(hiScore => <Text margin={{ top: 'small', bottom: 'small' }} color="light-1">{hiScore.name}</Text>)}
+            <Text color="dark-3" className="highscore-text">Name</Text>
+            {hiScores.map(hiScore => <Text margin={{ top: 'large', bottom: 'medium' }} color="light-1" className="highscore-text">{hiScore.name}</Text>)}
           </Box>
           <Box
             align="end"
@@ -75,15 +77,15 @@ export default class Leaderboard extends Component {
             direction="column"
             className="score-column"
           >
-            <Text color="dark-3">Score</Text>
-            {hiScores.map(hiScore => <Text margin={{ top: 'small', bottom: 'small' }} color="light-1">{hiScore.score}</Text>)}
+            <Text color="dark-3" className="highscore-text">Score</Text>
+            {hiScores.map(hiScore => <Text margin={{ top: 'large', bottom: 'medium' }} color="light-1" className="highscore-text">{hiScore.score}</Text>)}
           </Box>
         </Box>
         {/* ItMonster image */}
-        <Box alignSelf="end" margin={{ top: 'xlarge' }} width="large">
+        <Box alignSelf="end" margin={{ top: 'large' }} width="large">
           <StyledImage src="../static/itmonster.png" />
         </Box>
-      </Box>
+      </LeaderboardLayout>
     );
   }
 }

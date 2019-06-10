@@ -4,6 +4,10 @@ import styled from 'styled-components';
 import { Box } from 'grommet';
 
 export const SessionsLayout = styled(Box)`
+  .session-text {
+    font-size: 50px;
+    line-height: 1;
+  }
   .upcoming-sessions-title {
     font-size: 80px;
     font-weight: 100;
