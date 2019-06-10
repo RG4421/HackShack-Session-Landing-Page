@@ -5,30 +5,27 @@ import theme from "./theme";
 import Header from "../components/Header";
 import TabLayout from "../components/CardLayout/index";
 import eventSchedule from "../data/hpe-discover-events.json";
+const Day1 = eventSchedule.filter(
+  session => session.date === "Tuesday, June 18, 2019"
+);
+const Day2 = eventSchedule.filter(
+  session => session.date === "Wednesday, June 19, 2019"
+);
+const Day3 = eventSchedule.filter(
+  session => session.date === "Thursday, June 20, 2019"
+);
 
 export default class LandingPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: 18,
-      sessions: this.filterSessions(eventSchedule, 18)
+      selected: ""
     };
     this.onClick = this.onClick.bind(this);
   }
 
-  filterSessions(sessions, day) {
-    return sessions.filter(
-      session => new Date(session.datetimeStart).getDate() === day
-    ).sort((a, b) => {
-      if (a.datetimeStart < b.datetimeStart) {return -1}
-      else if (a.datetimeStart > b.datetimeStart) {return 1}
-      else {return 0}
-    });
-  }
-
   onClick(selected) {
-    let sessions = this.filterSessions(eventSchedule, selected);
-    this.setState({ selected, sessions });
+    this.setState({ selected });
   }
 
   render() {
@@ -41,81 +38,131 @@ export default class LandingPage extends Component {
           <Heading margin="xsmall" size="large">
             <strong> Sessions </strong>
           </Heading>
-          <Tabs flex="grow" justify="start">
+          <Tabs height="medium" flex="grow" justify="start">
             <Tab
               title={
                 <Text
                   onClick={e => {
                     e.preventDefault();
-                    this.onClick(18);
+                    this.onClick("day1");
                   }}
-                  color={selected === 18 ? "dark-3" : "brand"}
+                  color={selected === "day1" ? "dark-3" : "brand"}
                   size="large"
                 >
                   Day 1
                 </Text>
               }
             >
+              {Day1.map(
+                ({
+                  title,
+                  page,
+                  presenter,
+                  content,
+                  presentationlink,
+                  videoLink,
+                  image,
+                  date,
+                  time
+                }) => (
+                  <TabLayout
+                    key={title}
+                    image={image === "" ? defaultImage : image}
+                    title={title}
+                    page={page}
+                    presenter={presenter}
+                    content={content}
+                    presenterLink={presentationlink}
+                    videoLink={videoLink}
+                    date={date}
+                    time={time}
+                  />
+                )
+              )}
             </Tab>
             <Tab
               title={
                 <Text
                   onClick={e => {
                     e.preventDefault();
-                    this.onClick(19);
+                    this.onClick("day2");
                   }}
-                  color={selected === 19 ? "dark-3" : "brand"}
+                  color={selected === "day2" ? "dark-3" : "brand"}
                   size="large"
                 >
                   Day 2
                 </Text>
               }
             >
+              {Day2.map(
+                ({
+                  title,
+                  page,
+                  presenter,
+                  content,
+                  presentationlink,
+                  videoLink,
+                  image,
+                  date,
+                  time
+                }) => (
+                  <TabLayout
+                    key={title}
+                    image={image === "" ? defaultImage : image}
+                    title={title}
+                    page={page}
+                    presenter={presenter}
+                    content={content}
+                    presenterLink={presentationlink}
+                    videoLink={videoLink}
+                    date={date}
+                    time={time}
+                  />
+                )
+              )}
             </Tab>
             <Tab
               title={
                 <Text
                   onClick={e => {
                     e.preventDefault();
-                    this.onClick(20);
+                    this.onClick("day3");
                   }}
-                  color={selected === 20 ? "dark-3" : "brand"}
+                  color={selected === "day3" ? "dark-3" : "brand"}
                   size="large"
                 >
                   Day 3
                 </Text>
               }
             >
+              {Day3.map(
+                ({
+                  title,
+                  page,
+                  presenter,
+                  content,
+                  presentationlink,
+                  videoLink,
+                  image,
+                  date,
+                  time
+                }) => (
+                  <TabLayout
+                    key={title}
+                    image={image === "" ? defaultImage : image}
+                    title={title}
+                    page={page}
+                    presenter={presenter}
+                    content={content}
+                    presenterLink={presentationlink}
+                    videoLink={videoLink}
+                    date={date}
+                    time={time}
+                  />
+                )
+              )}
             </Tab>
           </Tabs>
-          {this.state.sessions.map(
-            ({
-              id,
-              title,
-              page,
-              presenter,
-              content,
-              presentationlink,
-              videoLink,
-              image,
-              datetimeStart,
-              datetimeEnd
-            }) => (
-              <TabLayout
-                key={id}
-                image={image === "" ? defaultImage : image}
-                title={title}
-                page={page}
-                presenter={presenter}
-                content={content}
-                presenterLink={presentationlink}
-                videoLink={videoLink}
-                date={datetimeStart}
-                timeStart={datetimeStart}
-                timeEnd={datetimeEnd}
-              />
-            )
-          )}
         </Box>
       </Grommet>
     );
