@@ -41,9 +41,9 @@ export const CardLayout = ({
       <Heading level="2" size="medium">
         <Moment format="dddd" date={timeStart} />
         ,&nbsp;
-        <Moment format="HH:mm a" date={timeStart} /> 
+        <Moment format="h:mm a" date={timeStart} /> 
         &nbsp;-&nbsp; 
-        <Moment format="HH:mm a" date={timeEnd} />
+        <Moment format="h:mm a" date={timeEnd} />
       </Heading>
       <Text size="large" color="brand" weight="bold">
         {page}
