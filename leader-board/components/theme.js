@@ -22,6 +22,10 @@ const theme = {
         src: url("https://hpefonts.s3.amazonaws.com/web/MetricHPE-Web-Light.woff") format('woff');
         font-weight: 100;
       }
+      @font-face {
+        font-family: "ArcadeClassic";
+        src: url("../static/arcadeclassic.woff") format('woff');
+      }
     `,
     },
   },
