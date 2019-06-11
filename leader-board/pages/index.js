@@ -8,13 +8,19 @@ import { StyledImage } from '../components/StyledComponents/styles';
 
 const Home = () => (
   <Grommet theme={theme}>
-    <Carousel play={5000}>
+{/*     <Carousel play={5000}>
       <Leaderboard />
       <Sessions />
       <StyledImage src="../static/gremlincard.png" />
       <StyledImage src="../static/hpedevcard.png" />
       <StyledImage src="../static/hpedesigncard.png" />
-    </Carousel>
+    </Carousel> */}
+    <Sessions />
+    <style jsx global>{`
+      body {
+        margin: 0;
+      }
+    `}</style>
   </Grommet>
 );
 

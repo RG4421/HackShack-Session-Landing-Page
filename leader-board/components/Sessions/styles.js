@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Box } from 'grommet';
 
 export const SessionsLayout = styled(Box)`
+  height: 100vh;
   .session-text {
     font-size: 40px;
     line-height: 1;
