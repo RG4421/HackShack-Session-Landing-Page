@@ -7,7 +7,7 @@ import Sessions from './sessions';
 import { StyledImage } from '../components/StyledComponents/styles';
 
 const Home = () => (
-  <Grommet full theme={theme}>
+  <Grommet theme={theme}>
 {/*     <Carousel play={5000}>
       <Leaderboard />
       <Sessions />

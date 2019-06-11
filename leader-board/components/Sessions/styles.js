@@ -5,7 +5,12 @@ import { Box } from 'grommet';
 
 export const SessionsLayout = styled(Box)`
   .session-text {
-    font-size: 50px;
+    font-size: 40px;
+    line-height: 1;
+  }
+  .session-text-time {
+    font-weight: bold;
+    font-size: 40px;
     line-height: 1;
   }
   .upcoming-sessions-title {
