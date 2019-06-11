@@ -11,7 +11,7 @@ export default class Leaderboard extends Component {
     this.state = {
       hiScores: [],
       ranks: ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th', '9th', '10th'],
-      colors: [],
+      colors: ['#FFFFFF', '#FFAA15', '#FD6FFF', '#9060EB', '#A2423D', '#FF4040', '#00739D', '#00C781', '#2AD2C9', '#777777'],
     };
   }
 
@@ -60,7 +60,7 @@ export default class Leaderboard extends Component {
             className="rank-column"
           >
             <Text color="dark-3" className="highscore-text">Rank</Text>
-            {ranks.map(rank => <Text margin={{ top: 'large', bottom: 'medium' }} color="light-1" className="highscore-text">{rank}</Text>)}
+            {ranks.map((rank, index) => <Text margin={{ top: 'large', bottom: 'medium' }} color={colors[index]} className="highscore-text">{rank}</Text>)}
           </Box>
           <Box
             align="start"
@@ -69,7 +69,7 @@ export default class Leaderboard extends Component {
             className="name-column"
           >
             <Text color="dark-3" className="highscore-text">Name</Text>
-            {hiScores.map(hiScore => <Text margin={{ top: 'large', bottom: 'medium' }} color="light-1" className="highscore-text">{hiScore.name}</Text>)}
+            {hiScores.map((hiScore, index) => <Text margin={{ top: 'large', bottom: 'medium' }} color={colors[index]} className="highscore-text">{hiScore.name}</Text>)}
           </Box>
           <Box
             align="end"
@@ -78,7 +78,7 @@ export default class Leaderboard extends Component {
             className="score-column"
           >
             <Text color="dark-3" className="highscore-text">Score</Text>
-            {hiScores.map(hiScore => <Text margin={{ top: 'large', bottom: 'medium' }} color="light-1" className="highscore-text">{hiScore.score}</Text>)}
+            {hiScores.map((hiScore, index) => <Text margin={{ top: 'large', bottom: 'medium' }} color={colors[index]} className="highscore-text">{hiScore.score}</Text>)}
           </Box>
         </Box>
         {/* ItMonster image */}

@@ -15,7 +15,7 @@ const Home = () => (
       <StyledImage src="../static/hpedevcard.png" />
       <StyledImage src="../static/hpedesigncard.png" />
     </Carousel> */}
-    <Sessions />
+    <Leaderboard />
   </Grommet>
 );
 
