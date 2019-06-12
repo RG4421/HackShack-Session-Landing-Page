@@ -8,6 +8,9 @@ const cors = require('cors')
 // var path = require('path');
 const serverless = require('serverless-http');
 
+const Filter = require('bad-words');
+const filter = new Filter();
+
 const app = express();
 const router = express.Router();
 
@@ -43,9 +46,16 @@ router.get('/user/leaderboard', (req,res) => {
 
 // Create User
 router.post('/user/create', (req, res) => {
-  return User.create(req.body)
-    .then(user => res.send(user))
-    .catch(err => res.send(err));
+  const { initials, name } = req.body;
+  let initialsProfanityCheck = filter.isProfane(initials);
+  let nameProfanityCheck = filter.isProfane(name);
+  if (initialsProfanityCheck || nameProfanityCheck) {
+    res.status(403).send('Profanity not allowed');
+  } else {
+    return User.create(req.body)
+      .then(user => res.send(user))
+      .catch(err => res.send(err));
+  }
 });
 
 // Model routes
