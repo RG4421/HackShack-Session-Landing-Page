@@ -47,7 +47,11 @@ export default deepMerge(grommet, {
       }
       @font-face {
         font-family: "ArcadeClassic";
+<<<<<<< HEAD
         src: url("../img/arcadeclassic.woff") format('woff');
+=======
+        src: url("../fonts/arcadeclassic.woff") format('woff');
+>>>>>>> dev-ops
       }
     `,
     }
