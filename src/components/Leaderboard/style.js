@@ -3,7 +3,10 @@ import styled from 'styled-components';
 import { Box } from 'grommet';
 
 export const LeaderboardLayout = styled(Box)`
-  height: 100vh;
+  min-height: 1920px;
+  min-width: 1080px;
+  max-height: 1920px;
+  max-width: 1080px;
   .highscore-title {
     font-family: "ArcadeClassic";
     font-size: 95px;
