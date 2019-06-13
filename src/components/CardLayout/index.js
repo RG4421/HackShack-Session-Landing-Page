@@ -9,6 +9,7 @@ export const CardLayout = ({
   image,
   title,
   page,
+  pageLink,
   presenter,
   content,
   presentationLink,
@@ -45,9 +46,13 @@ export const CardLayout = ({
         &nbsp;-&nbsp; 
         <Moment format="h:mm a" date={timeEnd} />
       </Heading>
-      <Text size="large" color="brand" weight="bold">
-        {page}
-      </Text>
+      <StyledAnchor
+        target="_blank"
+        size="large"
+        color="brand"
+        label={page}
+        href={pageLink}
+      />
       <Paragraph size="large" margin={{ bottom: "xsmall" }}>
         {presenter}
       </Paragraph>
