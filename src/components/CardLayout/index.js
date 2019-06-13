@@ -47,12 +47,12 @@ export const CardLayout = ({
         <Moment format="h:mm a" date={timeEnd} />
       </Heading>
       <StyledAnchor
-          target="_blank"
-          size="large"
-          color="brand"
-          label={page}
-          href={pageLink}
-        />
+        target="_blank"
+        size="large"
+        color="brand"
+        label={page}
+        href={pageLink}
+      />
       <Paragraph size="large" margin={{ bottom: "xsmall" }}>
         {presenter}
       </Paragraph>
