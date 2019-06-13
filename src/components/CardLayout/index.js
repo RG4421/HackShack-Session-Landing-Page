@@ -1,8 +1,8 @@
 /* (C) Copyright 2019 Hewlett Packard Enterprise Development LP. */
 import React from "react";
 import PropTypes from "prop-types";
-import { Box, Heading, Paragraph, Text } from "grommet";
-import { StyledAnchor, StyledHeading, StyledParagraph } from "./styles";
+import { Box, Paragraph } from "grommet";
+import { StyledAnchor, StyledHeading, StyledHeading2, StyledParagraph } from "./styles";
 import Moment from 'react-moment';
 
 export const CardLayout = ({
@@ -39,13 +39,19 @@ export const CardLayout = ({
       <StyledHeading margin="none" size="small">
         {title}
       </StyledHeading>
-      <Heading level="2" size="medium">
+      <StyledHeading2 
+        level="2" 
+        size="medium"
+        margin={{
+          "top": "none"
+        }}
+      >
         <Moment format="dddd" date={timeStart} />
         ,&nbsp;
         <Moment format="h:mm a" date={timeStart} /> 
         &nbsp;-&nbsp; 
         <Moment format="h:mm a" date={timeEnd} />
-      </Heading>
+      </StyledHeading2>
       <StyledAnchor
         target="_blank"
         size="large"
