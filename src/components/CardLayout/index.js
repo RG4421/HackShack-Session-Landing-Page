@@ -39,22 +39,23 @@ export const CardLayout = ({
       <StyledHeading margin="none" size="small">
         {title}
       </StyledHeading>
-        {
-          timeStart === undefined ? null :
-          <StyledHeading2 
-            level="2" 
-            size="medium"
-            margin={{
-              "vertical": "none"
-            }}
-          >
-            <Moment format="dddd" date={timeStart} />
-            ,&nbsp;
-            <Moment format="h:mm a" date={timeStart} /> 
-            &nbsp;-&nbsp; 
-            <Moment format="h:mm a" date={timeEnd} />
-          </StyledHeading2>
-        }
+      {
+        timeStart === undefined 
+          ? null 
+          : <StyledHeading2 
+              level="2" 
+              size="medium"
+              margin={{
+                "vertical": "none"
+              }}
+            >
+              <Moment format="dddd" date={timeStart} />
+              ,&nbsp;
+              <Moment format="h:mm a" date={timeStart} /> 
+              &nbsp;-&nbsp; 
+              <Moment format="h:mm a" date={timeEnd} />
+            </StyledHeading2>
+      }
       <StyledAnchor
         target="_blank"
         size="large"
@@ -63,9 +64,13 @@ export const CardLayout = ({
         href={pageLink}
         margin={{ top: "medium"}}
       />
-      <Paragraph size="large" margin={{ bottom: "xsmall" }}>
-        {presenter}
-      </Paragraph>
+      {
+        presenter === undefined 
+          ? null 
+          : <Paragraph size="large" margin={{ bottom: "xsmall" }}>
+              {presenter}
+            </Paragraph>
+      }
       <StyledParagraph margin={{ top: "xsmall" }}>{content}</StyledParagraph>
       <Box
         fill
