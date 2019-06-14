@@ -5,6 +5,8 @@ import theme from "./theme";
 import Header from "../components/Header";
 import TabLayout from "../components/CardLayout/index";
 import eventSchedule from "../data/hpe-discover-events.json";
+import ReactGA from "react-ga";
+import { throwError } from "rxjs";
 
 export default class LandingPage extends Component {
   constructor(props) {
@@ -15,23 +17,63 @@ export default class LandingPage extends Component {
     };
     this.onClick = this.onClick.bind(this);
   }
-  
-  filterSessions(sessions, day) {
-    return sessions.filter(
-      session => day === undefined 
-        ? session.datetimeStart === undefined 
-        : new Date(session.datetimeStart).getDate() === day
-    ).sort((a,b) => {
-      if (a.datetimeStart < b.datetimeStart) {return -1;}
-      else if (a.datetimeStart > b.datetimeStart) {return 1;}
-      else {return 0;}
-    });
+
+  componentDidMount() {
+    let gtagId;
+    let gaDebug;
+
+    if (process.env.NODE_ENV === "production") {
+      gtagId = "UA-108944070-3";
+      gaDebug = false;
+    } else if (process.env.NODE_ENV === "development") {
+      gtagId = "UA-NNNNNN-N";
+      gaDebug = true;
+    } else {
+      throwError(
+        "NODE_ENV not set to 'production' nor 'development'." +
+          "Google Analytics tracking will not be initialized."
+      );
+    }
+
+    window.onload = () => {
+      if (typeof window !== "undefined") {
+        ReactGA.initialize(gtagId, {
+          debug: gaDebug
+        });
+        const { location } = window;
+        ReactGA.set({ page: location.pathname });
+        ReactGA.pageview(location.pathname);
+      }
+    };
   }
 
-  onClick(selected) {
+  filterSessions(sessions, day) {
+    return sessions
+      .filter(session =>
+        day === undefined
+          ? session.datetimeStart === undefined
+          : new Date(session.datetimeStart).getDate() === day
+      )
+      .sort((a, b) => {
+        if (a.datetimeStart < b.datetimeStart) {
+          return -1;
+        } else if (a.datetimeStart > b.datetimeStart) {
+          return 1;
+        } else {
+          return 0;
+        }
+      });
+  }
+
+  onClick(selected, event) {
     this.setState({ selected });
     let sessions = this.filterSessions(eventSchedule, selected);
-    this.setState({sessions});
+    this.setState({ sessions });
+    ReactGA.event({
+      category: "Sessions Navigation",
+      action: "Click",
+      label: event.target.innerText
+    });
   }
 
   render() {
@@ -39,7 +81,7 @@ export default class LandingPage extends Component {
     const defaultImage = "../img/defaultImage.png";
     return (
       <Grommet theme={theme}>
-        <Header /> 
+        <Header />
         <Box margin="medium" pad="medium">
           <Heading margin="xsmall" size="large">
             <strong> Sessions </strong>
@@ -50,7 +92,7 @@ export default class LandingPage extends Component {
                 <Text
                   onClick={e => {
                     e.preventDefault();
-                    this.onClick(18);
+                    this.onClick(18, e);
                   }}
                   color={selected === 18 ? "dark-3" : "brand"}
                   size="large"
@@ -58,14 +100,13 @@ export default class LandingPage extends Component {
                   Day 1
                 </Text>
               }
-            >
-            </Tab>
+            />
             <Tab
               title={
                 <Text
                   onClick={e => {
                     e.preventDefault();
-                    this.onClick(19);
+                    this.onClick(19, e);
                   }}
                   color={selected === 19 ? "dark-3" : "brand"}
                   size="large"
@@ -73,14 +114,13 @@ export default class LandingPage extends Component {
                   Day 2
                 </Text>
               }
-            > 
-            </Tab>
+            />
             <Tab
               title={
                 <Text
                   onClick={e => {
                     e.preventDefault();
-                    this.onClick(20);
+                    this.onClick(20, e);
                   }}
                   color={selected === 20 ? "dark-3" : "brand"}
                   size="large"
@@ -88,14 +128,13 @@ export default class LandingPage extends Component {
                   Day 3
                 </Text>
               }
-            >
-            </Tab>
+            />
             <Tab
               title={
                 <Text
                   onClick={e => {
                     e.preventDefault();
-                    this.onClick(undefined);
+                    this.onClick(undefined, e);
                   }}
                   color={selected === undefined ? "dark-3" : "brand"}
                   size="large"
@@ -103,14 +142,14 @@ export default class LandingPage extends Component {
                   All-Day Challenges
                 </Text>
               }
-            >
-            </Tab>
+            />
           </Tabs>
           {this.state.sessions.map(
             ({
               id,
               title,
               page,
+              pageLink,
               presenter,
               content,
               presentationlink,
@@ -124,6 +163,7 @@ export default class LandingPage extends Component {
                 image={image === "" ? defaultImage : image}
                 title={title}
                 page={page}
+                pageLink={pageLink}
                 presenter={presenter}
                 content={content}
                 presenterLink={presentationlink}

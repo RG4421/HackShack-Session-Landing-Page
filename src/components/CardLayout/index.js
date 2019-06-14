@@ -2,8 +2,22 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Box, Paragraph } from "grommet";
-import { StyledAnchor, StyledHeading, StyledHeading2, StyledParagraph } from "./styles";
-import Moment from 'react-moment';
+import {
+  StyledAnchor,
+  StyledHeading,
+  StyledHeading2,
+  StyledParagraph
+} from "./styles";
+import Moment from "react-moment";
+import ReactGA from "react-ga";
+
+const handleClick = (action, label) => {
+  ReactGA.event({
+    category: "Session Detail",
+    action: action,
+    label: label
+  });
+};
 
 export const CardLayout = ({
   image,
@@ -12,7 +26,7 @@ export const CardLayout = ({
   pageLink,
   presenter,
   content,
-  presentationLink,
+  presenterLink,
   videoLink,
   date,
   timeStart,
@@ -39,38 +53,35 @@ export const CardLayout = ({
       <StyledHeading margin="none" size="small">
         {title}
       </StyledHeading>
-      {
-        timeStart === undefined 
-          ? null 
-          : <StyledHeading2 
-              level="2" 
-              size="medium"
-              margin={{
-                "vertical": "none"
-              }}
-            >
-              <Moment format="dddd" date={timeStart} />
-              ,&nbsp;
-              <Moment format="h:mm a" date={timeStart} /> 
-              &nbsp;-&nbsp; 
-              <Moment format="h:mm a" date={timeEnd} />
-            </StyledHeading2>
-      }
+      {timeStart === undefined ? null : (
+        <StyledHeading2
+          level="2"
+          size="medium"
+          margin={{
+            vertical: "none"
+          }}
+        >
+          <Moment format="dddd" date={timeStart} />
+          ,&nbsp;
+          <Moment format="h:mm a" date={timeStart} />
+          &nbsp;-&nbsp;
+          <Moment format="h:mm a" date={timeEnd} />
+        </StyledHeading2>
+      )}
       <StyledAnchor
         target="_blank"
         size="large"
         color="brand"
         label={page}
         href={pageLink}
-        margin={{ top: "medium"}}
+        margin={{ top: "medium" }}
+        onClick={() => {
+          handleClick("Click - Product Page", title);
+        }}
       />
-      {
-        presenter === undefined 
-          ? null 
-          : <Paragraph size="large" margin={{ bottom: "xsmall" }}>
-              {presenter}
-            </Paragraph>
-      }
+      <Paragraph size="large" margin={{ bottom: "xsmall" }}>
+        {presenter}
+      </Paragraph>
       <StyledParagraph margin={{ top: "xsmall" }}>{content}</StyledParagraph>
       <Box
         fill
@@ -84,7 +95,10 @@ export const CardLayout = ({
           size="large"
           color="brand"
           label="Presentation Link"
-          href={presentationLink}
+          href={presenterLink}
+          onClick={() => {
+            handleClick("Download - Presentation", title);
+          }}
         />
         <StyledAnchor
           target="_blank"
@@ -92,6 +106,9 @@ export const CardLayout = ({
           color="brand"
           label="Video Link"
           href={videoLink}
+          onClick={() => {
+            handleClick("Click - Video Link", title);
+          }}
         />
       </Box>
     </Box>
