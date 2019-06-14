@@ -28,8 +28,8 @@ export default class Sessions extends Component {
       if (session.datetimeStart !== undefined) {
         const sessionTime = new Date(session.datetimeStart).getHours();
         const sessionDay = new Date(session.datetimeStart).getDate();
-        if (sessionDay === 18) {
-          if (sessionTime >= 10 && sessionList.length < 5) {
+        if (sessionDay === currentDay) {
+          if (sessionTime >= currentTime && sessionList.length < 5) {
             sessionList.push(session);
           }
         }
