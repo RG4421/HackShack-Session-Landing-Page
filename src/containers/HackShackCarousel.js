@@ -1,6 +1,6 @@
 /* (C) Copyright 2019 Hewlett Packard Enterprise Development LP. */
 import React , { Component }from 'react';
-import { Grommet, Carousel, Box, Image} from 'grommet';
+import { Grommet, Carousel, Box } from 'grommet';
 import theme from './theme';
 import Leaderboard from './Leaderboard.js';
 import Sessions from './Sessions.js';

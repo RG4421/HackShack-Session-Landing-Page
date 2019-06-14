@@ -6,7 +6,6 @@ import { Image } from 'grommet';
 export const StyledImage = styled(Image)`
   width: 100%;
   height: auto;
-  
 `;
 
 export const StyledCard = styled(Image)`

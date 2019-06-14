@@ -4,6 +4,28 @@ import styled from 'styled-components';
 import { Box } from 'grommet';
 
 export const SessionsLayout = styled(Box)`
+    max-width: 1080px;
+    max-height: 1920px;
+    .outer {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .middle {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1080px;
+    @media (orientation: landscape) {
+      transform: translate(0%, -25%) scale(0.5, 0.5)
+    }
+  }
   .session-text {
     font-size: 40px;
     line-height: 1;
