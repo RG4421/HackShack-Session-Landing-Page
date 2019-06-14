@@ -33,7 +33,7 @@ export default class Sessions extends Component {
         }
       }
     });
-    this.setState({ sessions: sessionList, isLoaded: true });
+      this.setState({ sessions: sessionList, isLoaded: true });
   }
 
   render() {

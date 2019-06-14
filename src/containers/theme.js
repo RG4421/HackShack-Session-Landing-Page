@@ -8,6 +8,10 @@ export default deepMerge(grommet, {
       'accent-1': '#2bd3ca',
       'accent-2': '#8f60eb',
       'accent-3': '#fd9a69',
+      'accent-4': '#fd6fff',
+      'accent-5': '#6fffb0',
+      'accent-6': '#ffaa15',
+      'dark-1': '#102a30',
       brand: '#00C781',
       'neutral-1': '#425563',
       'neutral-2': '#5F7A76',
@@ -47,11 +51,7 @@ export default deepMerge(grommet, {
       }
       @font-face {
         font-family: "ArcadeClassic";
-<<<<<<< HEAD
-        src: url("../img/arcadeclassic.woff") format('woff');
-=======
         src: url("../fonts/arcadeclassic.woff") format('woff');
->>>>>>> dev-ops
       }
     `,
     }
