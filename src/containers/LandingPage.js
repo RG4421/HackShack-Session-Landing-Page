@@ -18,7 +18,9 @@ export default class LandingPage extends Component {
   
   filterSessions(sessions, day) {
     return sessions.filter(
-      session => new Date(session.datetimeStart).getDate() === day
+      session => day === undefined 
+        ? session.datetimeStart === undefined 
+        : new Date(session.datetimeStart).getDate() === day
     ).sort((a,b) => {
       if (a.datetimeStart < b.datetimeStart) {return -1;}
       else if (a.datetimeStart > b.datetimeStart) {return 1;}
@@ -29,7 +31,6 @@ export default class LandingPage extends Component {
   onClick(selected) {
     this.setState({ selected });
     let sessions = this.filterSessions(eventSchedule, selected);
-    console.log(sessions);
     this.setState({sessions});
   }
 
@@ -85,6 +86,21 @@ export default class LandingPage extends Component {
                   size="large"
                 >
                   Day 3
+                </Text>
+              }
+            >
+            </Tab>
+            <Tab
+              title={
+                <Text
+                  onClick={e => {
+                    e.preventDefault();
+                    this.onClick(undefined);
+                  }}
+                  color={selected === undefined ? "dark-3" : "brand"}
+                  size="large"
+                >
+                  All-Day Challenges
                 </Text>
               }
             >
