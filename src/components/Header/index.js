@@ -15,7 +15,7 @@ export const Header = () =>
       <ImageContainer
         alignSelf="center"
       >
-        <img src="/img/Group-4.png" alt="Hack Shack" />
+        <img src="/img/Group4.png" alt="Hack Shack" />
       </ImageContainer>
       <LogoButton
         href="https://developer.hpe.com/"
