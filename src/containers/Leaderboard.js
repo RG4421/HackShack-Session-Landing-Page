@@ -48,8 +48,8 @@ export default class Leaderboard extends Component {
                 <Box>
                   <StyledImage src="../img/hackshackattack.png" />
                 </Box>
-                <Box margin={{ top: 'large', bottom: 'xlarge' }}>
-                  <Text className="highscore-title">High Scores</Text>
+                <Box className="title-container" margin={{ top: 'large', bottom: 'xlarge' }}>
+                  <Text color="#FEDE32" className="highscore-title">High Scores</Text>
                 </Box>
               </Box>
               {/* Rank/Name/Score columns */}
@@ -68,7 +68,7 @@ export default class Leaderboard extends Component {
                 </Box>
                 <Box
                   align="start"
-                  basis="1/2"
+                  basis="1/3"
                   direction="column"
                   className="name-column"
                 >
@@ -86,8 +86,8 @@ export default class Leaderboard extends Component {
                 </Box>
               </Box>
               {/* ItMonster image */}
-              <Box alignSelf="end" margin={{ top: 'large' }} width="large">
-                <StyledImage src="./img/itmonster.png" />
+              <Box align="end" alignSelf="end" margin={{ top: 'large' }} width="large">
+                <StyledImage className="it-monster" src="./img/itmonster.png" />
               </Box>
             </Box>
           </LeaderboardLayout>

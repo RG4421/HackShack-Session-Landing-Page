@@ -19,17 +19,29 @@ export const LeaderboardLayout = styled(Box)`
     margin-left: auto;
     margin-right: auto;
     max-width: 1080px;
-    @media (orientation: landscape) {
-      transform: translate(0%, -23.5%) scale(0.55, 0.55)
-    }
   }
   .highscore-title {
     font-family: "ArcadeClassic";
     font-size: 95px;
+    text-shadow: 4px 4px #E08328;
+    @media (orientation: landscape) {
+      font-size: 60px;
+    }
+  }
+  .title-container {
+    @media (orientation: landscape) {
+      margin-top: 23px;
+      margin-bottom: 23px;
+    }
   }
   .highscore-text {
     font-family: "ArcadeClassic";
     font-size: 50px;
+    @media (orientation: landscape) {
+      font-size: 35px;
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
   }
 `;
 

@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import { Box } from 'grommet';
 
 export const SessionsLayout = styled(Box)`
-    max-width: 1080px;
-    max-height: 1920px;
     .outer {
     display: table;
     position: absolute;

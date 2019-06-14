@@ -6,6 +6,9 @@ import { Image } from 'grommet';
 export const StyledImage = styled(Image)`
   width: 100%;
   height: auto;
+  @media (orientation: landscape) {
+    max-width: 500px;
+}
 `;
 
 export const StyledCard = styled(Image)`
