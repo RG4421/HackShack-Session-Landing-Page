@@ -59,7 +59,7 @@ export default class Leaderboard extends Component {
               >
                 <Box
                   align="start"
-                  basis="1/3"
+                  basis="1/4"
                   direction="column"
                   className="rank-column"
                 >
@@ -68,7 +68,7 @@ export default class Leaderboard extends Component {
                 </Box>
                 <Box
                   align="start"
-                  basis="1/3"
+                  basis="1/2"
                   direction="column"
                   className="name-column"
                 >
@@ -77,7 +77,7 @@ export default class Leaderboard extends Component {
                 </Box>
                 <Box
                   align="end"
-                  basis="1/3"
+                  basis="1/4"
                   direction="column"
                   className="score-column"
                 >

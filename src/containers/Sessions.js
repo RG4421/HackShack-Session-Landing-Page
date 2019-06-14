@@ -27,7 +27,7 @@ export default class Sessions extends Component {
     sortedSessionData.map((session) => {
       const sessionTime = new Date(session.datetimeStart).getHours();
       const sessionDay = new Date(session.datetimeStart).getDate();
-      if (sessionDay === 18) {
+      if (sessionDay === currentDay) {
         if (sessionTime >= currentTime && sessionList.length < 5) {
           sessionList.push(session);
         }
@@ -74,6 +74,7 @@ export default class Sessions extends Component {
                         <Box basis="xlarge"><Text className="session-text">{session.title}</Text></Box>
                       </Box>
                       <Box
+                        className="session-separator"
                         background="dark-2"
                         fill="horizontal"
                         height="1px"
@@ -84,7 +85,7 @@ export default class Sessions extends Component {
                 </Box>
               </Box>
               <Box align="center">
-                <Text className="session-text" weight="bold" color="accent-2">Not seeing a session? Ask us!</Text>
+                <Text className="session-text" weight="bold" color="accent-4">Not seeing a session? Ask us!</Text>
               </Box>
             </Box>
           </SessionsLayout>

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Box } from 'grommet';
 
 export const LeaderboardLayout = styled(Box)`
+  height: 100vh;
   .outer {
     display: table;
     position: absolute;
@@ -22,13 +23,14 @@ export const LeaderboardLayout = styled(Box)`
   }
   .highscore-title {
     font-family: "ArcadeClassic";
-    font-size: 95px;
+    font-size: 100px;
     text-shadow: 4px 4px #E08328;
     @media (orientation: landscape) {
       font-size: 60px;
     }
   }
   .title-container {
+    margin-bottom: 105px;
     @media (orientation: landscape) {
       margin-top: 23px;
       margin-bottom: 23px;

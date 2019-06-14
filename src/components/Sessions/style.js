@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import { Box } from 'grommet';
 
 export const SessionsLayout = styled(Box)`
-    .outer {
+  height: 100vh;
+  .outer {
     display: table;
     position: absolute;
     top: 0;
@@ -20,33 +21,35 @@ export const SessionsLayout = styled(Box)`
     margin-left: auto;
     margin-right: auto;
     max-width: 1080px;
-    @media (orientation: landscape) {
-      transform: translate(0%, -25%) scale(0.5, 0.5)
-    }
   }
   .session-text {
     font-size: 40px;
     line-height: 1;
+    @media (orientation: landscape) {
+      font-size: 25px;
+    }
   }
   .session-text-time {
     font-weight: bold;
     font-size: 40px;
     line-height: 1;
+    @media (orientation: landscape) {
+      font-size: 25px;
+    }
+  }
+  .session-separator {
+    @media (orientation: landscape) {
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
   }
   .upcoming-sessions-title {
     font-size: 80px;
     font-weight: 100;
-    @media only screen and (max-width: 340px) {
-      font-size: 30px;
-    }
-    @media only screen and (min-width: 340px) and (max-width: 500px) {
+    @media (orientation: landscape) {
       font-size: 40px;
-    }
-    @media only screen and (min-width: 500px) and (max-width: 800px) {
-      font-size: 60px;
-    }
-    @media only screen and (min-width: 1200px) {
-      font-size: 100px;
+      margin-top: 0px;
+      margin-bottom: 60px;
     }
   }
 `;

@@ -22,7 +22,8 @@ export default class HackShackCarousel extends Component {
       <Box align="center">
         { isLoaded && (
           <Grommet full theme={theme}>
-{/*             <Carousel play={5000}>
+            <Carousel play={5000}>
+              <Leaderboard />
               <Sessions />
               <Box align="center" background="dark-1">
                 <StyledCard src="../img/hpedevcard.png" />
@@ -33,8 +34,7 @@ export default class HackShackCarousel extends Component {
               <Box align="center" background="accent-6">
                 <StyledCard src="./img/gremlincard.png" />
               </Box>
-            </Carousel> */}
-              <Leaderboard />
+            </Carousel>
           </Grommet>
         )}
       </Box>
