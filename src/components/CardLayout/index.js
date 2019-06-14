@@ -90,26 +90,34 @@ export const CardLayout = ({
         gap="medium"
         direction="row-responsive"
       >
-        <StyledAnchor
-          target="_blank"
-          size="large"
-          color="brand"
-          label="Presentation Link"
-          href={presenterLink}
-          onClick={() => {
-            handleClick("Download - Presentation", title);
-          }}
+      {
+        presenterLink === undefined ? null :(
+          <StyledAnchor
+            target="_blank"
+            size="large"
+            color="brand"
+            label="Presentation Link"
+            href={presenterLink}
+            onClick={() => {
+              handleClick("Download - Presentation", title);
+            }}
         />
-        <StyledAnchor
-          target="_blank"
-          size="large"
-          color="brand"
-          label="Video Link"
-          href={videoLink}
-          onClick={() => {
-            handleClick("Click - Video Link", title);
-          }}
+        )
+      }
+      {
+        videoLink === undefined ? null : (
+          <StyledAnchor
+            target="_blank"
+            size="large"
+            color="brand"
+            label="Video Link"
+            href={videoLink}
+            onClick={() => {
+              handleClick("Click - Video Link", title);
+            }}
         />
+        )
+      }
       </Box>
     </Box>
   </Box>
