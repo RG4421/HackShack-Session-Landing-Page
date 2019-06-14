@@ -294,11 +294,7 @@
     "presentationlink": "Presenter Link",
     "videoLink": "Video Link",
     "image": "/img/defaultImage.png",
-    "datetimeStart": "2019-06-18T14:00:00.000Z",
-    "datetimeEnd": "2019-06-20T21:00:00.000Z",
-    "presenter": "Alex Mejias",
-    "content": "Apply the skills that you’ve learned to find the misbehaving server using only limited information and iLO logs. No registration required. Just show up and start coding.",
-    "drop_in": "true"
+    "content": "Apply the skills that you’ve learned to find the misbehaving server using only limited information and iLO logs. No registration required. Just show up and start coding."
   },
   {
     "id": "19719_8950",
@@ -310,11 +306,7 @@
     "presentationlink": "Presenter Link",
     "videoLink": "Video Link",
     "image": "/img/defaultImage.png",
-    "datetimeStart": "2019-06-18T14:00:00.000Z",
-    "datetimeEnd": "2019-06-20T21:00:00.000Z",
-    "presenter": "Alex Mejias",
-    "content": "Show off your ability to enhance an existing PowerShell module or create and populate a group of HPE OneView resources using HPE Global Dashboard REST API. No registration required. Just show up and start coding.",
-    "drop_in": "true"
+    "content": "Show off your ability to enhance an existing PowerShell module or create and populate a group of HPE OneView resources using HPE Global Dashboard REST API. No registration required. Just show up and start coding."
   },
   {
     "id": "19719_8986",
@@ -326,11 +318,7 @@
     "presentationlink": "Presenter Link",
     "videoLink": "Video Link",
     "image": "/img/defaultImage.png",
-    "datetimeStart": "2019-06-18T14:00:00.000Z",
-    "datetimeEnd": "2019-06-20T21:00:00.000Z",
-    "presenter": "Alex Mejias",
-    "content": "Leverage the granularity and simplicity of the SimpliVity REST API to build a report. Keep it simple or unleash your creativity to come up with a cool 3D graphical representation. No registration required. Just show up and start coding.",
-    "drop_in": "true"
+    "content": "Leverage the granularity and simplicity of the SimpliVity REST API to build a report. Keep it simple or unleash your creativity to come up with a cool 3D graphical representation. No registration required. Just show up and start coding."
   },
   {
     "id": "19719_8990",
@@ -342,11 +330,7 @@
     "presentationlink": "Presenter Link",
     "videoLink": "Video Link",
     "image": "/img/defaultImage.png",
-    "datetimeStart": "2019-06-18T14:00:00.000Z",
-    "datetimeEnd": "2019-06-20T21:00:00.000Z",
-    "presenter": "Alex Mejias",
-    "content": "Use the SimpliVity REST API to build a solution for pre-and-post backup script injection to enable backup life cycle management use cases. No registration required. Just show up and start coding.",
-    "drop_in": "true"
+    "content": "Use the SimpliVity REST API to build a solution for pre-and-post backup script injection to enable backup life cycle management use cases. No registration required. Just show up and start coding."
   },
   {
     "id": "19719_9020",
@@ -358,11 +342,7 @@
     "presentationlink": "Presenter Link",
     "videoLink": "Video Link",
     "image": "/img/defaultImage.png",
-    "datetimeStart": "2019-06-18T14:00:00.000Z",
-    "datetimeEnd": "2019-06-20T21:00:00.000Z",
-    "presenter": "Alex Mejias",
-    "content": "Learn innovative ways of producing bulletproof backups using the HPE SimpliVity REST API. No registration required. Just show up and start coding.",
-    "drop_in": "true"
+    "content": "Learn innovative ways of producing bulletproof backups using the HPE SimpliVity REST API. No registration required. Just show up and start coding."
   },
   {
     "id": "19719_9055",
@@ -374,11 +354,7 @@
     "presentationlink": "Presenter Link",
     "videoLink": "Video Link",
     "image": "/img/defaultImage.png",
-    "datetimeStart": "2019-06-18T14:00:00.000Z",
-    "datetimeEnd": "2019-06-20T21:00:00.000Z",
-    "presenter": "Alex Mejias",
-    "content": "Build a dashboard that shows the current network view configuration of the Composable Fabric mesh network quickly. Prizes will be awarded to the most innovative solution. No registration required. Just show up and start coding.",
-    "drop_in": "true"
+    "content": "Build a dashboard that shows the current network view configuration of the Composable Fabric mesh network quickly. Prizes will be awarded to the most innovative solution. No registration required. Just show up and start coding."
   },
   {
     "id": "19719_9090",
@@ -390,11 +366,7 @@
     "presentationlink": "Presenter Link",
     "videoLink": "Video Link",
     "image": "/img/defaultImage.png",
-    "datetimeStart": "2019-06-18T14:00:00.000Z",
-    "datetimeEnd": "2019-06-20T21:00:00.000Z",
-    "presenter": "Alex Mejias",
-    "content": "Learn how to code or improve your current coding skills. Your hack can be as simple as showing Hello World in notepad or a text editor like Vim. To win the prize, remember, creativity counts! No registration required. Just show up and start coding.",
-    "drop_in": "true"
+    "content": "Learn how to code or improve your current coding skills. Your hack can be as simple as showing Hello World in notepad or a text editor like Vim. To win the prize, remember, creativity counts! No registration required. Just show up and start coding."
   },
   {
     "id": "19719_9105",
@@ -406,11 +378,7 @@
     "presentationlink": "Presenter Link",
     "videoLink": "Video Link",
     "image": "/img/defaultImage.png",
-    "datetimeStart": "2019-06-18T14:00:00.000Z",
-    "datetimeEnd": "2019-06-20T21:00:00.000Z",
-    "presenter": "Alex Mejias",
-    "content": "Learn how to code or improve your current coding skills. Your hack can be as simple as showing Hello World in notepad or a text editor like Vim. To win the prize, remember, creativity counts! No registration required. Just show up and start coding.",
-    "drop_in": "true"
+    "content": "Learn how to code or improve your current coding skills. Your hack can be as simple as showing Hello World in notepad or a text editor like Vim. To win the prize, remember, creativity counts! No registration required. Just show up and start coding."
   },
   {
     "id": "19719_9126",
@@ -422,11 +390,7 @@
     "presentationlink": "Presenter Link",
     "videoLink": "Video Link",
     "image": "/img/defaultImage.png",
-    "datetimeStart": "2019-06-18T14:00:00.000Z",
-    "datetimeEnd": "2019-06-20T21:00:00.000Z",
-    "presenter": "Alex Mejias",
-    "content": "As an Azure Stack cloud administrator, you can create IaaS, PaaS offers that your tenant users can self-subscribe to. Here you’ll learn how to use PowerShell and/or admin portal to create/configure service offers with plans, quotas and enable user subscriptions. No registration required. Just show up and start coding.",
-    "drop_in": "true"
+    "content": "As an Azure Stack cloud administrator, you can create IaaS, PaaS offers that your tenant users can self-subscribe to. Here you’ll learn how to use PowerShell and/or admin portal to create/configure service offers with plans, quotas and enable user subscriptions. No registration required. Just show up and start coding."
   },
   {
     "id": "19719_9139",
@@ -438,10 +402,6 @@
     "presentationlink": "Presenter Link",
     "videoLink": "Video Link",
     "image": "/img/defaultImage.png",
-    "datetimeStart": "2019-06-18T14:00:00.000Z",
-    "datetimeEnd": "2019-06-20T21:00:00.000Z",
-    "presenter": "Alex Mejias",
-    "content": "Explore the concept of using infrastructure as code to deploy application resources globally via Azure or Azure Stack. You’ll also learn how to integrate HPE Nimble solutions as external storage for virtual machines running on Azure Stack. No registration required. Just show up and start coding.",
-    "drop_in": "true"
+    "content": "Explore the concept of using infrastructure as code to deploy application resources globally via Azure or Azure Stack. You’ll also learn how to integrate HPE Nimble solutions as external storage for virtual machines running on Azure Stack. No registration required. Just show up and start coding."
   }
 ]

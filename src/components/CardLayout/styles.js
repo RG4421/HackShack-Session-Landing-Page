@@ -10,6 +10,10 @@ export const StyledHeading = styled(Heading)`
   font-weight: 800;
 `;
 
+export const StyledHeading2 = styled(Heading)`
+  font-weight: 100;
+`;
+
 export const StyledParagraph = styled(Paragraph)`
   max-width: 100%;
 `;
