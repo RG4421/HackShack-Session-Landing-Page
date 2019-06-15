@@ -96,7 +96,7 @@ export const CardLayout = ({
             target="_blank"
             size="large"
             color="brand"
-            label="Presentation Link"
+            label="View Presentation"
             href={presenterLink}
             onClick={() => {
               handleClick("Download - Presentation", title);
@@ -110,7 +110,7 @@ export const CardLayout = ({
             target="_blank"
             size="large"
             color="brand"
-            label="Video Link"
+            label="Video"
             href={videoLink}
             onClick={() => {
               handleClick("Click - Video Link", title);
