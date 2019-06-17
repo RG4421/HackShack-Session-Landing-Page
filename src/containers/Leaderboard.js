@@ -26,7 +26,6 @@ export default class Leaderboard extends Component {
     fetch(`${Config.apiUrl}/user/leaderboard`)
     .then(res => res.json())
     .then((data) => {
-      console.log(data)
       const sortedHiScores = data.sort((a, b) => b.score - a.score);
       const len = sortedHiScores.length;
       if (len < 10) {
