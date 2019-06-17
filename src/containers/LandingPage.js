@@ -12,8 +12,8 @@ export default class LandingPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: 18,
-      sessions: this.filterSessions(eventSchedule, 18)
+      selected: this.props.day || 18,
+      sessions: this.filterSessions(eventSchedule, this.props.day || 18)
     };
     this.onClick = this.onClick.bind(this);
   }
@@ -27,7 +27,7 @@ export default class LandingPage extends Component {
       gaDebug = false;
     } else if (process.env.NODE_ENV === "development") {
       gtagId = "UA-NNNNNN-N";
-      gaDebug = true;
+      gaDebug = false;
     } else {
       throwError(
         "NODE_ENV not set to 'production' nor 'development'." +
@@ -49,11 +49,17 @@ export default class LandingPage extends Component {
 
   filterSessions(sessions, day) {
     return sessions
-      .filter(session =>
-        day === undefined
-          ? session.datetimeStart === undefined
-          : new Date(session.datetimeStart).getDate() === day
-      )
+      .filter(session => {
+        if (day === undefined) {
+          return session.datetimeStart === undefined;
+        }
+        else if (day === "all") {
+          return session;
+        }
+        else {
+          return new Date(session.datetimeStart).getDate() === day;
+        }
+      })
       .sort((a, b) => {
         if (a.datetimeStart < b.datetimeStart) {
           return -1;
@@ -156,9 +162,11 @@ export default class LandingPage extends Component {
               videoLink,
               image,
               datetimeStart,
-              datetimeEnd
+              datetimeEnd,
+              hash_link,
             }) => (
               <TabLayout
+                id={hash_link}
                 key={id}
                 image={image === "" ? defaultImage : image}
                 title={title}
