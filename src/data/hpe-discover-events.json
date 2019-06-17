@@ -249,7 +249,6 @@
     "track": "IT Consumption and Financing",
     "page": "HPE Nimble Storage",
     "pageLink": "https://developer.hpe.com/platform/nimble-storage/home",
-    "presentationlink": "Presenter Link",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/hpe-dev-nimble-section.svg",
     "datetimeStart": "2019-06-18T15:00:00.000Z",
     "datetimeEnd": "2019-06-18T15:40:00.000Z",
@@ -348,7 +347,6 @@
     "track": "Hybrid Cloud ",
     "page": "HPE Proliant for Microsoft Azure Stack",
     "pageLink": "https://developer.hpe.com/platform/hpe-proliant-for-microsoft-azure-stack/home",
-    "presentationlink": "Presenter Link",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/abstractlines_01_gm60-1536343691798.jpg",
     "content": "As an Azure Stack cloud administrator, you can create IaaS, PaaS offers that your tenant users can self-subscribe to. Here you’ll learn how to use PowerShell and/or admin portal to create/configure service offers with plans, quotas and enable user subscriptions. No registration required. Just show up and start coding."
   },
