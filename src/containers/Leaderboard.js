@@ -18,7 +18,7 @@ export default class Leaderboard extends Component {
 
   componentDidMount() {
     this.getLeaderboardData();
-    setInterval(() => {
+    this.intervalID = setInterval(() => {
       this.getLeaderboardData();
     }, 40000);
   }
@@ -38,6 +38,9 @@ export default class Leaderboard extends Component {
       this.setState({ hiScores, isLoaded: true });
     })
     .catch(err => console.log(err));
+  }
+  componentWillUnmount() {
+    clearInterval(this.intervalID);
   }
   render() {
     const { hiScores, ranks, colors, isLoaded } = this.state;
