@@ -20,6 +20,7 @@ const handleClick = (action, label) => {
 };
 
 export const CardLayout = ({
+  id,
   image,
   title,
   page,
@@ -34,6 +35,7 @@ export const CardLayout = ({
   ...rest
 }) => (
   <Box
+    id={id}
     pad={{ top: "small", bottom: "medium" }}
     margin="small"
     direction="row-responsive"
