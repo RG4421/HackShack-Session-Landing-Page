@@ -102,8 +102,7 @@
     "datetimeStart": "2019-06-20T15:00:00.000Z",
     "datetimeEnd": "2019-06-20T15:40:00.000Z",
     "presenter": "Dana Lynn",
-    "content": "Learn how insights from user experience research and design can improve the outcome of your product roadmap. In this session, we'll guide you through a multi-disciplinary approach to UX research and design strategy. Walk away with shared resources that will enable you to partake in the design journey with us. Everybody is welcome to attend this session.  ",
-    "hash_link": "oneviewapi"
+    "content": "Learn how insights from user experience research and design can improve the outcome of your product roadmap. In this session, we'll guide you through a multi-disciplinary approach to UX research and design strategy. Walk away with shared resources that will enable you to partake in the design journey with us. Everybody is welcome to attend this session.  "
   },
   {
     "id": "18598_9074",
@@ -118,7 +117,8 @@
     "datetimeStart": "2019-06-19T21:00:00.000Z",
     "datetimeEnd": "2019-06-19T21:40:00.000Z",
     "presenter": "Blaine Southam",
-    "content": "Bring your laptop, get comfortable and be ready to learn about HPE OneView, HPE's composable infrastructure management platform designed to help accelerate your customer outcomes. During our interactive session, we'll explore the API using Postman. After that, we will use PowerShell (or Python) to write a script that automates HPE OneView. By the end of the workshop, you will have written a simple example of infrastructure as code. All experience levels are welcome."
+    "content": "Bring your laptop, get comfortable and be ready to learn about HPE OneView, HPE's composable infrastructure management platform designed to help accelerate your customer outcomes. During our interactive session, we'll explore the API using Postman. After that, we will use PowerShell (or Python) to write a script that automates HPE OneView. By the end of the workshop, you will have written a simple example of infrastructure as code. All experience levels are welcome.",
+    "hash_link": "oneviewapi"
   },
   {
     "id": "19834_9253",
