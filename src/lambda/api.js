@@ -58,6 +58,16 @@ router.post('/user/create', (req, res) => {
   }
 });
 
+// Delete all users
+// Use this route only when db cleanup required
+/*
+router.post('/users/delete', (req, res) => {
+    return User.deleteMany({ })
+      .then(user => res.send(user))
+      .catch(err => res.send(err));
+});
+*/
+
 // Model routes
 app.use(`/.netlify/functions/api`, router);
 

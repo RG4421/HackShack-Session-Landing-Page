@@ -21,6 +21,12 @@ export default class Leaderboard extends Component {
       .then(res => res.json())
       .then((data) => {
         const sortedHiScores = data.sort((a, b) => b.score - a.score);
+        const len = sortedHiScores.length;
+        if (len < 10) {
+          for (let i = len + 1; i <= 10; i += 1) {
+            sortedHiScores.push({ score: '------', name: '------' });
+          }
+        }
         const hiScores = sortedHiScores.slice(0, 10);
         this.setState({ hiScores, isLoaded: true });
       })
