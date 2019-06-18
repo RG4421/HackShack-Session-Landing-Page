@@ -261,13 +261,13 @@
   {
     "id": "19719_8925",
     "session_id": "HSC9719",
-    "title": "Hack Shack Challenge with HPE OneView: Locate the rogue server in a large data center",
+    "title": "Hack Shack Challenge with HPE OneView: Inventory and filter servers that meet a specified criterion",
     "track": "Hybrid Cloud ",
     "page": "HPE OneView",
     "pageLink": "https://developer.hpe.com/platform/hpe-oneview/home",
     "presentationlink": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/Discover_2019_HSC9719_OneView_API_Challenge.pdf",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/hpe-oneview-artwork-03-1528747183245.png",
-    "content": "Apply the skills that you’ve learned to find the misbehaving server using only limited information and iLO logs. No registration required. Just show up and start coding."
+    "content": "Your boss just told you she needs to know what Gen10 blades we have in inventory with > 512MB of RAM. Rather than doing this manually every few weeks – you decide to just write a script that will generate the output of the servers, including model, serial number and the amount of memory. No registration required. Just show up and start coding."
   },
   {
     "id": "19719_8950",
@@ -287,6 +287,7 @@
     "track": "Hybrid Cloud ",
     "page": "HPE SimpliVity",
     "pageLink": "https://developer.hpe.com/platform/hpe-simplivity/home",
+    "presentationlink": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/Discover_2019_HSC9719_SimpliVity_RESTAPI_Backup_Script.pdf",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/simplivity-1529941739039.jpg",
     "content": "Leverage the granularity and simplicity of the SimpliVity REST API to build a report. Keep it simple or unleash your creativity to come up with a cool 3D graphical representation. No registration required. Just show up and start coding."
   },
