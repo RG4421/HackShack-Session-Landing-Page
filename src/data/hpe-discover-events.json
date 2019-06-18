@@ -138,7 +138,7 @@
     "session_id": "HSW9835",
     "title": "Hack Shack Workshop: Simplify edge and IoT management with intent-driven computing",
     "track": "Hybrid Cloud ; Software-defined Infrastructure",
-    "page": "HPE edgeline converged edge systems and OT",
+    "page": "HPE Converged Edge Systems & OT",
     "pageLink": "https://www.hpe.com/us/en/servers/edgeline-systems.html",
     "presentationlink": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/Discover_2019_HSW9835_Edge_IoT.pdf",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/net-1511391885400.jpg",
@@ -152,7 +152,7 @@
     "session_id": "HSW9835",
     "title": "Hack Shack Workshop: Simplify edge and IoT management with intent-driven computing",
     "track": "Hybrid Cloud ; Software-defined Infrastructure",
-    "page": "HPE edgeline converged edge systems and OT",
+    "page": "HPE Converged Edge Systems & OT",
     "pageLink": "https://www.hpe.com/us/en/servers/edgeline-systems.html",
     "presentationlink": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/Discover_2019_HSW9835_Edge_IoT.pdf",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/net-1511391885400.jpg",
@@ -353,5 +353,15 @@
     "presentationlink": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/Discover_2019_HSC9719_Azure_Stack_DevOps_Automation.pdf",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/hpe-dev-portal-labs-1509995458037.svg",
     "content": "Explore the concept of using infrastructure as code to deploy application resources globally via Azure or Azure Stack. You’ll also learn how to integrate HPE Nimble solutions as external storage for virtual machines running on Azure Stack. No registration required. Just show up and start coding."
+  },
+  {
+    "id": "19719_9999",
+    "session_id": "HSC9719",
+    "title": "Hack Shack Challenge: Enhance network camera resilience at the IoT edge",
+    "track": "Hybrid Cloud ",
+    "page": "HPE Converged Edge Systems & OT",
+    "pageLink": "https://www.hpe.com/us/en/servers/edgeline-systems.html",
+    "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/hpe-dev-platform-ilo-1509387772828.svg",
+    "content": "Using Kubernetes and Service Mesh, your challenge is to develop a solution to retrieve images from cameras on the edge while tolerating network variations (e.g. failures)."
   }
 ]
