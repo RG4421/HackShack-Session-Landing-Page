@@ -97,6 +97,7 @@
     "track": "Software-defined Infrastructure",
     "page": "HPE OneView",
     "pageLink": "https://developer.hpe.com/platform/hpe-oneview/home",
+    "presentationlink": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/Discover_2019_HSW8598_Infrastructure_Automation_OneView_API.pdf",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/hpe-oneview-artwork-03-1528747183245.png",
     "datetimeStart": "2019-06-19T20:00:00.000Z",
     "datetimeEnd": "2019-06-19T20:40:00.000Z",
