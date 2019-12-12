@@ -52,11 +52,9 @@ export default class LandingPage extends Component {
       .filter(session => {
         if (day === undefined) {
           return session.datetimeStart === undefined;
-        }
-        else if (day === "all") {
+        } else if (day === "all") {
           return session;
-        }
-        else {
+        } else {
           return new Date(session.datetimeStart).getDate() === day;
         }
       })
@@ -98,9 +96,9 @@ export default class LandingPage extends Component {
                 <Text
                   onClick={e => {
                     e.preventDefault();
-                    this.onClick(18, e);
+                    this.onClick(9, e);
                   }}
-                  color={selected === 18 ? "dark-3" : "brand"}
+                  color={selected === 9 ? "dark-3" : "brand"}
                   size="large"
                 >
                   Day 1
@@ -112,9 +110,9 @@ export default class LandingPage extends Component {
                 <Text
                   onClick={e => {
                     e.preventDefault();
-                    this.onClick(19, e);
+                    this.onClick(10, e);
                   }}
-                  color={selected === 19 ? "dark-3" : "brand"}
+                  color={selected === 10 ? "dark-3" : "brand"}
                   size="large"
                 >
                   Day 2
@@ -126,12 +124,40 @@ export default class LandingPage extends Component {
                 <Text
                   onClick={e => {
                     e.preventDefault();
-                    this.onClick(20, e);
+                    this.onClick(11, e);
                   }}
-                  color={selected === 20 ? "dark-3" : "brand"}
+                  color={selected === 11 ? "dark-3" : "brand"}
                   size="large"
                 >
                   Day 3
+                </Text>
+              }
+            />
+            <Tab
+              title={
+                <Text
+                  onClick={e => {
+                    e.preventDefault();
+                    this.onClick(12, e);
+                  }}
+                  color={selected === 12 ? "dark-3" : "brand"}
+                  size="large"
+                >
+                  Day 4
+                </Text>
+              }
+            />
+            <Tab
+              title={
+                <Text
+                  onClick={e => {
+                    e.preventDefault();
+                    this.onClick(13, e);
+                  }}
+                  color={selected === 13 ? "dark-3" : "brand"}
+                  size="large"
+                >
+                  Day 5
                 </Text>
               }
             />
@@ -163,7 +189,7 @@ export default class LandingPage extends Component {
               image,
               datetimeStart,
               datetimeEnd,
-              hash_link,
+              hash_link
             }) => (
               <TabLayout
                 id={hash_link}
