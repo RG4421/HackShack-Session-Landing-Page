@@ -8,7 +8,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      initDayFilter: window.location.hash ? "all" : 18
+      initDayFilter: window.location.hash ? "all" : 9
     };
   }
 
