@@ -1,17 +1,17 @@
 /* (C) Copyright 2019 Hewlett Packard Enterprise Development LP. */
-import React, { Component } from 'react';
-import { Box, Text } from 'grommet';
-import { StyledImage } from '../components/Shared/style';
-import { SessionsLayout } from '../components/Sessions/style';
-import sessionData from '../data/hpe-discover-events.json';
-import Moment from 'react-moment';
+import React, { Component } from "react";
+import { Box, Text } from "grommet";
+import { StyledImage } from "../components/Shared/style";
+import { SessionsLayout } from "../components/Sessions/style";
+import sessionData from "../data/hpe-discover-events.json";
+import Moment from "react-moment";
 
 export default class Sessions extends Component {
   constructor(props) {
     super(props);
     this.state = {
       sessions: [],
-      isLoaded: false,
+      isLoaded: false
     };
   }
 
@@ -24,7 +24,7 @@ export default class Sessions extends Component {
       const next = new Date(b.datetimeStart);
       return current - next;
     });
-    sortedSessionData.map((session) => {
+    sortedSessionData.map(session => {
       if (session.datetimeStart !== undefined) {
         const sessionTime = new Date(session.datetimeStart).getHours();
         const sessionDay = new Date(session.datetimeStart).getDate();
@@ -34,27 +34,34 @@ export default class Sessions extends Component {
           }
         }
       }
+      return session;
     });
-      this.setState({ sessions: sessionList, isLoaded: true });
+    this.setState({ sessions: sessionList, isLoaded: true });
   }
 
   render() {
     const { sessions, isLoaded } = this.state;
     return (
       <Box className="outer">
-        { isLoaded && (
+        {isLoaded && (
           <SessionsLayout
             className="sessions-container middle"
             background="dark-1"
             direction="column"
-            pad={
-              {
-                top: 'none', bottom: 'large', left: 'large', right: 'large',
-              }}
+            pad={{
+              top: "none",
+              bottom: "large",
+              left: "large",
+              right: "large"
+            }}
           >
             <Box className="inner">
               {/* Sessions title image and text */}
-              <Box margin={{ bottom: 'large' }} className="sessions-title" align="center">
+              <Box
+                margin={{ bottom: "large" }}
+                className="sessions-title"
+                align="center"
+              >
                 <Box>
                   <StyledImage src="../img/hackshacktitle.png" />
                 </Box>
@@ -62,32 +69,50 @@ export default class Sessions extends Component {
               {/* Upcoming sessions */}
               <Box align="start" className="upcoming-sessions-container">
                 <Text
-                  margin={{ top: 'large', bottom: 'xlarge' }}
+                  margin={{ top: "large", bottom: "xlarge" }}
                   className="upcoming-sessions-title"
                 >
                   Upcoming Sessions
                 </Text>
                 <Box direction="column">
-                  {sessions.map((session, index) => { 
-                    return <Box key={index}>
-                      <Box direction="row">
-                        <Box basis="medium"><Moment format="h:mm a" date={session.datetimeStart} className="session-text-time" /></Box>
-                        <Box basis="medium"><Text className="session-text" weight={100}>{session.session_id}</Text></Box>
-                        <Box basis="xlarge"><Text className="session-text">{session.title}</Text></Box>
+                  {sessions.map((session, index) => {
+                    return (
+                      <Box key={index}>
+                        <Box direction="row">
+                          <Box basis="medium">
+                            <Moment
+                              format="h:mm a"
+                              date={session.datetimeStart}
+                              className="session-text-time"
+                            />
+                          </Box>
+                          <Box basis="medium">
+                            <Text className="session-text" weight={100}>
+                              {session.session_id}
+                            </Text>
+                          </Box>
+                          <Box basis="xlarge">
+                            <Text className="session-text">
+                              {session.title}
+                            </Text>
+                          </Box>
+                        </Box>
+                        <Box
+                          className="session-separator"
+                          background="dark-2"
+                          fill="horizontal"
+                          height="1px"
+                          margin={{ top: "large", bottom: "large" }}
+                        />
                       </Box>
-                      <Box
-                        className="session-separator"
-                        background="dark-2"
-                        fill="horizontal"
-                        height="1px"
-                        margin={{ top: 'large', bottom: 'large' }}
-                      />
-                    </Box>;
+                    );
                   })}
                 </Box>
               </Box>
               <Box align="center">
-                <Text className="session-text" weight="bold" color="accent-4">Not seeing a session? Ask us!</Text>
+                <Text className="session-text" weight="bold" color="accent-4">
+                  Not seeing a session? Ask us!
+                </Text>
               </Box>
             </Box>
           </SessionsLayout>
