@@ -84,7 +84,10 @@ export const CardLayout = ({
       <Paragraph size="large" margin={{ bottom: "xsmall" }}>
         {presenter}
       </Paragraph>
-      <StyledParagraph margin={{ top: "xsmall" }}>{content}</StyledParagraph>
+      <StyledParagraph
+        dangerouslySetInnerHTML={{ __html: content }}
+        margin={{ top: "xsmall" }}
+      />
       <Box
         fill
         align="end"
@@ -92,8 +95,7 @@ export const CardLayout = ({
         gap="medium"
         direction="row-responsive"
       >
-      {
-        presenterLink === undefined ? null :(
+        {presenterLink === undefined ? null : (
           <StyledAnchor
             target="_blank"
             size="large"
@@ -103,11 +105,9 @@ export const CardLayout = ({
             onClick={() => {
               handleClick("Download - Presentation", title);
             }}
-        />
-        )
-      }
-      {
-        videoLink === undefined ? null : (
+          />
+        )}
+        {videoLink === undefined ? null : (
           <StyledAnchor
             target="_blank"
             size="large"
@@ -117,9 +117,8 @@ export const CardLayout = ({
             onClick={() => {
               handleClick("Click - Video Link", title);
             }}
-        />
-        )
-      }
+          />
+        )}
       </Box>
     </Box>
   </Box>
