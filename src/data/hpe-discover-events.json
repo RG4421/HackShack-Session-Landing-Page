@@ -14,8 +14,8 @@
     "session_id": "HSW8626",
     "title": "Hack Shack Workshop: Learn about fundamentals of HPE SimpliVity REST API & improve your agility in managing an HCI DC",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/HPEDesignlines.png",
-    "datetimeStart": "2020-03-10T19:00:00.000Z",
-    "datetimeEnd": "2020-03-10T19:40:00.000Z",
+    "datetimeStart": "2020-03-10T22:00:00.000Z",
+    "datetimeEnd": "2020-03-10T22:50:00.000Z",
     "presenter": "Ron Dharma",
     "content": "HPE SimpliVity is intelligently simple HCI that is suitable for geographically dispersed datacenter. You will learn how to use the fully supported HPE SimpliVity's REST API, to perform authentication, to manage your REST API sessions, to interpret and respond to the status of your REST call and many other fundamental knowledge of using HPE SimpliVity REST API. Furthermore, you will learn additional features added from the latest release. You will also see a demo on how to use SimpliVity REST API for automation use case."
   },
@@ -24,8 +24,8 @@
     "session_id": "HSW8628",
     "title": "Hack Shack Workshop: RedFish API101",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/HPEDesignlines.png",
-    "datetimeStart": "2020-03-10T17:00:00.000Z",
-    "datetimeEnd": "2020-03-10T17:40:00.000Z",
+    "datetimeStart": "2020-03-10T23:00:00.000Z",
+    "datetimeEnd": "2020-03-10T23:50:00.000Z",
     "presenter": "Francois Donze",
     "content": "For this Redfish interactive demo-lab, you'll be able to use your own laptop or the provided station and perform your own tests. After a quick positioning of the DMTF Redfish API, we'll explore a Redfish tree to understand its basic structure. In addition we'll learn how to modify resources and perform actions. Best practises will be presented as well. Beginners and experts are welcome."
   },
@@ -34,8 +34,8 @@
     "session_id": "HSW8628",
     "title": "Hack Shack Workshop: Introduction to the HPE Nimble Storage REST API",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/hpe-dev-newstack-header-1509386464834-1.svg",
-    "datetimeStart": "2020-03-11T18:00:00.000Z",
-    "datetimeEnd": "2020-03-11T18:40:00.000Z",
+    "datetimeStart": "2020-03-11T14:30:00.000Z",
+    "datetimeEnd": "2020-03-11T15:20:00.000Z",
     "presenter": "Michael Mattsson",
     "content": "In this workshop we’ll go through some of the basics of the Nimble OS primitives to manipulate resources via the REST API. We’ll use standard off-the-shelf tools to Create, Read, Update and Delete (CRUD) volumes, snapshots, clones and relevant objects. If you ever thought of wanting to automate a set of tasks on your Nimble array or thought of creating a self-service framework for your users or applications, this is the place to start!"
   },
@@ -44,8 +44,8 @@
     "session_id": "HSW8593",
     "title": "Hack Shack Workshop: Discover Grommet, an HPE Open Source project to help you streamline the way you delevop apps",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/hero-resources.svg",
-    "datetimeStart": "2020-03-11T19:00:00.000Z",
-    "datetimeEnd": "2020-03-19T11:40:00.000Z",
+    "datetimeStart": "2020-03-11T15:30:00.000Z",
+    "datetimeEnd": "2020-03-19T16:20:00.000Z",
     "presenter": "Pramod Reddy Sareddy",
     "content": "Ever wanted to develop your own app in a easy way ? come and join us at this 101 Session on grommet, an open source project led by HPE. Grommet is a react-based framework that provides accessibility, modularity, responsiveness, and theming in a tidy package. This session will allow you to discover the basics and deploy your first app on netifly!"
   },
@@ -54,8 +54,8 @@
     "session_id": "HSW8625",
     "title": "Hack Shack Workshop: Use DevOps tools to automate your Composable Fabric Network",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/hpe-dev-platform-ilo-1509387772828.svg",
-    "datetimeStart": "2020-03-11T23:30:00.000Z",
-    "datetimeEnd": "2020-03-11T00:10:00.000Z",
+    "datetimeStart": "2020-03-11T17:00:00.000Z",
+    "datetimeEnd": "2020-03-11T17:50:00.000Z",
     "presenter": "Chris Young",
     "content": "Introduction to the HPE Composable Fabric Manager integration infrastructure (open source ST2 project), REST API, and API bindings to initiate Composable Fabric operations or respond to Composable Fabric events through applications like Slack, Trello, Twitter, and more."
   },
@@ -64,8 +64,8 @@
     "session_id": "HSW8625",
     "title": "Hack Shack Workshop: Dive into infrastructure automation with the HPE OneView API",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/hpe-dev-portal-labs-1509995458037.svg",
-    "datetimeStart": "2020-03-11T16:00:00.000Z",
-    "datetimeEnd": "2020-03-11T16:40:00.000Z",
+    "datetimeStart": "2020-03-11T18:00:00.000Z",
+    "datetimeEnd": "2020-03-11T18:50:00.000Z",
     "presenter": "Vincent Berger",
     "content": "Bring your laptop, get comfortable and be ready to learn about HPE OneView, HPE's composable infrastructure management platform designed to help accelerate your customer outcomes. During our interactive session, we'll explore the API using Postman. After that, we will use PowerShell (or Python) to write a script that automates HPE OneView. By the end of the workshop, you will have written a simple example of infrastructure as code. All experience levels are welcome."
   },
@@ -74,8 +74,8 @@
     "session_id": "HSW8598",
     "title": "Hack Shack Open Lab 1 : Build, Launch, and Use Containerized Applications Using the HPE Container Platform",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/hpe-oneview-artwork-03-1528747183245.png",
-    "datetimeStart": "2020-03-11T22:00:00.000Z",
-    "datetimeEnd": "2020-03-11T22:40:00.000Z",
+    "datetimeStart": "2020-03-11T21:00:00.000Z",
+    "datetimeEnd": "2020-03-11T23:00:00.000Z",
     "presenter": "Chris Crawford – Frederic Berque",
     "content": "Gartner predicts that 75% of organizations will be using containers in production by 2022. Your customers are either planning their container strategy or actively executing it! In this Hack Shack Open Lab, you will get hands-on with containers by learning how easy it is to deploy applications in the HPECP.   We will build a container, deploy it to the HPECP, launch it, and then enable the features of containers which make them so great such as scaling, resiliency, and portability. We will also spend time working with our differentiators in the market such as: Container Migration KubeDirector, MapR, ML OPS. While not required, familiarity with Linux, the Linux command line shell (bash or similar), SSH, Docker, Kubernetes, and basic networking concepts is a plus!"
   },
@@ -85,7 +85,7 @@
     "title": "Hack Shack Open Lab 2: Aruba APIs Hands-On Labs",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/ovgd-login-background-1538580038007.png",
     "datetimeStart": "2020-03-11T23:00:00.000Z",
-    "datetimeEnd": "2020-03-11T23:40:00.000Z",
+    "datetimeEnd": "2020-03-11T19:00:00.000Z",
     "presenter": "Joe Neville",
     "content": "Get your automation game on with Aruba APIs in this hands-on lab session covering Aruba's wired and wireless portfolio. No experience required we are offering a collection of tailored labs for those of varying skill levels from coding new-comers to hardcore Pythonistas and all those in-between.  Manage, config and automate Aruba Products using their REST APIs, and move on from slow, error-prone CLI work."
   },
@@ -94,8 +94,8 @@
     "session_id": "HSW9834",
     "title": "Hack Shack Workshop: Use DevOps tools to automate your Composable Fabric Network",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/onesphere-section-1515505107079.svg",
-    "datetimeStart": "2020-03-12T18:00:00.000Z",
-    "datetimeEnd": "2020-03-12T18:40:00.000Z",
+    "datetimeStart": "2020-03-12T14:30:00.000Z",
+    "datetimeEnd": "2020-03-12T15:20:00.000Z",
     "presenter": "Chris Young",
     "content": "Introduction to the HPE Composable Fabric Manager integration infrastructure (open source ST2 project), REST API, and API bindings to initiate Composable Fabric operations or respond to Composable Fabric events through applications like Slack, Trello, Twitter, and more."
   },
@@ -104,8 +104,8 @@
     "session_id": "HSW9835",
     "title": "Hack Shack Workshop: Discover Grommet, an HPE Open Source project to help you streamline the way you develop apps",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/net-1511391885400.jpg",
-    "datetimeStart": "2020-03-12T17:00:00.000Z",
-    "datetimeEnd": "2020-03-12T17:40:00.000Z",
+    "datetimeStart": "2020-03-12T15:30:00.000Z",
+    "datetimeEnd": "2020-03-12T16:20:00.000Z",
     "presenter": "Pramod Reddy Sareddy",
     "content": "Ever wanted to develop your own app in a easy way ? come and join us at this 101 Session on grommet, an open source project led by HPE. Grommet is a react-based framework that provides accessibility, modularity, responsiveness, and theming in a tidy package. This session will allow you to discover the basics and deploy your first app on netifly!"
   },
@@ -115,7 +115,7 @@
     "title": "Hack Shack Workshop: Dive into infrastructure automation with the HPE OneView API",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/net-1511391885400.jpg",
     "datetimeStart": "2020-03-12T20:00:00.000Z",
-    "datetimeEnd": "2020-03-12T20:40:00.000Z",
+    "datetimeEnd": "2020-03-12T20:50:00.000Z",
     "presenter": "Vincent Berger",
     "content": "Bring your laptop, get comfortable and be ready to learn about HPE OneView, HPE's Composable infrastructure management platform designed to help accelerate your customer outcomes. During our interactive session, we'll explore the API using Postman. After that, we will use PowerShell (or Python) to write a script that automates HPE OneView. By the end of the workshop, you will have written a simple example of infrastructure as code. All experience levels are welcome"
   },
@@ -124,8 +124,8 @@
     "session_id": "HSW8622",
     "title": "Hack Shack Workshop: RedFish API101",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/simplivity-1529941739039.jpg",
-    "datetimeStart": "2020-03-12T20:00:00.000Z",
-    "datetimeEnd": "2020-03-12T20:40:00.000Z",
+    "datetimeStart": "2020-03-12T21:00:00.000Z",
+    "datetimeEnd": "2020-03-12T21:50:00.000Z",
     "presenter": "Francois Donze",
     "content": "For this Redfish interactive demo-lab, you'll be able to use your own laptop or the provided station and perform your own tests. After a quick positioning of the DMTF Redfish API, we'll explore a Redfish tree to understand its basic structure. In addition we'll learn how to modify resources and perform actions. Best practices will be presented as well. Beginners and experts are welcome."
   },
@@ -134,8 +134,8 @@
     "session_id": "HSW8622",
     "title": "Hack Shack Workshop: Introduction to the HPE Nimble Storage REST API",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/simplivity-1529941739039.jpg",
-    "datetimeStart": "2020-03-12T17:00:00.000Z",
-    "datetimeEnd": "2020-03-12T17:40:00.000Z",
+    "datetimeStart": "2020-03-12T22:30:00.000Z",
+    "datetimeEnd": "2020-03-12T23:20:00.000Z",
     "presenter": "Michael Mattsson",
     "content": "In this workshop we’ll go through some of the basics of the Nimble OS primitives to manipulate resources via the REST API. We’ll use standard off-the-shelf tools to Create, Read, Update and Delete (CRUD) volumes, snapshots, clones and relevant objects. If you ever thought of wanting to automate a set of tasks on your Nimble array or thought of creating a self-service framework for your users or applications, this is the place to start!"
   },
@@ -144,8 +144,8 @@
     "session_id": "HSW8621",
     "title": "Hack Shack Workshop: Learn about fundamentals of HPE SimpliVity REST API & improve your agility in managing an HCI DC",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/hpe-dev-3par-section1-1518109858239.svg",
-    "datetimeStart": "2020-03-12T20:00:00.000Z",
-    "datetimeEnd": "2020-03-12T20:40:00.000Z",
+    "datetimeStart": "2020-03-12T23:30:00.000Z",
+    "datetimeEnd": "2020-03-12T24:20:00.000Z",
     "presenter": "Ron Dharma",
     "content": "HPE SimpliVity is intelligently simple HCI that is suitable for geographically dispersed datacenter. You will learn how to use the fully supported HPE SimpliVity's REST API, to perform authentication, to manage your REST API sessions, to interpret and respond to the status of your REST call and many other fundamental knowledge of using HPE SimpliVity REST API. Furthermore, you will learn additional features added from the latest release. You will also see a demo on how to use SimpliVity REST API for automation use case."
   },
@@ -155,22 +155,22 @@
     "title": "Hack Shack Open Lab 3: Facial Recognition at the IoT edge - Recognize the face of the user",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/hpe-dev-platform-ilo-1509387772828.svg",
     "datetimeStart": "2020-03-13T16:00:00.000Z",
-    "datetimeEnd": "2020-03-13T16:40:00.000Z",
+    "datetimeEnd": "2020-03-13T18:00:00.000Z",
     "presenter": "Pramod Reddy Sareddy",
-    "content": "In this open lab, we will show you how to perform face detection and recognition using the Grommet Face Detection application, which uses a simple laptop's camera and the Microsoft Azure Face API. This is a fun application we have used at different events to showcase the many uses of Grommet. While fun, it also has practical applications in healthcare, banking, retail, and security industries. After a quick presentation, you will need to finish one or more of the following labs: ·Learn how to install the demo from scratch, ·Create a Kubernetes cluster using HPE Container Platform and deploy the application in container., ·Train the model with your picture, ·Add speech features? ·Make a language variant of the app by translating all the strings"
+    "content": "In this open lab, we will show you how to perform face detection and recognition using the Grommet Face Detection application, which uses a simple laptop's camera and the Microsoft Azure Face API. This is a fun application we have used at different events to showcase the many uses of Grommet. While fun, it also has practical applications in healthcare, banking, retail, and security industries. After a quick presentation, you will need to finish one or more of the following labs: <br/> · Learn how to install the demo from scratch <br/> · Create a Kubernetes cluster using HPE Container Platform and deploy the application in container. </br> · Train the model with your picture </br> · Add speech features? </br> · Make a language variant of the app by translating all the strings "
   },
   {
     "id": "18596_9138",
     "session_id": "HSW8596",
     "title": "All Day Hack Shack Desk: Presales Suite Opening Hours",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/hpe-dev-nimble-section.svg",
-    "content": "Monday, 9 March 14:30 – 20:00, Tuesday, 10 March 15:30 – 18:30, Wednesday, 11 March 14:30 – 19:00, Thursday, 12 March 10:30 – 16:30, Want to learn more about our HPE DEV Program?  This is the place! Take a moment to find out about what it can bring you and your customers!"
+    "content": "Monday, 9 March 14:30 – 20:00,<br/> Tuesday, 10 March 15:30 – 18:30, <br/> Wednesday, 11 March 14:30 – 19:00, <br/> Thursday, 12 March 10:30 – 16:30, </br> Want to learn more about our HPE DEV Program?  This is the place! Take a moment to find out about what it can bring you and your customers!"
   },
   {
     "id": "18623_9256",
     "session_id": "HSW8623",
     "title": "Hack Shack workshop: Learn about our most popular open source library, Grommet, a class-leading, React-based UI/UX framework",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/hpe-dev-grommet-gremlin-rockin-static.svg",
-    "content": "All Day Hack Shack Code Challenge: Whenever the coding spot is available! Welcome to the Hack Shack Challenge for TSS 2020! The idea is to have you respond to a challenge by writing a piece of Python code. The environment is the following:"
+    "content": "All Day Hack Shack Code Challenge: Whenever the coding spot is available! Welcome to the Hack Shack Challenge for TSS 2020! The idea is to have you respond to a challenge by writing a piece of Python code. The environment is the following: </br> -RaspberryPi </br> 3B-Raspian </br> -Python 3 </br> -Nano or vi for editing files </br> -Kano USB motion detector </br> </br> -Internet access Instructions: </br> 1. Test sample code with gesture control </br> 2. Open sample code </br> 3. Save it under your name </br> 4. Write a program that uses gesture to control anything you’d like.</br> 5.You have 45mn! </br> </br> Most creative work will win a prize. Winner announced on Friday morning. </br> All Day Hack Shack Games </br> Whenever the gaming spot is available! </br> Need a break ? Come and try to become a high Score gamer to win a prize!"
   }
 ]
