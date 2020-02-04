@@ -86,23 +86,21 @@ export default class LandingPage extends Component {
     return (
       <Grommet theme={theme}>
         <Header />
-        <Box
-          pad={{ top: "xsmall", bottom: "medium" }}
-          margin="medium"
-          direction="row"
-          align="center"
-          justify="between"
-          responsive={false}
-        >
-          <Box alignSelf="center" direction="row-responsive">
-            <Heading margin="xsmall" size="large">
-              <strong> Sessions </strong>
-            </Heading>
-          </Box>
-          <Box alignSelf="end" direction="row-responsive" />
-          <Image src="../img/hpedevQRCode.png" alt="QR Code"></Image>
-        </Box>
         <Box margin="medium" pad="medium">
+          <Box
+            direction="row"
+            align="center"
+            justify="between"
+            responsive={false}
+          >
+            <Box alignSelf="center" direction="row-responsive">
+              <Heading margin="xsmall" size="large">
+                <strong> Sessions </strong>
+              </Heading>
+            </Box>
+            <Box alignSelf="end" direction="row-responsive" />
+            <Image src="../img/hpedevQRCode.png" alt="QR Code"></Image>
+          </Box>
           <Tabs flex="grow" justify="start">
             <Tab
               title={
