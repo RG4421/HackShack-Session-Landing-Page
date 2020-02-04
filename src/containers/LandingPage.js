@@ -1,6 +1,6 @@
 /* (C) Copyright 2019 Hewlett Packard Enterprise Development LP. */
 import React, { Component } from "react";
-import { Grommet, Heading, Box, Tabs, Tab, Text } from "grommet";
+import { Grommet, Heading, Box, Tabs, Tab, Text, Image } from "grommet";
 import theme from "./theme";
 import Header from "../components/Header";
 import TabLayout from "../components/CardLayout/index";
@@ -86,10 +86,23 @@ export default class LandingPage extends Component {
     return (
       <Grommet theme={theme}>
         <Header />
+        <Box
+          pad={{ top: "xsmall", bottom: "medium" }}
+          margin="medium"
+          direction="row"
+          align="center"
+          justify="between"
+          responsive={false}
+        >
+          <Box alignSelf="center" direction="row-responsive">
+            <Heading margin="xsmall" size="large">
+              <strong> Sessions </strong>
+            </Heading>
+          </Box>
+          <Box alignSelf="end" direction="row-responsive" />
+          <Image src="../img/hpedevQRCode.png" alt="QR Code"></Image>
+        </Box>
         <Box margin="medium" pad="medium">
-          <Heading margin="xsmall" size="large">
-            <strong> Sessions </strong>
-          </Heading>
           <Tabs flex="grow" justify="start">
             <Tab
               title={
