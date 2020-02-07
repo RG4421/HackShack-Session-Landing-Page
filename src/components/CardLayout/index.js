@@ -27,6 +27,7 @@ export const CardLayout = ({
   pageLink,
   presenter,
   content,
+  ListOfTimes,
   presenterLink,
   videoLink,
   date,
@@ -70,6 +71,13 @@ export const CardLayout = ({
           <Moment format="h:mm a" date={timeEnd} />
         </StyledHeading2>
       )}
+        <StyledHeading2
+          level="2"
+          size="medium"
+          margin={{
+            vertical: "none"
+          }}
+          dangerouslySetInnerHTML={{ __html: ListOfTimes }}/>
       <StyledAnchor
         target="_blank"
         size="large"

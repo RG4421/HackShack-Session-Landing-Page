@@ -184,6 +184,7 @@ export default class LandingPage extends Component {
               pageLink,
               presenter,
               content,
+              ListOfTimes,
               presentationlink,
               videoLink,
               image,
@@ -200,6 +201,7 @@ export default class LandingPage extends Component {
                 pageLink={pageLink}
                 presenter={presenter}
                 content={content}
+                ListOfTimes={ListOfTimes}
                 presenterLink={presentationlink}
                 videoLink={videoLink}
                 date={datetimeStart}
