@@ -6,7 +6,7 @@
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/hpe-dev-nimble-section.svg",
     "datetimeStart": "2020-03-09T13:30:00.000Z",
     "datetimeEnd": "2020-03-09T14:20:00.000Z",
-    "ListOfTimes":"Monday, 5:00 pm – 5:50 pm </br> Monday, 6:00 pm – 6:50 pm",
+    "ListOfTimes":"Monday, 4:00 pm – 4:50 pm </br> Monday, 5:00 pm – 5:50 pm",
     "presenter": "Didier Lalli, Frederic Passeron, Denis Choukroun",
     "content": "The world has become significantly more software-centric, with software applications an integral piece of everyone's business. The HPE DEV Community, originally launched by HPE in 2017, is a program aimed at growing a community of developers focused on designing the best possible software experiences using open source and HPE products. Promoting API integration, open source projects like Grommet, and the newly announced HPE Container Platform, HPE DEV helps developers build and improve automation, service delivery, and workflows across HPE's product line. Come and learn how the HPE Developer Community Program can help you and your customers."
   },
@@ -78,7 +78,7 @@
     "datetimeStart": "2020-03-11T12:00:00.000Z",
     "datetimeEnd": "2020-03-11T14:00:00.000Z",
     "presenter": "Chris Crawford",
-    "content": "Gartner predicts that 75% of organizations will be using containers in production by 2022.  Your customers are either planning their container strategy or actively executing it! </br> In this Hack Shack, you will get hands-on with containers by learning how easy it is to deploy applications in the HPECP.   We will build a container, deploy it to the HPECP, launch it, and then enable the features of containers which make them so great such as scaling, resiliency, and portability. </br> We will also spend time working with our differentiators in the market such as: Container Migration, KubeDirector, MapR and ML OPS. </br> While not required, familiarity with Linux, the Linux command line shell (bash or similar), SSH, Docker, Kubernetes, and basic networking concepts is a plus!"
+    "content": "Gartner predicts that 75% of organizations will be using containers in production by 2022.  Your customers are either planning their container strategy or actively executing it! </br> In this Hack Shack, you will get hands-on with containers by learning how easy it is to deploy applications in the HPECP.   We will build a container, deploy it to the HPECP, launch it, and then enable the features of containers which make them so great such as scaling, resiliency, and portability. </br> We will also spend time working with our differentiators in the market such as: Container Migration, MapR and ML OPS. </br> While not required, familiarity with Linux, the Linux command line shell (bash or similar), SSH, Docker, Kubernetes, and basic networking concepts is a plus!"
   },
   {
     "id": "19834_9253",
@@ -164,14 +164,14 @@
     "id": "18596_9138",
     "title": "All Day Hack Shack Desk: Presales Suite Opening Hours",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/HPEDesignlines.png",
-    "ListOfTimes":"Monday, 9 March 3:30pm – 9:00,<br/> Tuesday, 10 March 4:30pm – 7:30, <br/> Wednesday, 11 March 3:30pm – 8:00, <br/> Thursday, 12 March 10:30am – 4:30pm",
+    "ListOfTimes":"Monday, 9 March 2:30pm – 8:00pm,<br/> Tuesday, 10 March 3:30pm – 6:30pm, <br/> Wednesday, 11 March 2:00pm – 7:00pm, <br/> Thursday, 12 March 10:30am – 4:30pm <br/> Friday, 13 March Closed",
     "content": "Want to learn more about our HPE DEV Program? </br>  This is the place! Take a moment to find out about what it can bring you and your customers !"
   },
   {
     "id": "18623_9256",
     "title": "All Day Hack Shack Code Challenge:",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/hpe-dev-grommet-gremlin-rockin-static.svg",
-    "content": "Whenever the coding spot is available! </br> Welcome to the Hack Shack Challenge for TSS 2020! </br> The idea is to have you respond to a challenge by writing a piece of Python code. The environment is the following: </br></br> - RaspberryPi 3B running Raspian </br> - Python 3 </br> - Nano or vi for editing files </br> - Kano USB motion detector </br> - Internet access </br></br> Instructions: </br> 1. Test sample code with gesture control </br> 2. Open sample code </br> 3. Save it under your name </br> 4. Write a program that uses gesture to control anything you'd like.</br> 5.You have 45mn! </br> </br> Most creative work will win a prize. Winner announced on Friday morning. </br> All Day Hack Shack Games </br> Whenever the gaming spot is available!"
+    "content": "Whenever the coding spot is available! </br> Welcome to the Hack Shack Challenge for TSS 2020! </br> The idea is to have you respond to a challenge by writing a piece of Python code. The environment is the following: </br></br> - RaspberryPi 3B running Raspian </br> - Python 3 </br> - Nano or vi for editing files </br> - Kano USB motion detector </br> - Internet access </br></br> Instructions: </br> 1. Test sample code with gesture control </br> 2. Open sample code </br> 3. Save it under your name </br> 4. Write a program that uses gesture to control anything you'd like.</br> 5.You have 45mn! </br> </br> Most creative work will win a prize. Winner announced on Friday morning."
   },
   {
     "id": "18623_9206",
