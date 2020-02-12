@@ -179,6 +179,7 @@ export default class LandingPage extends Component {
           {this.state.sessions.map(
             ({
               id,
+              session_id,
               title,
               page,
               pageLink,
@@ -194,6 +195,7 @@ export default class LandingPage extends Component {
             }) => (
               <TabLayout
                 id={hash_link}
+                session_id={session_id}
                 key={id}
                 image={image === "" ? defaultImage : image}
                 title={title}

@@ -21,6 +21,7 @@ const handleClick = (action, label) => {
 
 export const CardLayout = ({
   id,
+  session_id,
   image,
   title,
   page,
@@ -56,6 +57,11 @@ export const CardLayout = ({
       <StyledHeading margin="none" size="small">
         {title}
       </StyledHeading>
+      {session_id === undefined ? null : (
+      <StyledHeading2 margin={{top: 'small'}} size="small">
+       Session: {session_id}
+      </StyledHeading2>
+      )}
       {timeStart === undefined ? null : (
         <StyledHeading2
           level="2"
