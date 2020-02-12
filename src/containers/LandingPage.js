@@ -23,7 +23,7 @@ export default class LandingPage extends Component {
     let gaDebug;
 
     if (process.env.NODE_ENV === "production") {
-      gtagId = "UA-108944070-3";
+      gtagId = "UA-108944070-4";
       gaDebug = false;
     } else if (process.env.NODE_ENV === "development") {
       gtagId = "UA-NNNNNN-N";
@@ -171,7 +171,7 @@ export default class LandingPage extends Component {
                   color={selected === undefined ? "dark-3" : "brand"}
                   size="large"
                 >
-                  All-Day Challenges
+                  Garden
                 </Text>
               }
             />
