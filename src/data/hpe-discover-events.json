@@ -1,6 +1,6 @@
 [
   {
-    "id": "IHS1, IHS2, IHS3",
+    "id": "18626_8960",
     "session_id": "IHS1, IHS2, IHS3 (50 Minutes)",
     "title": "HPE Developer Community Program – Why you should care? (Though we know you don’t)",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/hpe-dev-nimble-section.svg",
@@ -174,7 +174,7 @@
     "content": "Whenever the coding spot is available! </br> Welcome to the Hack Shack Challenge for TSS 2020! </br> The idea is to have you respond to a challenge by writing a piece of Python code. The environment is the following: </br></br> - RaspberryPi 3B running Raspian </br> - Python 3 </br> - Nano or vi for editing files </br> - Kano USB motion detector </br> - Internet access </br></br> Instructions: </br> 1. Test sample code with gesture control </br> 2. Open sample code </br> 3. Save it under your name </br> 4. Write a program that uses gesture to control anything you'd like.</br> 5.You have 45mn! </br> </br> Most creative work will win a prize. Winner announced on Friday morning. </br> All Day Hack Shack Games </br> Whenever the gaming spot is available!"
   },
   {
-    "id": "18623_9256",
+    "id": "18623_9206",
     "title": "All Day Hack Shack Games:",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/hpe-dev-grommet-gremlin-rockin-static.svg",
     "content": "Whenever the gaming spot is available! </br> Need a break ? Come and try to become a high Scorer  on the Hack Shack Attack game to win a prize!"
