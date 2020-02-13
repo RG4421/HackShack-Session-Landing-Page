@@ -75,8 +75,8 @@
     "session_id": "OLH10 (120 Minutes)",
     "title": "Hackshack Open Lab: HPE Container Platform: (Not AI oriented here)",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/hpe-oneview-artwork-03-1528747183245.png",
-    "datetimeStart": "2020-03-11T12:00:00.000Z",
-    "datetimeEnd": "2020-03-11T14:00:00.000Z",
+    "datetimeStart": "2020-03-11T14:00:00.000Z",
+    "datetimeEnd": "2020-03-11T16:00:00.000Z",
     "presenter": "Chris Crawford",
     "content": "Gartner predicts that 75% of organizations will be using containers in production by 2022.  Your customers are either planning their container strategy or actively executing it! </br> In this Hack Shack, you will get hands-on with containers by learning how easy it is to deploy applications in the HPECP.   We will build a container, deploy it to the HPECP, launch it, and then enable the features of containers which make them so great such as scaling, resiliency, and portability. </br> We will also spend time working with our differentiators in the market such as: Container Migration, MapR and ML OPS. </br> While not required, familiarity with Linux, the Linux command line shell (bash or similar), SSH, Docker, Kubernetes, and basic networking concepts is a plus!"
   },
