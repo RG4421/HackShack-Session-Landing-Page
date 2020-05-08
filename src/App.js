@@ -1,18 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import LandingPage from './containers/LandingPage.js';
 import HackShackCarousel from './containers/HackShackCarousel.js';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      initDayFilter: window.location.hash ? 'all' : 9,
-    };
-  }
+const App = props => {
+  const initDayFilter = window.location.hash ? 'all' : 9;
 
-  hashLinkScroll = () => {
+  const hashLinkScroll = () => {
     const { hash } = window.location;
     if (hash !== '') {
       setTimeout(() => {
@@ -23,20 +18,16 @@ class App extends Component {
     }
   };
 
-  render() {
-    return (
-      <BrowserRouter onUpdate={this.hashLinkScroll()}>
-        <Route
-          exact
-          path="/"
-          render={props => (
-            <LandingPage {...props} day={this.state.initDayFilter} />
-          )}
-        />
-        <Route exact path="/hackshack" component={HackShackCarousel} />
-      </BrowserRouter>
-    );
-  }
-}
+  return (
+    <BrowserRouter onUpdate={hashLinkScroll()}>
+      <Route
+        exact
+        path="/"
+        render={props => <LandingPage {...props} day={initDayFilter} />}
+      />
+      <Route exact path="/hackshack" component={HackShackCarousel} />
+    </BrowserRouter>
+  );
+};
 
 export default App;
