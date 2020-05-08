@@ -1,22 +1,22 @@
-import React, { Component } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-import "./App.css";
-import LandingPage from "./containers/LandingPage.js";
-import HackShackCarousel from "./containers/HackShackCarousel.js";
+import React, { Component } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+import './App.css';
+import LandingPage from './containers/LandingPage.js';
+import HackShackCarousel from './containers/HackShackCarousel.js';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      initDayFilter: window.location.hash ? "all" : 9
+      initDayFilter: window.location.hash ? 'all' : 9,
     };
   }
 
   hashLinkScroll = () => {
     const { hash } = window.location;
-    if (hash !== "") {
+    if (hash !== '') {
       setTimeout(() => {
-        const id = hash.replace("#", "");
+        const id = hash.replace('#', '');
         const el = document.getElementById(id);
         if (el) el.scrollIntoView();
       }, 500);

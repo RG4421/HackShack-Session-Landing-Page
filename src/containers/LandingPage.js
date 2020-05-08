@@ -1,12 +1,12 @@
 /* (C) Copyright 2019 Hewlett Packard Enterprise Development LP. */
-import React, { Component } from "react";
-import { Grommet, Heading, Box, Tabs, Tab, Text, Image } from "grommet";
-import { hpe } from "grommet-theme-hpe";
-import Header from "../components/Header";
-import TabLayout from "../components/CardLayout/index";
-import eventSchedule from "../data/hpe-discover-events.json";
-import ReactGA from "react-ga";
-import { throwError } from "rxjs";
+import React, { Component } from 'react';
+import { Grommet, Heading, Box, Tabs, Tab, Text, Image } from 'grommet';
+import { hpe } from 'grommet-theme-hpe';
+import Header from '../components/Header';
+import TabLayout from '../components/CardLayout/index';
+import eventSchedule from '../data/hpe-discover-events.json';
+import ReactGA from 'react-ga';
+import { throwError } from 'rxjs';
 
 export default class LandingPage extends Component {
   constructor(props) {
@@ -22,21 +22,21 @@ export default class LandingPage extends Component {
     let gtagId;
     let gaDebug;
 
-    if (process.env.NODE_ENV === "production") {
-      gtagId = "UA-108944070-4";
+    if (process.env.NODE_ENV === 'production') {
+      gtagId = 'UA-108944070-4';
       gaDebug = false;
-    } else if (process.env.NODE_ENV === "development") {
-      gtagId = "UA-NNNNNN-N";
+    } else if (process.env.NODE_ENV === 'development') {
+      gtagId = 'UA-NNNNNN-N';
       gaDebug = false;
     } else {
       throwError(
         "NODE_ENV not set to 'production' nor 'development'." +
-          "Google Analytics tracking will not be initialized."
+          'Google Analytics tracking will not be initialized.',
       );
     }
 
     window.onload = () => {
-      if (typeof window !== "undefined") {
+      if (typeof window !== 'undefined') {
         ReactGA.initialize(gtagId, {
           debug: gaDebug,
         });
@@ -49,10 +49,10 @@ export default class LandingPage extends Component {
 
   filterSessions(sessions, day) {
     return sessions
-      .filter((session) => {
+      .filter(session => {
         if (day === undefined) {
           return session.datetimeStart === undefined;
-        } else if (day === "all") {
+        } else if (day === 'all') {
           return session;
         } else {
           return new Date(session.datetimeStart).getDate() === day;
@@ -74,15 +74,15 @@ export default class LandingPage extends Component {
     let sessions = this.filterSessions(eventSchedule, selected);
     this.setState({ sessions });
     ReactGA.event({
-      category: "Sessions Navigation",
-      action: "Click",
+      category: 'Sessions Navigation',
+      action: 'Click',
       label: event.target.innerText,
     });
   }
 
   render() {
     const { selected } = this.state;
-    const defaultImage = "../img/defaultImage.png";
+    const defaultImage = '../img/defaultImage.png';
     return (
       <Grommet theme={hpe}>
         <Header />
@@ -99,11 +99,11 @@ export default class LandingPage extends Component {
             <Tab
               title={
                 <Text
-                  onClick={(e) => {
+                  onClick={e => {
                     e.preventDefault();
                     this.onClick(9, e);
                   }}
-                  color={selected === 9 ? "dark-3" : "brand"}
+                  color={selected === 9 ? 'dark-3' : 'brand'}
                   size="large"
                 >
                   Day 1
@@ -113,11 +113,11 @@ export default class LandingPage extends Component {
             <Tab
               title={
                 <Text
-                  onClick={(e) => {
+                  onClick={e => {
                     e.preventDefault();
                     this.onClick(10, e);
                   }}
-                  color={selected === 10 ? "dark-3" : "brand"}
+                  color={selected === 10 ? 'dark-3' : 'brand'}
                   size="large"
                 >
                   Day 2
@@ -127,11 +127,11 @@ export default class LandingPage extends Component {
             <Tab
               title={
                 <Text
-                  onClick={(e) => {
+                  onClick={e => {
                     e.preventDefault();
                     this.onClick(11, e);
                   }}
-                  color={selected === 11 ? "dark-3" : "brand"}
+                  color={selected === 11 ? 'dark-3' : 'brand'}
                   size="large"
                 >
                   Day 3
@@ -141,11 +141,11 @@ export default class LandingPage extends Component {
             <Tab
               title={
                 <Text
-                  onClick={(e) => {
+                  onClick={e => {
                     e.preventDefault();
                     this.onClick(12, e);
                   }}
-                  color={selected === 12 ? "dark-3" : "brand"}
+                  color={selected === 12 ? 'dark-3' : 'brand'}
                   size="large"
                 >
                   Day 4
@@ -155,11 +155,11 @@ export default class LandingPage extends Component {
             <Tab
               title={
                 <Text
-                  onClick={(e) => {
+                  onClick={e => {
                     e.preventDefault();
                     this.onClick(13, e);
                   }}
-                  color={selected === 13 ? "dark-3" : "brand"}
+                  color={selected === 13 ? 'dark-3' : 'brand'}
                   size="large"
                 >
                   Day 5
@@ -169,11 +169,11 @@ export default class LandingPage extends Component {
             <Tab
               title={
                 <Text
-                  onClick={(e) => {
+                  onClick={e => {
                     e.preventDefault();
                     this.onClick(undefined, e);
                   }}
-                  color={selected === undefined ? "dark-3" : "brand"}
+                  color={selected === undefined ? 'dark-3' : 'brand'}
                   size="large"
                 >
                   Garden
@@ -202,7 +202,7 @@ export default class LandingPage extends Component {
                 id={hash_link}
                 session_id={session_id}
                 key={id}
-                image={image === "" ? defaultImage : image}
+                image={image === '' ? defaultImage : image}
                 title={title}
                 page={page}
                 pageLink={pageLink}
@@ -215,7 +215,7 @@ export default class LandingPage extends Component {
                 timeStart={datetimeStart}
                 timeEnd={datetimeEnd}
               />
-            )
+            ),
           )}
         </Box>
       </Grommet>

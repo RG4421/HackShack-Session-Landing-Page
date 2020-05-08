@@ -1,6 +1,6 @@
 /* (C) Copyright 2019 Hewlett Packard Enterprise Development LP. */
-import styled from "styled-components";
-import { Anchor, Heading, Paragraph } from "grommet";
+import styled from 'styled-components';
+import { Anchor, Heading, Paragraph } from 'grommet';
 
 export const StyledAnchor = styled(Anchor)`
   font-weight: 800;

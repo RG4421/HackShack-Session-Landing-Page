@@ -1,14 +1,14 @@
 /* (C) Copyright 2019 Hewlett Packard Enterprise Development LP. */
-import React, { useState, useEffect } from "react";
-import { Box, Text } from "grommet";
-import { StyledImage } from "../components/Shared/style";
-import { SessionsLayout } from "../components/Sessions/style";
-import sessionData from "../data/hpe-discover-events.json";
-import Moment from "react-moment";
+import React, { useState, useEffect } from 'react';
+import { Box, Text } from 'grommet';
+import { StyledImage } from '../components/Shared/style';
+import { SessionsLayout } from '../components/Sessions/style';
+import sessionData from '../data/hpe-discover-events.json';
+import Moment from 'react-moment';
 
 const Sessions = () => {
   const [sessions, setSessions] = useState([]);
-  const [isLoaded, setIsLoaded] = useState("");
+  const [isLoaded, setIsLoaded] = useState('');
 
   useEffect(() => {
     const onMount = () => {
@@ -46,16 +46,16 @@ const Sessions = () => {
           background="dark-1"
           direction="column"
           pad={{
-            top: "none",
-            bottom: "large",
-            left: "large",
-            right: "large"
+            top: 'none',
+            bottom: 'large',
+            left: 'large',
+            right: 'large',
           }}
         >
           <Box className="inner">
             {/* Sessions title image and text */}
             <Box
-              margin={{ bottom: "large" }}
+              margin={{ bottom: 'large' }}
               className="sessions-title"
               align="center"
             >
@@ -66,7 +66,7 @@ const Sessions = () => {
             {/* Upcoming sessions */}
             <Box align="start" className="upcoming-sessions-container">
               <Text
-                margin={{ top: "large", bottom: "xlarge" }}
+                margin={{ top: 'large', bottom: 'xlarge' }}
                 className="upcoming-sessions-title"
               >
                 Upcoming Sessions
@@ -97,7 +97,7 @@ const Sessions = () => {
                         background="dark-2"
                         fill="horizontal"
                         height="1px"
-                        margin={{ top: "large", bottom: "large" }}
+                        margin={{ top: 'large', bottom: 'large' }}
                       />
                     </Box>
                   );

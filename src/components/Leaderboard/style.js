@@ -22,9 +22,9 @@ export const LeaderboardLayout = styled(Box)`
     max-width: 1080px;
   }
   .highscore-title {
-    font-family: "ArcadeClassic";
+    font-family: 'ArcadeClassic';
     font-size: 100px;
-    text-shadow: 4px 4px #E08328;
+    text-shadow: 4px 4px #e08328;
     @media (orientation: landscape) {
       font-size: 60px;
     }
@@ -37,7 +37,7 @@ export const LeaderboardLayout = styled(Box)`
     }
   }
   .highscore-text {
-    font-family: "ArcadeClassic";
+    font-family: 'ArcadeClassic';
     font-size: 50px;
     @media (orientation: landscape) {
       font-size: 35px;

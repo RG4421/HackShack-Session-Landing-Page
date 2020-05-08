@@ -6,7 +6,7 @@
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/hpe-dev-nimble-section.svg",
     "datetimeStart": "2020-03-09T13:30:00.000Z",
     "datetimeEnd": "2020-03-09T14:20:00.000Z",
-    "ListOfTimes":"Monday, 4:00 pm – 4:50 pm </br> Monday, 5:00 pm – 5:50 pm",
+    "ListOfTimes": "Monday, 4:00 pm – 4:50 pm </br> Monday, 5:00 pm – 5:50 pm",
     "presenter": "Didier Lalli, Frederic Passeron, Denis Choukroun",
     "content": "The world has become significantly more software-centric, with software applications an integral piece of everyone's business. The HPE DEV Community, originally launched by HPE in 2017, is a program aimed at growing a community of developers focused on designing the best possible software experiences using open source and HPE products. Promoting API integration, open source projects like Grommet, and the newly announced HPE Container Platform, HPE DEV helps developers build and improve automation, service delivery, and workflows across HPE's product line. Come and learn how the HPE Developer Community Program can help you and your customers."
   },
@@ -164,7 +164,7 @@
     "id": "18596_9138",
     "title": "All Day Hack Shack Desk: Presales Suite Opening Hours",
     "image": "https://hpe-developer-portal.s3.amazonaws.com/discover-lv19/img/HPEDesignlines.png",
-    "ListOfTimes":"Monday, 9 March 2:30pm – 8:00pm,<br/> Tuesday, 10 March 3:30pm – 6:30pm, <br/> Wednesday, 11 March 2:00pm – 7:00pm, <br/> Thursday, 12 March 10:30am – 4:30pm <br/> Friday, 13 March Closed",
+    "ListOfTimes": "Monday, 9 March 2:30pm – 8:00pm,<br/> Tuesday, 10 March 3:30pm – 6:30pm, <br/> Wednesday, 11 March 2:00pm – 7:00pm, <br/> Thursday, 12 March 10:30am – 4:30pm <br/> Friday, 13 March Closed",
     "content": "Want to learn more about our HPE DEV Program? </br>  This is the place! Take a moment to find out about what it can bring you and your customers !"
   },
   {

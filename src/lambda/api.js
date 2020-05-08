@@ -1,9 +1,11 @@
 // DB connection
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/default', { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/default', {
+  useNewUrlParser: true,
+});
 
-const express = require("express");
-const cors = require('cors')
+const express = require('express');
+const cors = require('cors');
 
 // var path = require('path');
 const serverless = require('serverless-http');
@@ -15,16 +17,16 @@ const app = express();
 const router = express.Router();
 
 const userSchema = mongoose.Schema({
-  name: {type: String, required: true},
-  email: {type: String},
-  initials: {type: String, required: true},
-  score: {type: Number, required: true},
+  name: { type: String, required: true },
+  email: { type: String },
+  initials: { type: String, required: true },
+  score: { type: Number, required: true },
 });
 
 const User = mongoose.model('User', userSchema);
 
 app.use(express.json());
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 router.get('/ping', (req, res) => {
@@ -36,12 +38,12 @@ router.get('/', (req, res) => {
 });
 
 // Get users record
-router.get('/user/leaderboard', (req,res) => {
+router.get('/user/leaderboard', (req, res) => {
   User.find()
-    .then( users => res.send(users))
-    .catch( err => {
-      res.send(err); 
-    }); 
+    .then(users => res.send(users))
+    .catch(err => {
+      res.send(err);
+    });
 });
 
 // Create User
@@ -70,7 +72,6 @@ router.post('/users/delete', (req, res) => {
 
 // Model routes
 app.use(`/.netlify/functions/api`, router);
-
 
 module.exports = app;
 
