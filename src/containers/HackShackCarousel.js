@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { Grommet, Carousel, Box } from 'grommet';
 import { hpe } from 'grommet-theme-hpe';
 import Leaderboard from './Leaderboard.js';
-import Sessions from './Sessions.js';
 import { StyledCard } from '../components/Shared/style';
 
 export default class HackShackCarousel extends Component {
@@ -22,19 +21,7 @@ export default class HackShackCarousel extends Component {
       <Box align="center">
         {isLoaded && (
           <Grommet full theme={hpe}>
-            <Carousel play={10000}>
-              <Leaderboard />
-              <Sessions />
-              <Box align="center" background="dark-1">
-                <StyledCard src="../img/hpedevcard.png" />
-              </Box>
-              <Box align="center" background="accent-5">
-                <StyledCard src="../img/hpedesigncard.png" />
-              </Box>
-              <Box align="center" background="accent-6">
-                <StyledCard src="./img/gremlincard.png" />
-              </Box>
-            </Carousel>
+            <Leaderboard />
           </Grommet>
         )}
       </Box>
