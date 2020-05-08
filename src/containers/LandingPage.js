@@ -84,7 +84,7 @@ export default class LandingPage extends Component {
     const { selected } = this.state;
     const defaultImage = '../img/defaultImage.png';
     return (
-      <Grommet theme={hpe}>
+      <Grommet theme={hpe} themeMode="dark">
         <Header />
         <Box margin="medium" pad="medium">
           <Box direction="row-responsive">
