@@ -1,7 +1,7 @@
 /* (C) Copyright 2019 Hewlett Packard Enterprise Development LP. */
 import React, { Component } from "react";
 import { Grommet, Heading, Box, Tabs, Tab, Text, Image } from "grommet";
-import theme from "./theme";
+import { hpe } from "grommet-theme-hpe";
 import Header from "../components/Header";
 import TabLayout from "../components/CardLayout/index";
 import eventSchedule from "../data/hpe-discover-events.json";
@@ -13,7 +13,7 @@ export default class LandingPage extends Component {
     super(props);
     this.state = {
       selected: this.props.day || 18,
-      sessions: this.filterSessions(eventSchedule, this.props.day || 18)
+      sessions: this.filterSessions(eventSchedule, this.props.day || 18),
     };
     this.onClick = this.onClick.bind(this);
   }
@@ -38,7 +38,7 @@ export default class LandingPage extends Component {
     window.onload = () => {
       if (typeof window !== "undefined") {
         ReactGA.initialize(gtagId, {
-          debug: gaDebug
+          debug: gaDebug,
         });
         const { location } = window;
         ReactGA.set({ page: location.pathname });
@@ -49,7 +49,7 @@ export default class LandingPage extends Component {
 
   filterSessions(sessions, day) {
     return sessions
-      .filter(session => {
+      .filter((session) => {
         if (day === undefined) {
           return session.datetimeStart === undefined;
         } else if (day === "all") {
@@ -76,7 +76,7 @@ export default class LandingPage extends Component {
     ReactGA.event({
       category: "Sessions Navigation",
       action: "Click",
-      label: event.target.innerText
+      label: event.target.innerText,
     });
   }
 
@@ -84,22 +84,22 @@ export default class LandingPage extends Component {
     const { selected } = this.state;
     const defaultImage = "../img/defaultImage.png";
     return (
-      <Grommet theme={theme}>
+      <Grommet theme={hpe}>
         <Header />
         <Box margin="medium" pad="medium">
           <Box direction="row-responsive">
-          <Box width="xsmall" height="xsmall">
-          <Image src="/img/hpedevQRCode.png" alt="HPE DEV QR Code"></Image>
-          </Box>
-          <Heading margin="xsmall" size="large">
-            <strong> Sessions </strong>
-          </Heading>
+            <Box width="xsmall" height="xsmall">
+              <Image src="/img/hpedevQRCode.png" alt="HPE DEV QR Code"></Image>
+            </Box>
+            <Heading margin="xsmall" size="large">
+              <strong> Sessions </strong>
+            </Heading>
           </Box>
           <Tabs flex="grow" justify="start">
             <Tab
               title={
                 <Text
-                  onClick={e => {
+                  onClick={(e) => {
                     e.preventDefault();
                     this.onClick(9, e);
                   }}
@@ -113,7 +113,7 @@ export default class LandingPage extends Component {
             <Tab
               title={
                 <Text
-                  onClick={e => {
+                  onClick={(e) => {
                     e.preventDefault();
                     this.onClick(10, e);
                   }}
@@ -127,7 +127,7 @@ export default class LandingPage extends Component {
             <Tab
               title={
                 <Text
-                  onClick={e => {
+                  onClick={(e) => {
                     e.preventDefault();
                     this.onClick(11, e);
                   }}
@@ -141,7 +141,7 @@ export default class LandingPage extends Component {
             <Tab
               title={
                 <Text
-                  onClick={e => {
+                  onClick={(e) => {
                     e.preventDefault();
                     this.onClick(12, e);
                   }}
@@ -155,7 +155,7 @@ export default class LandingPage extends Component {
             <Tab
               title={
                 <Text
-                  onClick={e => {
+                  onClick={(e) => {
                     e.preventDefault();
                     this.onClick(13, e);
                   }}
@@ -169,7 +169,7 @@ export default class LandingPage extends Component {
             <Tab
               title={
                 <Text
-                  onClick={e => {
+                  onClick={(e) => {
                     e.preventDefault();
                     this.onClick(undefined, e);
                   }}
@@ -196,7 +196,7 @@ export default class LandingPage extends Component {
               image,
               datetimeStart,
               datetimeEnd,
-              hash_link
+              hash_link,
             }) => (
               <TabLayout
                 id={hash_link}

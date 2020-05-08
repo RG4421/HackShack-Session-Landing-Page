@@ -1,10 +1,10 @@
 /* (C) Copyright 2019 Hewlett Packard Enterprise Development LP. */
-import React , { Component }from 'react';
-import { Grommet, Carousel, Box } from 'grommet';
-import theme from './theme';
-import Leaderboard from './Leaderboard.js';
-import Sessions from './Sessions.js';
-import { StyledCard } from '../components/Shared/style';
+import React, { Component } from "react";
+import { Grommet, Carousel, Box } from "grommet";
+import { hpe } from "grommet-theme-hpe";
+import Leaderboard from "./Leaderboard.js";
+import Sessions from "./Sessions.js";
+import { StyledCard } from "../components/Shared/style";
 
 export default class HackShackCarousel extends Component {
   constructor(props) {
@@ -14,14 +14,14 @@ export default class HackShackCarousel extends Component {
     };
   }
   componentDidMount() {
-    this.setState({ isLoaded: true })
+    this.setState({ isLoaded: true });
   }
   render() {
-    const { isLoaded } = this.state; 
+    const { isLoaded } = this.state;
     return (
       <Box align="center">
-        { isLoaded && (
-          <Grommet full theme={theme}>
+        {isLoaded && (
+          <Grommet full theme={hpe}>
             <Carousel play={10000}>
               <Leaderboard />
               <Sessions />
