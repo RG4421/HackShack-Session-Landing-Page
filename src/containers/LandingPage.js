@@ -1,4 +1,4 @@
-/* (C) Copyright 2019 Hewlett Packard Enterprise Development LP. */
+/* (C) Copyright 2020 Hewlett Packard Enterprise Development LP. */
 import React, { Component } from 'react';
 import { Grommet, Heading, Box, Tabs, Tab, Text, Image } from 'grommet';
 import { hpe } from 'grommet-theme-hpe';

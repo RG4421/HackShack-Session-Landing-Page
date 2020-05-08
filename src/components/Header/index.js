@@ -1,4 +1,4 @@
-/* (C) Copyright 2019 Hewlett Packard Enterprise Development LP. */
+/* (C) Copyright 2020 Hewlett Packard Enterprise Development LP. */
 import React from 'react';
 import { Stack, Box, Image, Text } from 'grommet';
 import { ImageContainer, LogoButton, BrickWall } from './styles';
