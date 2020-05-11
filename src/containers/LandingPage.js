@@ -1,7 +1,6 @@
 /* (C) Copyright 2020 Hewlett Packard Enterprise Development LP. */
 import React, { useState, useEffect } from 'react';
-import { Grommet, Heading, Box, Tabs, Tab, Text, Image } from 'grommet';
-import { hpe } from 'grommet-theme-hpe';
+import { Heading, Box, Tabs, Tab, Text, Image } from 'grommet';
 import Header from '../components/Header';
 import TabLayout from '../components/CardLayout/index';
 import eventSchedule from '../data/hpe-discover-events.json';
@@ -77,7 +76,7 @@ const LandingPage = ({ day }) => {
   const defaultImage = '../img/defaultImage.png';
 
   return (
-    <Grommet theme={hpe} themeMode="dark">
+    <>
       <Header />
       <Box margin="medium" pad="medium">
         <Box direction="row-responsive">
@@ -211,7 +210,7 @@ const LandingPage = ({ day }) => {
           ),
         )}
       </Box>
-    </Grommet>
+    </>
   );
 };
 

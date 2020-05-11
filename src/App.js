@@ -1,8 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import { Grommet } from 'grommet';
+import { hpe } from 'grommet-theme-hpe';
 import './App.css';
-import LandingPage from './containers/LandingPage.js';
-import HackShackCarousel from './containers/HackShackCarousel.js';
+import LandingPage from './containers/LandingPage';
+import Leaderboard from './containers/Leaderboard';
 
 const App = props => {
   const initDayFilter = window.location.hash ? 'all' : 9;
@@ -19,14 +21,16 @@ const App = props => {
   };
 
   return (
-    <BrowserRouter onUpdate={hashLinkScroll()}>
-      <Route
-        exact
-        path="/"
-        render={props => <LandingPage {...props} day={initDayFilter} />}
-      />
-      <Route exact path="/hackshack" component={HackShackCarousel} />
-    </BrowserRouter>
+    <Grommet theme={hpe} themeMode="dark">
+      <BrowserRouter onUpdate={hashLinkScroll()}>
+        <Route
+          exact
+          path="/"
+          render={props => <LandingPage {...props} day={initDayFilter} />}
+        />
+        <Route exact path="/hackshack" component={Leaderboard} />
+      </BrowserRouter>
+    </Grommet>
   );
 };
 
