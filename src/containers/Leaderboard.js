@@ -5,7 +5,7 @@ import { Config } from '../config';
 import { StyledImage } from '../components/Shared/style';
 import { LeaderboardLayout } from '../components/Leaderboard/style';
 
-const Leaderboard = props => {
+const Leaderboard = () => {
   const [hiScores, setHiScores] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const ranks = [
@@ -44,8 +44,8 @@ const Leaderboard = props => {
             sortedHiScores.push({ score: '------', name: '------' });
           }
         }
-        const hiScores = sortedHiScores.slice(0, 10);
-        setHiScores(hiScores);
+        const hiScoresTop10 = sortedHiScores.slice(0, 10);
+        setHiScores(hiScoresTop10);
         setIsLoaded(true);
       })
       .catch(err => console.log(err));
