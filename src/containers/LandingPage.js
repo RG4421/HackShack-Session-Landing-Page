@@ -9,7 +9,7 @@ import { throwError } from 'rxjs';
 
 const filterSessions = (sessions, day) =>
   sessions
-    .filter(session => {
+    .filter((session) => {
       if (day === undefined) {
         return session.datetimeStart === undefined;
       } else if (day === 'all') {
@@ -91,7 +91,7 @@ const LandingPage = ({ day }) => {
           <Tab
             title={
               <Text
-                onClick={e => {
+                onClick={(e) => {
                   e.preventDefault();
                   onClick(9, e);
                 }}
@@ -105,7 +105,7 @@ const LandingPage = ({ day }) => {
           <Tab
             title={
               <Text
-                onClick={e => {
+                onClick={(e) => {
                   e.preventDefault();
                   onClick(10, e);
                 }}
@@ -119,7 +119,7 @@ const LandingPage = ({ day }) => {
           <Tab
             title={
               <Text
-                onClick={e => {
+                onClick={(e) => {
                   e.preventDefault();
                   onClick(11, e);
                 }}
@@ -133,7 +133,7 @@ const LandingPage = ({ day }) => {
           <Tab
             title={
               <Text
-                onClick={e => {
+                onClick={(e) => {
                   e.preventDefault();
                   onClick(12, e);
                 }}
@@ -147,7 +147,7 @@ const LandingPage = ({ day }) => {
           <Tab
             title={
               <Text
-                onClick={e => {
+                onClick={(e) => {
                   e.preventDefault();
                   onClick(13, e);
                 }}
@@ -161,7 +161,7 @@ const LandingPage = ({ day }) => {
           <Tab
             title={
               <Text
-                onClick={e => {
+                onClick={(e) => {
                   e.preventDefault();
                   onClick(undefined, e);
                 }}
