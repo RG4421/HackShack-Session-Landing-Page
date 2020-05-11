@@ -2,26 +2,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Box, Paragraph } from 'grommet';
+import Moment from 'react-moment';
+import ReactGA from 'react-ga';
 import {
   StyledAnchor,
   StyledHeading,
   StyledHeading2,
   StyledParagraph,
 } from './styles';
-import Moment from 'react-moment';
-import ReactGA from 'react-ga';
 
 const handleClick = (action, label) => {
   ReactGA.event({
     category: 'Session Detail',
-    action: action,
-    label: label,
+    action,
+    label,
   });
 };
 
 export const CardLayout = ({
   id,
-  session_id,
+  sessionId,
   image,
   title,
   page,
@@ -57,9 +57,9 @@ export const CardLayout = ({
       <StyledHeading margin="none" size="small">
         {title}
       </StyledHeading>
-      {session_id === undefined ? null : (
+      {sessionId === undefined ? null : (
         <StyledHeading2 margin={{ top: 'small' }} size="small">
-          Session: {session_id}
+          Session: {sessionId}
         </StyledHeading2>
       )}
       {timeStart === undefined ? null : (
@@ -140,6 +140,14 @@ export const CardLayout = ({
 );
 
 CardLayout.propTypes = {
+  id: PropTypes.string,
+  sessionId: PropTypes.string,
+  date: PropTypes.string,
+  timeStart: PropTypes.string,
+  timeEnd: PropTypes.string,
+  ListOfTimes: PropTypes.string,
+  pageLink: PropTypes.string,
+  presenterLink: PropTypes.string,
   image: PropTypes.string,
   title: PropTypes.string,
   page: PropTypes.string,

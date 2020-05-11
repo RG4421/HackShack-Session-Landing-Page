@@ -6,7 +6,7 @@ import './App.css';
 import LandingPage from './containers/LandingPage';
 import Leaderboard from './containers/Leaderboard';
 
-const App = props => {
+const App = () => {
   const initDayFilter = window.location.hash ? 'all' : 9;
 
   const hashLinkScroll = () => {

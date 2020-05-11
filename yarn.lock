@@ -1096,9 +1096,9 @@
     "@hapi/hoek" "^8.3.0"
 
 "@hpe/project-scripts@*":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@hpe/project-scripts/-/project-scripts-1.0.7.tgz#e51a8fac995e4bc4daa32b12175cd7f82c6811fa"
-  integrity sha512-caV8CampKqK0qrxUfZwktqPOWsVSyzDkm8DKlx0kJhtdtcNHSXcFOveXMpDdIdr8+D9MRi7WzgndxPu1BIhlew==
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@hpe/project-scripts/-/project-scripts-1.1.0.tgz#f0e2987132a21658d61358fb92461069a4bbd516"
+  integrity sha512-CrC081k1bXyxPl8y4QUbQS1Ja6EuA9cFv5JDfc+5qnlqONZB1MW2MDQ47c4kfmaH5KSc96Wz8K9nXh625wrlYQ==
   dependencies:
     babel-eslint "^10.1.0"
     eslint "^6.8.0"

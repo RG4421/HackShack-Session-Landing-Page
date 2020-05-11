@@ -1,31 +1,32 @@
 /* (C) Copyright 2020 Hewlett Packard Enterprise Development LP. */
 import React, { useState, useEffect } from 'react';
 import { Heading, Box, Tabs, Tab, Text, Image } from 'grommet';
+import PropTypes from 'prop-types';
+import ReactGA from 'react-ga';
+import { throwError } from 'rxjs';
 import Header from '../components/Header';
 import TabLayout from '../components/CardLayout/index';
 import eventSchedule from '../data/hpe-discover-events.json';
-import ReactGA from 'react-ga';
-import { throwError } from 'rxjs';
 
 const filterSessions = (sessions, day) =>
   sessions
     .filter((session) => {
       if (day === undefined) {
         return session.datetimeStart === undefined;
-      } else if (day === 'all') {
-        return session;
-      } else {
-        return new Date(session.datetimeStart).getDate() === day;
       }
+      if (day === 'all') {
+        return session;
+      }
+      return new Date(session.datetimeStart).getDate() === day;
     })
     .sort((a, b) => {
       if (a.datetimeStart < b.datetimeStart) {
         return -1;
-      } else if (a.datetimeStart > b.datetimeStart) {
-        return 1;
-      } else {
-        return 0;
       }
+      if (a.datetimeStart > b.datetimeStart) {
+        return 1;
+      }
+      return 0;
     });
 
 const LandingPage = ({ day }) => {
@@ -63,9 +64,9 @@ const LandingPage = ({ day }) => {
     };
   }, []);
 
-  const onClick = (selected, event) => {
-    setSelected(selected);
-    setSessions(filterSessions(eventSchedule, selected));
+  const onClick = (selectedIem, event) => {
+    setSelected(selectedIem);
+    setSessions(filterSessions(eventSchedule, selectedIem));
     ReactGA.event({
       category: 'Sessions Navigation',
       action: 'Click',
@@ -81,7 +82,7 @@ const LandingPage = ({ day }) => {
       <Box margin="medium" pad="medium">
         <Box direction="row-responsive">
           <Box width="xsmall" height="xsmall">
-            <Image src="/img/hpedevQRCode.png" alt="HPE DEV QR Code"></Image>
+            <Image src="/img/hpedevQRCode.png" alt="HPE DEV QR Code" />
           </Box>
           <Heading margin="xsmall" size="large">
             <strong> Sessions </strong>
@@ -176,7 +177,7 @@ const LandingPage = ({ day }) => {
         {sessions.map(
           ({
             id,
-            session_id,
+            sessionId,
             title,
             page,
             pageLink,
@@ -188,11 +189,11 @@ const LandingPage = ({ day }) => {
             image,
             datetimeStart,
             datetimeEnd,
-            hash_link,
+            hashLink,
           }) => (
             <TabLayout
-              id={hash_link}
-              session_id={session_id}
+              id={hashLink}
+              sessionId={sessionId}
               key={id}
               image={image === '' ? defaultImage : image}
               title={title}
@@ -212,6 +213,10 @@ const LandingPage = ({ day }) => {
       </Box>
     </>
   );
+};
+
+LandingPage.propTypes = {
+  day: PropTypes.number,
 };
 
 export default LandingPage;
