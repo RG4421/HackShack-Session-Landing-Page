@@ -1,9 +1,8 @@
 /* (C) Copyright 2020 Hewlett Packard Enterprise Development LP. */
 import React, { Component } from 'react';
-import { Grommet, Carousel, Box } from 'grommet';
+import { Grommet, Box } from 'grommet';
 import { hpe } from 'grommet-theme-hpe';
 import Leaderboard from './Leaderboard.js';
-import { StyledCard } from '../components/Shared/style';
 
 export default class HackShackCarousel extends Component {
   constructor(props) {
