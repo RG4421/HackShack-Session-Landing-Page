@@ -23,8 +23,17 @@ const App = () => {
 
   return (
     <Grommet theme={hpe} themeMode="dark">
-      <Box width="100vw" align="center">
-        <BrowserRouter onUpdate={hashLinkScroll()}>
+      <BrowserRouter onUpdate={hashLinkScroll()}>
+        <Box
+          background={{
+            image: 'url(/img/ezmeral-bg.png)', // swap BG based on route
+            size: 'cover',
+            opacity: 0.1,
+          }}
+          width="100vw"
+          height={{ min: '100vh', max: 'auto' }}
+          align="center"
+        >
           <Route
             exact
             path="/home-old"
@@ -37,8 +46,8 @@ const App = () => {
             render={props => <HomePage {...props} />}
           />
           <Route exact path="/hackshack" component={Leaderboard} />
-        </BrowserRouter>
-      </Box>
+        </Box>
+      </BrowserRouter>
     </Grommet>
   );
 };
