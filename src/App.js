@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import { Grommet } from 'grommet';
+import { Grommet, Box } from 'grommet';
 import { hpe } from 'grommet-theme-hpe';
 import './App.css';
 import LandingPage from './containers/LandingPage';
 import Leaderboard from './containers/Leaderboard';
+import HomePage from './pages/Home';
 
 const App = () => {
   const initDayFilter = window.location.hash ? 'all' : 9;
@@ -22,14 +23,22 @@ const App = () => {
 
   return (
     <Grommet theme={hpe} themeMode="dark">
-      <BrowserRouter onUpdate={hashLinkScroll()}>
-        <Route
-          exact
-          path="/"
-          render={props => <LandingPage {...props} day={initDayFilter} />}
-        />
-        <Route exact path="/hackshack" component={Leaderboard} />
-      </BrowserRouter>
+      <Box width="100vw" align="center">
+        <BrowserRouter onUpdate={hashLinkScroll()}>
+          <Route
+            exact
+            path="/home-old"
+            render={props => <LandingPage {...props} day={initDayFilter} />}
+          />
+          <Route exact path="/" render={props => <HomePage {...props} />} />
+          <Route
+            exact
+            path="/schedule"
+            render={props => <HomePage {...props} />}
+          />
+          <Route exact path="/hackshack" component={Leaderboard} />
+        </BrowserRouter>
+      </Box>
     </Grommet>
   );
 };
