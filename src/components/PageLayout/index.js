@@ -6,10 +6,14 @@ import SideNav from '../SideNav';
 const PageLayout = ({ children }) => {
   return (
     <Box width="100%" align="center" gap="large">
-      <Box pad="medium" background="background-front" width="full">
-        Top Nav
+      <Box
+        pad="medium"
+        background={{ color: 'brand', opacity: 0.2 }}
+        width="full"
+      >
+        HPE Discover
       </Box>
-      <Box width="xlarge" direction="row-responsive">
+      <Box pad="medium" width="xlarge" direction="row-responsive">
         <SideNav />
         {children}
       </Box>
