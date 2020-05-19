@@ -3,13 +3,10 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { Grommet, Box } from 'grommet';
 import { hpe } from 'grommet-theme-hpe';
 import './App.css';
-import LandingPage from './containers/LandingPage';
 import Leaderboard from './containers/Leaderboard';
 import HomePage from './pages/Home';
 
 const App = () => {
-  const initDayFilter = window.location.hash ? 'all' : 9;
-
   const hashLinkScroll = () => {
     const { hash } = window.location;
     if (hash !== '') {
@@ -34,11 +31,6 @@ const App = () => {
           height={{ min: '100vh', max: 'auto' }}
           align="center"
         >
-          <Route
-            exact
-            path="/home-old"
-            render={props => <LandingPage {...props} day={initDayFilter} />}
-          />
           <Route exact path="/" render={props => <HomePage {...props} />} />
           <Route
             exact
