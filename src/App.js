@@ -37,7 +37,7 @@ const App = () => {
             path="/schedule"
             render={props => <HomePage {...props} />}
           />
-          <Route exact path="/hackshack" component={Leaderboard} />
+          <Route exact path="/leaderboard" component={Leaderboard} />
         </Box>
       </BrowserRouter>
     </Grommet>
