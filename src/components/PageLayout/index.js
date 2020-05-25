@@ -1,28 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Box } from 'grommet';
+import MainHeader from '../Header';
+import AppFooter from '../Footer';
+import HPEDevFooter from '../HPEDevFooter';
 import SideNav from '../SideNav';
 
-const PageLayout = ({ children }) => {
+const PageLayout = ({ children, background }) => {
   return (
-    <Box width="100%" align="center" gap="large">
-      <Box
-        pad="medium"
-        background={{ color: 'brand', opacity: 0.2 }}
-        width="full"
-      >
-        HPE Discover
+    <Box
+      fill="vertical"
+      background={{
+        image: `url(${background})`, // swap BG based on route
+        size: 'cover',
+        position: 'relative',
+        // opacity: 0.1,
+      }}
+      justify="between"
+      // width="100vw"
+      // height={{ min: '100vh', max: 'auto' }}
+      align="start"
+    >
+      <MainHeader />
+      <Box direction="row" fill="vertical" justify="between">
+        <Box pad={{ left: 'xlarge', right: 'large' }}>
+          <SideNav />
+        </Box>
+        <Box direction="column">{children}</Box>
       </Box>
-      <Box pad="medium" width="xlarge" direction="row-responsive">
-        <SideNav />
-        {children}
-      </Box>
+      <HPEDevFooter />
+      <AppFooter />
     </Box>
   );
 };
 
 PageLayout.propTypes = {
   children: PropTypes.node.isRequired,
+  background: PropTypes.string.isRequired,
 };
 
 export default PageLayout;
