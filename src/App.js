@@ -1,14 +1,17 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import { Grommet, Box } from 'grommet';
+import { Grommet } from 'grommet';
 import { hpe } from 'grommet-theme-hpe';
 import './App.css';
 import Leaderboard from './containers/Leaderboard';
 import HomePage from './pages/Home';
+import ArcadePage from './pages/Arcade';
+import StickerWallPage from './pages/StickerWall';
 
 const App = () => {
   const hashLinkScroll = () => {
     const { hash } = window.location;
+    // console.log('hash', hash);
     if (hash !== '') {
       setTimeout(() => {
         const id = hash.replace('#', '');
@@ -21,24 +24,31 @@ const App = () => {
   return (
     <Grommet theme={hpe} themeMode="dark">
       <BrowserRouter onUpdate={hashLinkScroll()}>
-        <Box
-          background={{
-            image: 'url(/img/ezmeral-bg.png)', // swap BG based on route
-            size: 'cover',
-            opacity: 0.1,
-          }}
-          width="100vw"
-          height={{ min: '100vh', max: 'auto' }}
-          align="center"
-        >
-          <Route exact path="/" render={props => <HomePage {...props} />} />
-          <Route
-            exact
-            path="/schedule"
-            render={props => <HomePage {...props} />}
-          />
-          <Route exact path="/leaderboard" component={Leaderboard} />
-        </Box>
+        <Route
+          exact
+          path="/"
+          render={props => (
+            <HomePage
+              background="/img/hack-shack-home-background.png"
+              {...props}
+            />
+          )}
+        />
+        <Route
+          exact
+          path="/arcade"
+          render={props => (
+            <ArcadePage background="/img/ezmeral-bg.png" {...props} />
+          )}
+        />
+        <Route
+          exact
+          path="/stickerwall"
+          render={props => (
+            <StickerWallPage background="/img/ezmeral-bg.png" {...props} />
+          )}
+        />
+        <Route exact path="/leaderboard" component={Leaderboard} />
       </BrowserRouter>
     </Grommet>
   );
