@@ -75,7 +75,9 @@ export const SideNav = ({ location, history }) => (
     </NavButton>
     <NavButton
       history={history}
-      active={location.pathname === '/arcade'}
+      active={
+        location.pathname === '/arcade' || location.pathname === '/stickerwall'
+      }
       to="/arcade"
     >
       ARCADE
