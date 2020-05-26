@@ -23,12 +23,7 @@ const NavButton = ({ active, to, history, children }) => {
       onMouseOut={() => setHover(false)}
       onBlur={() => setHover(false)}
     >
-      <Heading
-        margin="none"
-        textAlign="start"
-        size="small"
-        color={getNavColor(active, hover)}
-      >
+      <Heading margin="none" size="small" color={getNavColor(active, hover)}>
         {children}
       </Heading>
     </Button>
@@ -45,7 +40,7 @@ NavButton.propTypes = {
 };
 
 export const SideNav = ({ location, history }) => (
-  <Box align="start" width="medium" gap="xsmall">
+  <Box align="start" gap="xsmall">
     <NavButton history={history} active={location.pathname === '/'} to="/">
       HOME
     </NavButton>
@@ -85,7 +80,7 @@ export const SideNav = ({ location, history }) => (
     <Box margin={{ top: 'large' }}>
       <Button>
         <Box direction="row" gap="xsmall">
-          <Twitter color="brand" />{' '}
+          <Twitter color="brand" />
           <Text weight="normal" color="white">
             Twitter
           </Text>
@@ -93,7 +88,7 @@ export const SideNav = ({ location, history }) => (
       </Button>
       <Button>
         <Box direction="row" gap="xsmall">
-          <Youtube color="brand" />{' '}
+          <Youtube color="brand" />
           <Text weight="normal" color="white">
             YouTube Channel
           </Text>

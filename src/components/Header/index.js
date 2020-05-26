@@ -1,9 +1,15 @@
 /* (C) Copyright 2019 Hewlett Packard Enterprise Development LP. */
 import React, { useContext } from 'react';
-import { Box, Text, Header, Image, Button, ResponsiveContext } from 'grommet';
-import { Search } from 'grommet-icons';
+import {
+  Box,
+  Text,
+  Header as HeaderGrommet,
+  Image,
+  Button,
+  ResponsiveContext,
+} from 'grommet';
 
-export const MainHeader = () => {
+export const Header = () => {
   const headerLinks = [
     { label: 'HOME', href: '#' },
     { label: 'AGENDA', href: '#' },
@@ -15,7 +21,7 @@ export const MainHeader = () => {
   ];
   const size = useContext(ResponsiveContext);
   return (
-    <Header
+    <HeaderGrommet
       align="center"
       direction="row"
       flex={false}
@@ -30,7 +36,7 @@ export const MainHeader = () => {
             fit="contain"
             size="small"
             src="https://us-central1-grommet-designer.cloudfunctions.net/images/lozzi-hpe-com/developer-logo.png"
-          ></Image>
+          />
         </Box>
         <Box align="center" justify="center" direction="row" gap="xsmall">
           <Text weight="bold">HPE</Text>
@@ -47,15 +53,7 @@ export const MainHeader = () => {
           <Button key={link.label} label={link.label} />
         ))}
       </Box>
-      <Box direction="row" gap="medium">
-        <Search></Search>
-        <Box background={{ color: 'light-4' }} round="full" pad="xxsmall">
-          <Text size="xsmall" textAlign="center">
-            PS
-          </Text>
-        </Box>
-      </Box>
-    </Header>
+    </HeaderGrommet>
   );
 };
-export default MainHeader;
+export default Header;

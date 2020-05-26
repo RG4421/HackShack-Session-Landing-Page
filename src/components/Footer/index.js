@@ -1,10 +1,8 @@
-import React, { useContext } from 'react';
-import { Box, Text, Footer, ResponsiveContext, Button } from 'grommet';
+import React from 'react';
+import { Box, Text, Footer as FooterGrommet, Button } from 'grommet';
+import { HPEDevFooter } from '../index';
 
-// import Footer from "./styles";
-export const AppFooter = () => {
-  const size = useContext(ResponsiveContext);
-
+export const Footer = () => {
   const footerLinks = [
     { label: 'Terms' },
     { label: 'Privacy' },
@@ -12,32 +10,21 @@ export const AppFooter = () => {
     { label: 'Feedback' },
   ];
   return (
-    <Footer
-      background="white"
-      fill="horizontal"
-      direction={size !== 'small' ? 'row' : 'column'}
-      align={size !== 'small' ? 'center' : undefined}
-    >
-      <Box
-        direction={size !== 'small' ? 'row' : 'column'}
-        align={size !== 'small' ? 'center' : undefined}
-        gap="xsmall"
-      >
-        <Text size="small">
-          &copy; 2020 Hewlett Packard Enterprise Development LP
-        </Text>
-      </Box>
-      <Box
-        direction="row"
-        align={size !== 'small' ? 'center' : undefined}
-        gap="xsmall"
-        wrap
-      >
-        {footerLinks.map(link => (
-          <Button key={link.label} label={link.label} />
-        ))}
-      </Box>
-    </Footer>
+    <Box>
+      <HPEDevFooter />
+      <FooterGrommet background="white">
+        <Box gap="xsmall">
+          <Text size="small">
+            &copy; 2020 Hewlett Packard Enterprise Development LP
+          </Text>
+        </Box>
+        <Box direction="row" gap="xsmall" wrap>
+          {footerLinks.map(link => (
+            <Button key={link.label} label={link.label} />
+          ))}
+        </Box>
+      </FooterGrommet>
+    </Box>
   );
 };
-export default AppFooter;
+export default Footer;

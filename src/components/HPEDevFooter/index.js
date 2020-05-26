@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import { Box, Text, Image, Header, ResponsiveContext, Button } from 'grommet';
+import React from 'react';
+import { Box, Text, Image, Button } from 'grommet';
 
 export const HPEDevFooter = () => {
   const footerLinks = [
@@ -8,38 +8,22 @@ export const HPEDevFooter = () => {
     { label: 'Community', href: 'https://developer.hpe.com/community' },
     { label: 'Events', href: 'https://developer.hpe.com/events' },
   ];
-  const size = useContext(ResponsiveContext);
-  //========================================= Footer
+
   return (
-    <Header
-      align="center"
-      direction="row"
-      flex={false}
-      justify="between"
-      gap="medium"
-      fill="horizontal"
-      pad="xsmall"
-      border="top"
-    >
-      <Box align="center" justify="center" direction="row" gap="small">
-        <Box height="xxsmall" width="xxsmall">
+    <Box align="center" direction="row" justify="between" border="top">
+      <Box direction="row" align="center" gap="small" margin="small">
+        <Box width="xxsmall" height="xxsmall">
           <Image
             fit="contain"
-            size="small"
             src="https://us-central1-grommet-designer.cloudfunctions.net/images/lozzi-hpe-com/developer-logo.png"
-          ></Image>
+          />
         </Box>
-        <Box align="center" justify="center" direction="row" gap="xsmall">
-          <Text weight="bold">HPE</Text>
-          <Text>Developer</Text>
-        </Box>
+        <Text>
+          <Text weight="bold">HPE </Text>
+          Developer
+        </Text>
       </Box>
-      <Box
-        direction="row"
-        align={size !== 'small' ? 'center' : undefined}
-        gap="xsmall"
-        wrap
-      >
+      <Box gap="xsmall" direction="row">
         {footerLinks.map(link => (
           <Button
             key={link.label}
@@ -49,7 +33,7 @@ export const HPEDevFooter = () => {
           />
         ))}
       </Box>
-    </Header>
+    </Box>
   );
 };
 export default HPEDevFooter;
