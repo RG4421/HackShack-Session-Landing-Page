@@ -22,11 +22,11 @@ const PageLayout = ({ children, background }) => {
       align="start"
     >
       <MainHeader />
-      <Box direction="row" fill="vertical" justify="between">
+      <Box direction="row" fill>
         <Box pad={{ left: 'xlarge', right: 'large' }}>
           <SideNav />
         </Box>
-        <Box direction="column">{children}</Box>
+        <Box fill>{children}</Box>
       </Box>
       <HPEDevFooter />
       <AppFooter />
