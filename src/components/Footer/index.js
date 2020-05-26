@@ -40,6 +40,7 @@ export const Footer = () => {
               key={link.label}
               label={link.label}
               href={link.href}
+              target="_blank"
             ></Anchor>
           ))}
         </Box>
