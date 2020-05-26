@@ -1,9 +1,9 @@
 /* (C) Copyright 2020 Hewlett Packard Enterprise Development LP. */
 import React, { useState, useEffect } from 'react';
 import { Box, Text } from 'grommet';
-import { Config } from '../config';
-import { StyledImage } from '../components/Shared/style';
-import { LeaderboardLayout } from '../components/Leaderboard/style';
+import { Config } from '../../config';
+import { StyledImage } from '../Shared/style';
+import { LeaderboardLayout } from './style';
 
 const Leaderboard = () => {
   const [hiScores, setHiScores] = useState([]);
