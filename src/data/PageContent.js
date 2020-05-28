@@ -49,7 +49,7 @@ export const arcadeContent = [
   {
     image: '/img/SlackLogo.svg',
     title: 'Learn more about the Arcade Contest',
-    desc: 'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut',
+    desc: 'Game rules, sed do eiusmod tempor incididunt ut',
     link: 'https://developer.hpe.com/newsletter-signup',
     label: 'Arcade Contest',
   },
