@@ -10,11 +10,9 @@ const Layout = ({ children, background }) => {
         image: `url(${background})`,
         size: 'cover',
       }}
-      justify="between"
-      height="100%"
     >
       <Header />
-      <Box direction="row">
+      <Box margin="large" gap="xlarge" direction="row">
         <SideNav />
         {children}
       </Box>
