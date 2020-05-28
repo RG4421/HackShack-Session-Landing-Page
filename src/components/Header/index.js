@@ -27,10 +27,11 @@ export const Header = () => {
       flex={false}
       justify="between"
       gap="medium"
+      height="small"
       fill="horizontal"
       pad="medium"
     >
-      <Box align="center" justify="center" direction="row" gap="small">
+      <Box alignSelf="start" align="center" justify="center" direction="row" gap="small">
         <Box height="xxsmall" width="xxsmall">
           <Image
             fit="contain"
@@ -45,6 +46,7 @@ export const Header = () => {
       </Box>
       <Box
         direction="row"
+        alignSelf="start"
         align={size !== 'small' ? 'center' : undefined}
         gap="xsmall"
         wrap
