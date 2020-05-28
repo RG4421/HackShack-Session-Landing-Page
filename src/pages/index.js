@@ -1,3 +1,4 @@
 import Home from './Home';
+import Community from './Community';
 
-export { Home };
+export { Home, Community };
