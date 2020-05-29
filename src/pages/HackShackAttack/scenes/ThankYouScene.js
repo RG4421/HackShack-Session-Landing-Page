@@ -34,32 +34,33 @@ export default class ThankYouScene extends Phaser.Scene {
 
   createThankYou() {
     this.add
-      .bitmapText(
+      .text(
         this.width / 2 + 10,
         this.height / 2 - 150,
-        'arcadeFont',
-        'THANKS FOR PLAYING!',
-        75,
+        'THANKS  FOR  PLAYING!',
+        {
+          fontFamily: 'ArcadeClassic',
+          fontSize: '75px',
+        },
       )
       .setTint(0xffffff)
       .setOrigin(0.5, 0.5);
 
     this.acceptText = this.add
-      .bitmapText(
-        this.width / 2 - 490,
-        this.height / 2 - 20,
-        'arcadeFont',
-        'Press A or Enter to continue',
-        35,
+      .text(
+        this.width / 2 - 255,
+        this.height / 2 + 80,
+        'Press  A  or  Enter  to  continue',
+        { fontFamily: 'ArcadeClassic', fontSize: '35px' },
       )
       .setTint(0xffffff);
 
     this.background = this.add
-      .sprite(this.width / 2 + 5, this.height / 2, 'highscoreBG')
-      .setScale(11.5);
+      .sprite(this.width / 2, this.height / 2, 'highscoreBG')
+      .setScale(6.2, 9);
     this.eyes = this.add
-      .sprite(this.width / 2 + 4, this.height / 2 - 110, 'highscoreEyes')
-      .setScale(9);
+      .sprite(this.width / 2, this.height / 2 - 120, 'highscoreEyes')
+      .setScale(5);
   }
 
   createAnimations() {

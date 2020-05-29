@@ -67,43 +67,34 @@ export default class ProfanityErrorScene extends Phaser.Scene {
   }
 
   createScene() {
-    this.message1 = this.add.bitmapText(
-      this.width / 2 - 720,
+    this.message1 = this.add.text(
+      this.width / 2 - 380,
       this.height / 2 - 180,
-      'arcadeFont',
-      'Profanity is not allowed',
-      60,
+      'Profanity  is  not  allowed',
+      { fontFamily: 'ArcadeClassic', fontSize: '60px' },
     );
-    this.message2 = this.add.bitmapText(
-      this.width / 2 - 780,
+    this.message2 = this.add.text(
+      this.width / 2 - 400,
       this.height / 2 - 100,
-      'arcadeFont',
-      'in either initials or name',
-      60,
+      'in  either  initials  or   name.',
+      { fontFamily: 'ArcadeClassic', fontSize: '60px' },
     );
-    this.message4 = this.add.bitmapText(
-      this.width - 200,
-      this.height / 2 - 75,
-      'arcadeFont',
-      '.',
-      60,
-    );
+
     this.acceptText = this.add
-      .bitmapText(
-        this.width / 2 - 490,
+      .text(
+        this.width / 2 - 255,
         this.height / 2 + 80,
-        'arcadeFont',
-        'Press A or Enter to continue',
-        35,
+        'Press  A  or  Enter  to  continue',
+        { fontFamily: 'ArcadeClassic', fontSize: '35px' },
       )
       .setTint(0xffffff);
 
     this.background = this.add
-      .sprite(this.width / 2 + 5, this.height / 2, 'highscoreBG')
-      .setScale(11.5);
+      .sprite(this.width / 2, this.height / 2, 'highscoreBG')
+      .setScale(6.2, 9);
     this.eyes = this.add
-      .sprite(this.width / 2 + 4, this.height / 2 - 110, 'highscoreEyes')
-      .setScale(9);
+      .sprite(this.width / 2, this.height / 2 - 120, 'highscoreEyes')
+      .setScale(5);
   }
 
   createAnimations() {
