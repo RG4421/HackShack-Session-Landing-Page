@@ -43,7 +43,7 @@ export const arcadeContent = [
     image: '/img/StickerWall.png',
     title: 'HPE DEV STICKER WALL',
     desc: 'Grab a avatar, wallpaper, or emoji for to throw on your computer!',
-    link: 'https://slack.hpedev.io/',
+    link: '/stickerwall',
     label: 'Grab some Art',
   },
   {
