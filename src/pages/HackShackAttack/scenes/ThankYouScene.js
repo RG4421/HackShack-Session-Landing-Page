@@ -82,12 +82,23 @@ export default class ThankYouScene extends Phaser.Scene {
   }
 
   gamepadInputs() {
-    if (this.gamepad.A && this.buttonPressed === false) {
-      this.buttonPressed = true;
-      this.enter();
-    }
-    if (!this.gamepad.A) {
-      this.buttonPressed = false;
+    // A button
+    if (this.gamepad.id.indexOf('Pro Controller') !== -1) {
+      if (this.gamepad.buttons[1].pressed) {
+        this.buttonPressed = true;
+        this.enter();
+      }
+      if (!this.gamepad.buttons[1].pressed) {
+        this.buttonPressed = false;
+      }
+    } else {
+      if (this.gamepad.A && this.buttonPressed === false) {
+        this.buttonPressed = true;
+        this.enter();
+      }
+      if (!this.gamepad.A) {
+        this.buttonPressed = false;
+      }
     }
   }
 
@@ -108,7 +119,7 @@ export default class ThankYouScene extends Phaser.Scene {
   enter() {
     this.startScene = false;
     this.background.play('closeMouth');
-    this.background.on('animationcomplete', (animation, frame) => {
+    this.background.on('animationcomplete', () => {
       this.scene.start('Title');
     });
   }
