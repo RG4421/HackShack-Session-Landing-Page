@@ -39,7 +39,7 @@ NavButton.propTypes = {
 };
 
 export const SideNav = ({ location, history }) => (
-  <Box align="start" gap="xsmall">
+  <Box pad={{left: 'xlarge'}} align="start" gap="xsmall">
     <NavButton history={history} active={location.pathname === '/'} to="/">
       HOME
     </NavButton>
