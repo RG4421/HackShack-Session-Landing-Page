@@ -52,7 +52,7 @@ export default class TitleScene extends Phaser.Scene {
       })
       .setTint(0xffffff)
       .setInteractive();
-    this.centerObject(this.attractButton, 1.8, -2.05);
+    this.centerObject(this.attractButton, 1.85, -2.05);
 
     this.keyboardInputs();
   }
@@ -113,14 +113,14 @@ export default class TitleScene extends Phaser.Scene {
     }
     // joystick
     if (
-      this.gamepad.leftStick.y <= -0.8 &&
+      this.gamepad.leftStick.y <= -0.6 &&
       this.stickPressed === false &&
       this.selection !== 'start'
     ) {
       this.stickPressed = true;
       this.onChange();
     } else if (
-      this.gamepad.leftStick.y >= 0.8 &&
+      this.gamepad.leftStick.y >= 0.6 &&
       this.stickPressed === false &&
       this.selection !== 'attract'
     ) {
