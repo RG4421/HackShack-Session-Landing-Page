@@ -141,14 +141,14 @@ export default class GameOverScene extends Phaser.Scene {
     }
     // joystick
     if (
-      this.gamepad.leftStick.x <= -0.8 &&
+      this.gamepad.leftStick.x <= -0.6 &&
       this.stickPressed === false &&
       this.selection !== 'submit'
     ) {
       this.stickPressed = true;
       this.onChange();
     } else if (
-      this.gamepad.leftStick.x >= 0.8 &&
+      this.gamepad.leftStick.x >= 0.6 &&
       this.stickPressed === false &&
       this.selection !== 'cancel'
     ) {
