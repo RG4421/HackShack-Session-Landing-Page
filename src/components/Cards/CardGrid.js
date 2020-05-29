@@ -1,12 +1,12 @@
-import React from 'react';
-import { Grid } from 'grommet';
+import React, { useContext } from 'react';
+import { Grid, ResponsiveContext } from 'grommet';
 
 export const CardGrid = ({ children, ...rest }) => {
+  const size = useContext(ResponsiveContext);
   return (
     <Grid
-      align="end"
-      alignSelf="center"
-      columns={{ count: 2, size: 'auto' }}
+      columns={size !== 'small' ? { count: 2, size: 'medium' } : '100%'}
+      rows={["auto", "flex"]}
       gap="medium"
       justify="center"
       {...rest}

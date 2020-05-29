@@ -7,13 +7,13 @@ export const ContentCards = ({ image, title, desc, link, label }) => {
   return (
     <Card align="start" background="background">
       <CardImage background="background-front">
-        <Image src={image} alt="SlackLogo" fit="cover" />
+        <Image src={image} alt="SlackLogo" fit="contain" />
       </CardImage>
-      <Box basis="1/2">
+      <Box justify="between" fill>
         <Heading margin={{ top: 'medium', bottom: 'small' }} level={2}>
           {title}
         </Heading>
-        <Text size="large">{desc}</Text>
+        <Text size="xlarge">{desc}</Text>
         <Button
           margin={{ vertical: 'medium' }}
           alignSelf="start"

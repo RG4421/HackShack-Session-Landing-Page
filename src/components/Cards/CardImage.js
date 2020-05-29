@@ -9,7 +9,7 @@ export const CardImage = ({ background, children, ...rest }) => {
       height="small"
       round="xsmall"
       overflow="hidden"
-      basis="1/2"
+      fill
       style={{ position: 'relative' }}
       {...rest}
     >
