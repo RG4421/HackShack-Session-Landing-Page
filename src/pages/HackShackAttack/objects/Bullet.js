@@ -1,5 +1,5 @@
 /* (C) Copyright 2019 Hewlett Packard Enterprise Development LP. */
-import 'phaser';
+import Phaser from 'phaser';
 
 export default class Bullet extends Phaser.Physics.Arcade.Sprite {
   constructor(scene, x, y) {
@@ -12,14 +12,16 @@ export default class Bullet extends Phaser.Physics.Arcade.Sprite {
     this.scene.physics.world.enable(this);
     this.scene.add.existing(this);
   }
+
   update() {
     if (this.x > this.gameWidth + 100 || this.x < -100) {
       this.onHit();
-    } 
+    }
     if (this.y > this.gameHeight + 100 || this.y < -100) {
-      this.onHit()
+      this.onHit();
     }
   }
+
   fireBullet(x, y, direction) {
     this.enableBody(true);
     this.setActive(true);
@@ -42,51 +44,57 @@ export default class Bullet extends Phaser.Physics.Arcade.Sprite {
         this.setPosition(x, y + 12);
         this.setVelocityX(550);
         break;
+      default:
+        break;
     }
   }
 
   onFireGamepad(x, y, gamepad) {
-    if (gamepad.id.indexOf('Xbox Wireless Controller') > -1 ||
-        gamepad.id.indexOf('Wireless Controller') > -1) {
+    if (
+      gamepad.id.indexOf('Xbox Wireless Controller') > -1 ||
+      gamepad.id.indexOf('Wireless Controller') > -1
+    ) {
       if (gamepad.buttons[3].pressed) {
-        return this.fireBullet(x, y, 'up')
+        return this.fireBullet(x, y, 'up');
       } else if (gamepad.A) {
-        return this.fireBullet(x, y, 'down')
+        return this.fireBullet(x, y, 'down');
       }
       if (gamepad.buttons[2].pressed) {
-        return this.fireBullet(x, y, 'left')
+        return this.fireBullet(x, y, 'left');
       } else if (gamepad.B) {
-        return this.fireBullet(x, y, 'right')
+        return this.fireBullet(x, y, 'right');
       }
     }
     if (gamepad.buttons[4].pressed) {
-      return this.fireBullet(x, y, 'up')
+      return this.fireBullet(x, y, 'up');
     } else if (gamepad.A) {
-      return this.fireBullet(x, y, 'down')
+      return this.fireBullet(x, y, 'down');
     }
     if (gamepad.buttons[3].pressed) {
-      this.fireBullet(x, y, 'left')
+      this.fireBullet(x, y, 'left');
     } else if (gamepad.B) {
-      this.fireBullet(x, y, 'right')
+      this.fireBullet(x, y, 'right');
     }
   }
+
   onFireKeyboard(x, y, fireKeys) {
     if (fireKeys.up.isDown) {
-      this.fireBullet(x, y, 'up')
+      this.fireBullet(x, y, 'up');
     } else if (fireKeys.down.isDown) {
-      this.fireBullet(x, y, 'down')
+      this.fireBullet(x, y, 'down');
     }
     if (fireKeys.left.isDown) {
-      this.fireBullet(x, y, 'left')
+      this.fireBullet(x, y, 'left');
     } else if (fireKeys.right.isDown) {
-      this.fireBullet(x, y, 'right')
+      this.fireBullet(x, y, 'right');
     }
   }
 
   onHit() {
-    this.explosion = this.scene.add.sprite(this.x, this.y, 'explosion')
-    .setScale(0.8)
-    .play('explode');
+    this.explosion = this.scene.add
+      .sprite(this.x, this.y, 'explosion')
+      .setScale(0.8)
+      .play('explode');
     this.disableBody();
     this.setActive(false);
     this.setVisible(false);

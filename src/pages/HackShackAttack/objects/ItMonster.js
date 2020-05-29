@@ -1,5 +1,5 @@
 /* (C) Copyright 2019 Hewlett Packard Enterprise Development LP. */
-import 'phaser';
+import Phaser from 'phaser';
 
 export default class ItMonster extends Phaser.Physics.Arcade.Sprite {
   constructor(scene, x, y) {
@@ -11,6 +11,7 @@ export default class ItMonster extends Phaser.Physics.Arcade.Sprite {
     this.scene.physics.world.enable(this);
     this.scene.add.existing(this);
   }
+
   spawn(x, y) {
     this.hp = 3;
     this.setPosition(x, y);
@@ -20,21 +21,18 @@ export default class ItMonster extends Phaser.Physics.Arcade.Sprite {
   onHit(damage) {
     this.hp -= damage;
     if (this.hp <= 0) {
-      this.poof = this.scene.add.sprite(this.x, this.y, 'itMonsterPoof')
-      .setScale(1.8)
-      .play('poof');
-      this.setActive(false);
-      this.setVisible(false);
-      this.disableBody();
-      this.scene.events.emit('updateScore', this.points);
+      this.kill();
     }
   }
+
   kill() {
-    this.poof = this.scene.add.sprite(this.x, this.y, 'itMonsterPoof')
-    .setScale(1.8)
-    .play('poof');
+    this.poof = this.scene.add
+      .sprite(this.x, this.y, 'itMonsterPoof')
+      .setScale(1.5)
+      .play('poof');
     this.setActive(false);
     this.setVisible(false);
     this.disableBody();
+    this.scene.events.emit('updateScore', this.points);
   }
 }

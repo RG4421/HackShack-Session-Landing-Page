@@ -1,5 +1,5 @@
 /* (C) Copyright 2019 Hewlett Packard Enterprise Development LP. */
-import 'phaser';
+import Phaser from 'phaser';
 
 export default class PowerUp extends Phaser.Physics.Arcade.Sprite {
   constructor(scene, x, y) {
@@ -10,17 +10,17 @@ export default class PowerUp extends Phaser.Physics.Arcade.Sprite {
     this.scene.physics.world.enable(this);
     this.scene.add.existing(this);
   }
-  update() {
-  }
+
   spawn(x, y) {
-    this.setPosition(x, y)
+    this.setPosition(x, y);
     this.play('powerUpFloat');
   }
-  onHit(player) {
+
+  onHit() {
     this.setActive(false);
     this.setVisible(false);
     this.disableBody();
-  
+
     this.scene.events.emit('gotPowerUp');
   }
 }

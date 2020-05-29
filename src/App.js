@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Grommet } from 'grommet';
 import { hpe } from 'grommet-theme-hpe';
-import { Home } from './pages/index';
+import { Home, HackShackAttack } from './pages/index';
+import { Leaderboard } from './components/index';
 
 const App = () => {
   return (
@@ -11,6 +12,12 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="/hackshackattack">
+            <HackShackAttack />
+          </Route>
+          <Route path="/leaderboard">
+            <Leaderboard />
           </Route>
         </Switch>
       </Router>

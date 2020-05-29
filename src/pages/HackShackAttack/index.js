@@ -1,6 +1,7 @@
 /* (C) Copyright 2019 Hewlett Packard Enterprise Development LP. */
+import React from 'react';
+import { IonPhaser } from '@ion-phaser/react';
 import Phaser from 'phaser';
-import { config } from './config/config';
 import BootScene from './scenes/BootScene';
 import PreloaderScene from './scenes/PreloaderScene';
 import TitleScene from './scenes/TitleScene';
@@ -14,9 +15,8 @@ import ThankYouScene from './scenes/ThankYouScene';
 import ProfanityErrorScene from './scenes/ProfanityErrorScene';
 import SplashScene from './scenes/SplashScene';
 
-class Game extends Phaser.Game {
-  constructor() {
-    super(config);
+class Game extends Phaser.Scene {
+  create() {
     this.scene.add('Boot', BootScene);
     this.scene.add('Preloader', PreloaderScene);
     this.scene.add('Title', TitleScene);
@@ -33,6 +33,37 @@ class Game extends Phaser.Game {
   }
 }
 
-window.onload = function () {
-  window.game = new Game();
+const HackShackAttack = () => {
+  const gameConfig = {
+    initialize: true,
+    game: {
+      parent: 'phaser-game',
+      type: Phaser.AUTO,
+      input: {
+        gamepad: true,
+        queue: true,
+      },
+      scale: {
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+      },
+      pixelArt: true,
+      physics: {
+        default: 'arcade',
+        arcade: {
+          debug: false,
+          gravity: { y: 0 },
+        },
+      },
+      scene: Game,
+    },
+  };
+  const { game, initialize } = gameConfig;
+  return (
+    <div id="phaser-game">
+      <IonPhaser game={game} initialize={initialize} />
+    </div>
+  );
 };
+
+export default HackShackAttack;
