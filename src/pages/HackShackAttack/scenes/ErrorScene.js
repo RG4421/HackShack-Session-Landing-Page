@@ -42,12 +42,22 @@ export default class ErrorScene extends Phaser.Scene {
 
   gamepadInputs() {
     // A button
-    if (this.gamepad.A && this.buttonPressed === false) {
-      this.buttonPressed = true;
-      this.enter();
-    }
-    if (!this.gamepad.A) {
-      this.buttonPressed = false;
+    if (this.gamepad.id.indexOf('Pro Controller') !== -1) {
+      if (this.gamepad.buttons[1].pressed) {
+        this.buttonPressed = true;
+        this.enter();
+      }
+      if (!this.gamepad.buttons[1].pressed) {
+        this.buttonPressed = false;
+      }
+    } else {
+      if (this.gamepad.A && this.buttonPressed === false) {
+        this.buttonPressed = true;
+        this.enter();
+      }
+      if (!this.gamepad.A) {
+        this.buttonPressed = false;
+      }
     }
   }
 
