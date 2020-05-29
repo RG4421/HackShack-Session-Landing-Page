@@ -4,8 +4,14 @@ import { Box } from 'grommet';
 
 export const Card = ({ children, ...rest }) => {
   return (
-    <Box height="624px" width="576px" round="small" overflow="hidden" {...rest}>
-      <Box flex pad="medium">
+    <Box
+      width={{ max: '500px' }}
+      fill
+      round="small"
+      overflow="hidden"
+      {...rest}
+    >
+      <Box fill pad="medium">
         {children}
       </Box>
     </Box>
