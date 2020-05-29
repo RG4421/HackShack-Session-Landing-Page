@@ -67,18 +67,36 @@ export default class BackToTitleScene extends Phaser.Scene {
 
   gamepadInputs() {
     // A button
-    if (this.gamepad.A && this.buttonPressed === false) {
-      this.buttonPressed = true;
-      this.onSelect();
-    }
-    if (!this.gamepad.A) {
-      this.buttonPressed = false;
+    if (this.gamepad.id.indexOf('Pro Controller') !== -1) {
+      if (this.gamepad.buttons[1].pressed) {
+        this.buttonPressed = true;
+        this.onSelect();
+      }
+      if (!this.gamepad.buttons[1].pressed) {
+        this.buttonPressed = false;
+      }
+    } else {
+      if (this.gamepad.A && this.buttonPressed === false) {
+        this.buttonPressed = true;
+        this.onSelect();
+      }
+      if (!this.gamepad.A) {
+        this.buttonPressed = false;
+      }
     }
     // joystick
-    if (this.gamepad.leftStick.x === -1 && this.stickPressed === false) {
+    if (
+      this.gamepad.leftStick.x <= -0.6 &&
+      this.stickPressed === false &&
+      this.selection !== 'submit'
+    ) {
       this.stickPressed = true;
       this.onChange();
-    } else if (this.gamepad.leftStick.x === 1 && this.stickPressed === false) {
+    } else if (
+      this.gamepad.leftStick.x >= 0.6 &&
+      this.stickPressed === false &&
+      this.selection !== 'cancel'
+    ) {
       this.stickPressed = true;
       this.onChange();
     }
@@ -88,58 +106,55 @@ export default class BackToTitleScene extends Phaser.Scene {
   }
 
   createScene() {
+    // submit select box
     this.submitSelectionBox = this.add
       .graphics()
       .fillStyle(0xffffff, 1)
-      .fillRoundedRect(this.width / 2 - 280, this.height / 2 + 35, 200, 80);
+      .fillRoundedRect(this.width / 3 - 80, this.height / 2 + 70, 200, 80);
+
+    // cancel select box
     this.cancelSelectionBox = this.add
       .graphics()
       .fillStyle(0xffffff, 1)
-      .fillRoundedRect(this.width / 2, this.height / 2 + 35, 200, 80);
-    this.submitSelectionBox.visible = false;
+      .fillRoundedRect(this.width / 2 + 20, this.height / 2 + 70, 200, 80);
+    this.cancelSelectionBox.visible = false;
 
+    // submit and cancel buttons
     this.submitButton = this.add
-      .bitmapText(
-        this.width / 2 - 250,
-        this.height / 2 + 50,
-        'arcadeFont',
-        'Yes',
-        45,
-      )
-      .setTint(0xffffff)
-      .setInteractive();
-    this.cancelButton = this.add
-      .bitmapText(
-        this.width / 2 + 50,
-        this.height / 2 + 50,
-        'arcadeFont',
-        'No',
-        45,
-      )
+      .text(this.width / 3 - 35, this.height / 2 + 75, 'Yes', {
+        fontFamily: 'ArcadeClassic',
+        fontSize: '60px',
+      })
       .setTint(0x000000)
       .setInteractive();
 
-    this.message1 = this.add.bitmapText(
-      this.width / 2 - 520,
+    this.cancelButton = this.add
+      .text(this.width / 2 + 85, this.height / 2 + 75, 'No', {
+        fontFamily: 'ArcadeClassic',
+        fontSize: '60px',
+      })
+      .setTint(0xffffff)
+      .setInteractive();
+
+    this.message1 = this.add.text(
+      this.width / 2 - 280,
       this.height / 2 - 180,
-      'arcadeFont',
       'Cancel submitting',
-      60,
+      { fontFamily: 'ArcadeClassic', fontSize: '60px' },
     );
-    this.message2 = this.add.bitmapText(
-      this.width / 2 - 360,
+    this.message2 = this.add.text(
+      this.width / 2 - 180,
       this.height / 2 - 100,
-      'arcadeFont',
       'your score?',
-      60,
+      { fontFamily: 'ArcadeClassic', fontSize: '60px' },
     );
 
     this.background = this.add
-      .sprite(this.width / 2 + 5, this.height / 2, 'highscoreBG')
-      .setScale(11.5);
+      .sprite(this.width / 2, this.height / 2, 'highscoreBG')
+      .setScale(6.2, 9);
     this.eyes = this.add
-      .sprite(this.width / 2 + 4, this.height / 2 - 110, 'highscoreEyes')
-      .setScale(9);
+      .sprite(this.width / 2, this.height / 2 - 120, 'highscoreEyes')
+      .setScale(5);
   }
 
   createAnimations() {
