@@ -1,6 +1,6 @@
 export const communityContent = [
   {
-    image: '/img/slack.png',
+    image: '/img/SlackLogo.svg',
     title: 'Sign up for the HPE Developer Newsletter',
     desc:
       'Got questions or just want to chat with other folks that work at or with HPE?',
@@ -8,23 +8,16 @@ export const communityContent = [
     label: 'Join News Letter',
   },
   {
-    image: '/img/slack.png',
-    title: 'Join the HPE Dev Slack Community',
+    image: '/img/SlackLogo.svg',
+    title: 'Join HPE Dev Slack Community',
     desc: 'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut',
     link: 'https://slack.hpedev.io/',
     label: 'Join Slack Channel',
   },
   {
-    image: '/img/slack.png',
-    title: 'Sign up for the HPE Developer Newsletter',
-    desc: 'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut',
-    link: 'https://developer.hpe.com/newsletter-signup',
-    label: 'Join Newsletter',
-  },
-  {
-    image: '/img/slack.png',
-    title: 'Sign up for the HPE Developer Newsletter',
-    desc: 'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut',
+    image: '/img/SlackLogo.svg',
+    title: 'Sign up for the HPE Dev Newsletter',
+    desc: 'Game rules, sed do eiusmod tempor incididunt ut Game rules, sed do eiusmod tempor incididunt ut',
     link: 'https://developer.hpe.com/newsletter-signup',
     label: 'Join Newsletter',
   },

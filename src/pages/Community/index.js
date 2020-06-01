@@ -10,6 +10,7 @@ const Community = () => {
       <CardGrid>
         {communityContent.map(content => (
           <ContentCards
+            key={content.title}
             title={content.title}
             image={content.image}
             desc={content.desc}

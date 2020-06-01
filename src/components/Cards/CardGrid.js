@@ -6,10 +6,11 @@ export const CardGrid = ({ children, ...rest }) => {
   return (
     <Grid
       columns={size !== 'small' ? { count: 2, size: 'medium' } : '100%'}
-      rows={["auto", "flex"]}
+      rows={['auto', 'flex']}
       gap="medium"
       justify="center"
       {...rest}
+      fill
     >
       {children}
     </Grid>
