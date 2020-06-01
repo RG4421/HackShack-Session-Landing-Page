@@ -14,7 +14,6 @@ const App = () => {
     gtagId = 'UA-108944070-5';
     gaDebug = false;
   } else if (process.env.NODE_ENV === 'development') {
-    console.log('dev mode ga', process.env.NODE_ENV);
     gtagId = 'UA-NNNNNN-N';
     gaDebug = false;
   } else {
