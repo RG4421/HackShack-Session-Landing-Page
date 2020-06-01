@@ -5,22 +5,28 @@ import { Layout, ButtonSplit } from '../../components/index';
 const Home = () => {
   return (
     <Layout background="/img/hack-shack-home-background.png">
-      <Box direction="column" align="end">
+      <Box
+        direction="column"
+        align="center"
+        justify="start"
+        style={{ position: 'relative' }}
+      >
         <Box>
           <Image
             fit="contain"
-            src="/img/hack-shack-dve-logo.png"
+            src="/img/hack-shack-dve-logo.svg"
             alt="Hack Shack"
           />
         </Box>
-
         <Box
           align="center"
           gap="medium"
+          width="58%"
           style={{
             transform: 'rotate(-10deg)',
-            width: '720px',
-            height: '168px',
+            position: 'absolute',
+            left: '39%',
+            top: '80%',
           }}
         >
           <Text alignSelf="end" textAlign="start" size="xlarge">
