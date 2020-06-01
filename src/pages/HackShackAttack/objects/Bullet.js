@@ -51,29 +51,41 @@ export default class Bullet extends Phaser.Physics.Arcade.Sprite {
 
   onFireGamepad(x, y, gamepad) {
     if (
-      gamepad.id.indexOf('Xbox Wireless Controller') > -1 ||
-      gamepad.id.indexOf('Wireless Controller') > -1
+      gamepad.id.indexOf('Xbox Wireless Controller') !== -1 ||
+      gamepad.id.indexOf('Wireless Controller') !== -1
     ) {
       if (gamepad.buttons[3].pressed) {
-        return this.fireBullet(x, y, 'up');
+        this.fireBullet(x, y, 'up');
       } else if (gamepad.A) {
         return this.fireBullet(x, y, 'down');
       }
       if (gamepad.buttons[2].pressed) {
-        return this.fireBullet(x, y, 'left');
+        this.fireBullet(x, y, 'left');
       } else if (gamepad.B) {
         return this.fireBullet(x, y, 'right');
       }
-    }
-    if (gamepad.buttons[4].pressed) {
-      return this.fireBullet(x, y, 'up');
-    } else if (gamepad.A) {
-      return this.fireBullet(x, y, 'down');
-    }
-    if (gamepad.buttons[3].pressed) {
-      this.fireBullet(x, y, 'left');
-    } else if (gamepad.B) {
-      this.fireBullet(x, y, 'right');
+    } else if (gamepad.id.indexOf('Pro Controller') !== -1) {
+      if (gamepad.buttons[3].pressed) {
+        this.fireBullet(x, y, 'up');
+      } else if (gamepad.buttons[0].pressed) {
+        return this.fireBullet(x, y, 'down');
+      }
+      if (gamepad.buttons[2].pressed) {
+        this.fireBullet(x, y, 'left');
+      } else if (gamepad.buttons[1].pressed) {
+        return this.fireBullet(x, y, 'right');
+      }
+    } else {
+      if (gamepad.buttons[4].pressed) {
+        this.fireBullet(x, y, 'up');
+      } else if (gamepad.A) {
+        return this.fireBullet(x, y, 'down');
+      }
+      if (gamepad.buttons[3].pressed) {
+        this.fireBullet(x, y, 'left');
+      } else if (gamepad.B) {
+        this.fireBullet(x, y, 'right');
+      }
     }
   }
 

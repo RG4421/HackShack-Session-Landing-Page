@@ -15,7 +15,7 @@ export default class BackToTitleScene extends Phaser.Scene {
     this.height = this.game.config.height;
     this.width = this.game.config.width;
 
-    this.selection = 'cancel';
+    this.selection = 'submit';
     this.score = data.score;
   }
 

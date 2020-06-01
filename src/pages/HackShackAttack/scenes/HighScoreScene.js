@@ -75,34 +75,51 @@ export default class HighScoreScene extends Phaser.Scene {
 
   gamepadInputs() {
     if (this.loading === false) {
-      // A button
-      if (this.gamepad.A && this.buttonPressed === false) {
-        this.buttonPressed = true;
-        this.enter();
-      }
-      if (this.gamepad.B && this.buttonPressed === false) {
-        this.buttonPressed = true;
-        this.backspace();
-      }
-      if (!this.gamepad.A && !this.gamepad.B) {
-        this.buttonPressed = false;
+      // A and B button
+      if (this.gamepad.id.indexOf('Pro Controller') !== -1) {
+        if (this.gamepad.buttons[1].pressed && this.buttonPressed === false) {
+          this.buttonPressed = true;
+          this.enter();
+        }
+        if (this.gamepad.buttons[0].pressed && this.buttonPressed === false) {
+          this.buttonPressed = true;
+          this.backspace();
+        }
+        if (
+          !this.gamepad.buttons[1].pressed &&
+          !this.gamepad.buttons[0].pressed
+        ) {
+          this.buttonPressed = false;
+        }
+      } else {
+        if (this.gamepad.A && this.buttonPressed === false) {
+          this.buttonPressed = true;
+          this.enter();
+        }
+        if (this.gamepad.B && this.buttonPressed === false) {
+          this.buttonPressed = true;
+          this.backspace();
+        }
+        if (!this.gamepad.A && !this.gamepad.B) {
+          this.buttonPressed = false;
+        }
       }
       // joystick
-      if (this.gamepad.leftStick.y === -1 && this.stickPressed === false) {
+      if (this.gamepad.leftStick.y <= -0.6 && this.stickPressed === false) {
         this.stickPressed = true;
         this.moveUp();
       } else if (
-        this.gamepad.leftStick.y === 1 &&
+        this.gamepad.leftStick.y >= 0.6 &&
         this.stickPressed === false
       ) {
         this.stickPressed = true;
         this.moveDown();
       }
-      if (this.gamepad.leftStick.x === -1 && this.stickPressed === false) {
+      if (this.gamepad.leftStick.x <= -0.6 && this.stickPressed === false) {
         this.stickPressed = true;
         this.moveLeft();
       } else if (
-        this.gamepad.leftStick.x === 1 &&
+        this.gamepad.leftStick.x >= 0.6 &&
         this.stickPressed === false
       ) {
         this.stickPressed = true;
@@ -165,7 +182,7 @@ export default class HighScoreScene extends Phaser.Scene {
       })
       .setTint(0xff1fdc83);
     this.add
-      .text(100, 570, 'NAME', {
+      .text(100, 570, 'EMAIL', {
         fontFamily: 'ArcadeClassic',
         fontSize: '40px',
       })
