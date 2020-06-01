@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Box, Main } from 'grommet';
+import { Box, Main, Image } from 'grommet';
 import { Footer, Header, SideNav } from '../index';
 
 const Layout = ({ children, background }) => {
@@ -9,16 +9,23 @@ const Layout = ({ children, background }) => {
       background={{
         image: `url(${background})`,
         size: 'cover',
+        repeat: 'no-repeat',
+        position: 'fixed',
       }}
-      style={{ height: 'auto', minHeight: '100vh' }}
+      style={{ height: 'auto', minHeight: '900px' }}
+      justify="between"
     >
-      <Header />
-      <Main full pad="large" margin="large">
-        <Box gap="xlarge" direction="row">
+      <Box>
+        <Header />
+        <Box
+          direction="row"
+          // height="100vh"
+          pad={{ left: 'large', right: 'large' }}
+        >
           <SideNav />
-          <Box full>{children}</Box>
+          <Box margin={{ left: 'large' }}>{children}</Box>
         </Box>
-      </Main>
+      </Box>
       <Footer />
     </Box>
   );
