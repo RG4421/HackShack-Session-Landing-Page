@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
-import { Box, Button, Heading, Text } from 'grommet';
-import { Twitter, Youtube } from 'grommet-icons';
+import { Box, Button, Heading } from 'grommet';
 
 const getNavColor = (active, hover) => {
   if (active) return 'white';
@@ -40,9 +39,9 @@ NavButton.propTypes = {
 };
 
 export const SideNav = ({ location, history }) => (
-  <Box align="start" gap="xsmall">
+  <Box pad={{ left: 'xlarge', top: 'large' }} align="start" gap="xsmall">
     <NavButton history={history} active={location.pathname === '/'} to="/">
-      HOME
+      HACK SHACK
     </NavButton>
     <NavButton
       history={history}
@@ -77,24 +76,6 @@ export const SideNav = ({ location, history }) => (
     >
       ARCADE
     </NavButton>
-    <Box margin={{ top: 'large' }}>
-      <Button>
-        <Box direction="row" gap="xsmall">
-          <Twitter color="brand" />
-          <Text weight="normal" color="white">
-            Twitter
-          </Text>
-        </Box>
-      </Button>
-      <Button>
-        <Box direction="row" gap="xsmall">
-          <Youtube color="brand" />
-          <Text weight="normal" color="white">
-            YouTube Channel
-          </Text>
-        </Box>
-      </Button>
-    </Box>
   </Box>
 );
 
