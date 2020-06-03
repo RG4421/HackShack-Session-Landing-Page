@@ -18,6 +18,7 @@ const Layout = ({ children, background }) => {
       <Box>
         <Header />
         <Box
+          gap="xlarge"
           direction="row"
           // height="100vh"
           pad={{ left: 'large', right: 'large' }}
