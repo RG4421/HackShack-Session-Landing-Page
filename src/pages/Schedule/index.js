@@ -31,7 +31,6 @@ const Schedule = () => {
             desc,
             role,
             week,
-            link,
           }) => (
             <ScheduleCards
               key={session_id}
@@ -41,8 +40,7 @@ const Schedule = () => {
               sessionType={session_type}
               title={title}
               presenter={presenter}
-              desc={desc}
-              link={link}
+              desc={desc.slice(0, 220) + '...'}
             />
           ),
         )}

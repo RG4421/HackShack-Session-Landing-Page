@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Favorite } from 'grommet-icons';
 import { Box, Button, Heading, Text, Avatar } from 'grommet';
 
 export const ScheduleCards = ({
@@ -9,15 +10,12 @@ export const ScheduleCards = ({
   presenter,
   title,
   desc,
-  link,
   id,
 }) => {
   return (
     <Box
       pad="large"
-      background={
-        sessionType === 'Workshop' ? '#00567acc' : 'background'
-      }
+      background={sessionType === 'Workshop' ? '#00567acc' : 'background'}
       width="576px"
       round="small"
       overflow="hidden"
@@ -45,7 +43,13 @@ export const ScheduleCards = ({
       </Box>
       <Box fill justify="evenly">
         <Box pad={{ top: 'large' }} gap="small" direction="row">
-          <Avatar src={avatar} />
+          {avatar && avatar ? (
+            <Avatar src={avatar} />
+          ) : (
+            <Avatar background="background-contrast">
+              <Favorite color="brand" />
+            </Avatar>
+          )}
           <Box>
             <Text>{presenter}</Text>
             <Text>{role}</Text>
@@ -61,7 +65,8 @@ export const ScheduleCards = ({
       <Button
         margin={{ top: 'medium', bottom: 'small' }}
         alignSelf="start"
-        href={link}
+        href="https://content.attend.hpe.com/go/agendabuilder.sessions/?l=1043&locale=en_US"
+        target="_blank"
         label={
           <Box pad="xsmall">
             <Text color="text-strong">Learn more</Text>
