@@ -12,16 +12,16 @@ const App = () => {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/community">
+          <Route path="/community">
             <Community />
           </Route>
           <Route exact path="/schedule">
             <Schedule />
           </Route>
-          <Route exact path="/arcade">
+          <Route path="/arcade">
             <Arcade />
           </Route>
-          <Route exact path="/stickerwall">
+          <Route path="/stickerwall">
             <StickerWall />
           </Route>
         </Switch>

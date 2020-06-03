@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Text, Image, Button } from 'grommet';
+import { FooterContainer } from './styles';
 
 export const HPEDevFooter = () => {
   const footerLinks = [
@@ -10,13 +11,16 @@ export const HPEDevFooter = () => {
   ];
 
   return (
-    <Box align="center" direction="row" justify="between" border="top">
-      <Box direction="row" align="center" gap="small" margin="small">
+    <FooterContainer
+      align="center"
+      justify="between"
+      border="top"
+      pad={{ left: 'medium', right: 'medium', top: 'small', bottom: 'small' }}
+      style={{ whiteSpace: 'nowrap' }}
+    >
+      <Box direction="row" align="center" gap="small">
         <Box width="xxsmall" height="xxsmall">
-          <Image
-            fit="contain"
-            src="https://us-central1-grommet-designer.cloudfunctions.net/images/lozzi-hpe-com/developer-logo.png"
-          />
+          <Image fit="contain" src="./img/hpeDevLogo.svg" />
         </Box>
         <Text>
           <Text weight="bold">HPE </Text>
@@ -24,16 +28,16 @@ export const HPEDevFooter = () => {
         </Text>
       </Box>
       <Box gap="xsmall" direction="row">
-        {footerLinks.map(link => (
-          <Button
-            key={link.label}
-            label={link.label}
-            href={link.href}
-            target="_blank"
-          />
-        ))}
+        {footerLinks.map(link => {
+          const { label, href } = link;
+          return (
+            <Button key={label} href={href} target="_blank">
+              <Text color="#FFFFFF">{label}</Text>
+            </Button>
+          );
+        })}
       </Box>
-    </Box>
+    </FooterContainer>
   );
 };
 export default HPEDevFooter;
