@@ -2,7 +2,7 @@ import React from 'react';
 import { ContentCards } from '../../components/Cards';
 import { Layout } from '../../components/index';
 import { CardGrid } from '../../components/Cards';
-import { communityContent } from '../../data/PageContent';
+import { communityContent } from '../../CardData/PageContent';
 
 const Community = () => {
   return (

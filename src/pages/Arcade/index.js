@@ -2,7 +2,7 @@ import React from 'react';
 import { ContentCards } from '../../components/Cards';
 import { Layout } from '../../components/index';
 import { CardGrid } from '../../components/Cards';
-import { arcadeContent } from '../../data/PageContent';
+import { arcadeContent } from '../../CardData/PageContent';
 
 const Arcade = () => {
   return (
