@@ -14,7 +14,7 @@ export const communityContent = [
     alt: 'Dev Logo',
     title: 'JOIN HPE DEVELOPER COMMUNITY',
     desc: 'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut',
-    link: 'https://slack.hpedev.io/',
+    link: 'https://developer.hpe.com/signup',
     label: 'Join the Community',
     background: 'rgba(0, 86, 122, 0.8);',
   },
@@ -34,7 +34,7 @@ export const communityContent = [
     title: 'FOLLOW OUR TEAM ON TWITTER',
     desc:
       'Game rules, sed do eiusmod tempor incididunt ut Game rules, sed do eiusmod tempor incididunt ut',
-    link: 'https://developer.hpe.com/newsletter-signup',
+    link: 'https://twitter.com/hashtag/hpedevcom?src=hash',
     label: 'Follow us on Twitter',
     background: 'background',
   },
@@ -44,7 +44,7 @@ export const communityContent = [
     title: 'HPE EZMERAL DATA FABRIC ACADEMY',
     desc:
       'Game rules, sed do eiusmod tempor incididunt ut Game rules, sed do eiusmod tempor incididunt ut',
-    link: 'https://developer.hpe.com/newsletter-signup',
+    link: 'https://learn.mapr.com/',
     label: 'Go to the Academy',
     background: 'rgba(0, 86, 122, 0.8);',
   },
