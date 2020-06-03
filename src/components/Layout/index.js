@@ -17,7 +17,7 @@ const Layout = ({ children, background }) => {
     >
       <Box>
         <Header />
-        <Box direction="row" pad={{ left: 'large', right: 'large' }}>
+        <Box gap="xlarge" direction="row" pad={{ left: 'large', right: 'large' }}>
           <SideNav />
           <Box>{children}</Box>
         </Box>

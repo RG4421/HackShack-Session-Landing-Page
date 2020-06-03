@@ -53,13 +53,14 @@ export const SideNav = ({ location, history }) => (
     <NavButton history={history} active={location.pathname === '/#'} to="#">
       HPE EZMERAL
     </NavButton>
+    {/* Take out Replays for now
     <NavButton
       history={history}
       active={location.pathname === '/replays'}
       to="/replays"
     >
       REPLAYS
-    </NavButton>
+    </NavButton> */}
     <NavButton
       history={history}
       active={location.pathname === '/community'}

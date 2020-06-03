@@ -16,7 +16,7 @@ export const communityContent = [
     desc: 'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut',
     link: 'https://slack.hpedev.io/',
     label: 'Join the Community',
-    background: 'rgba(0, 86, 122, 0.8);',
+    background: '#00567acc',
   },
   {
     logo: '/img/developerLogo.svg',
@@ -26,7 +26,7 @@ export const communityContent = [
       'Game rules, sed do eiusmod tempor incididunt ut Game rules, sed do eiusmod tempor incididunt ut',
     link: 'https://developer.hpe.com/newsletter-signup',
     label: 'Get the Newsletter',
-    background: 'rgba(0, 86, 122, 0.8);',
+    background: '#00567acc',
   },
   {
     logo: '/img/Twitter.svg',
@@ -46,7 +46,7 @@ export const communityContent = [
       'Game rules, sed do eiusmod tempor incididunt ut Game rules, sed do eiusmod tempor incididunt ut',
     link: 'https://developer.hpe.com/newsletter-signup',
     label: 'Go to the Academy',
-    background: 'rgba(0, 86, 122, 0.8);',
+    background: '#00567acc',
   },
 ];
 
