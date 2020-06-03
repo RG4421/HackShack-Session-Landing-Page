@@ -44,6 +44,7 @@ export const ContentCards = ({
           href={link}
           secondary
           label={label}
+          target="_blank"
         ></Button>
       </Box>
     </Card>
