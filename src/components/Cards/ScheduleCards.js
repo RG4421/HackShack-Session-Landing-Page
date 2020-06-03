@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Favorite } from 'grommet-icons';
 import { Box, Button, Heading, Text, Avatar } from 'grommet';
 
 export const ScheduleCards = ({
@@ -46,9 +45,7 @@ export const ScheduleCards = ({
           {avatar && avatar ? (
             <Avatar src={avatar} />
           ) : (
-            <Avatar background="background-contrast">
-              <Favorite color="brand" />
-            </Avatar>
+            <Avatar src="/img/defaultAvatar.svg" />
           )}
           <Box justify="center">
             <Text>{presenter}</Text>
