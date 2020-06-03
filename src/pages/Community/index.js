@@ -8,7 +8,7 @@ import { Heading } from 'grommet';
 const Community = () => {
   return (
     <Layout background="/img/community-background.svg">
-      <Heading margin={{ bottom: 'large' }}>COMMUNITY</Heading>
+      <Heading color="text-strong" margin={{ bottom: 'large' }}>COMMUNITY</Heading>
       <CardGrid>
         {communityContent.map(content => (
           <ContentCards
