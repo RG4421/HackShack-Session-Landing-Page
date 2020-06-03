@@ -1,10 +1,16 @@
 import styled from 'styled-components';
-import { Footer } from 'grommet';
+import { Anchor, Box } from 'grommet';
 
-export const StyledFooter = styled(Footer)`
-  a {
-    text-decoration: none;
+export const StyledAnchor = styled(Anchor)`
+  text-decoration: none;
+`;
+
+export const FooterContainer = styled(Box)`
+  white-space: nowrap;
+  flex-direction: row;
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
   }
 `;
 
-export default StyledFooter;
+export default { StyledAnchor, FooterContainer };
