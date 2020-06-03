@@ -43,7 +43,11 @@ export const ContentCards = ({
           alignSelf="start"
           href={link}
           secondary
-          label={label}
+          label={
+            <Box pad="xsmall">
+              <Text color="text-strong">{label}</Text>
+            </Box>
+          }
           target="_blank"
         ></Button>
       </Box>
