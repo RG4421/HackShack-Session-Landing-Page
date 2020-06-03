@@ -1,6 +1,5 @@
 [
   {
-    "id": "18626_8960",
     "session_id": "W485",
     "session_type": "Session",
     "title": "AI 101, Convolutional Neural Network (CNN) for MNIST",
@@ -10,7 +9,6 @@
     "week": "1"
   },
   {
-    "id": "18626_8960",
     "session_id": "W480",
     "session_type": "Session",
     "avatar": "/img/Didier.png",
@@ -21,7 +19,6 @@
     "week": "1"
   },
   {
-    "id": "18626_8960",
     "session_id": "W486",
     "session_type": "Workshop",
     "title": "Hack Shack: Automate Apps With the HPE Container Platform",
@@ -30,7 +27,6 @@
     "week": "1"
   },
   {
-    "id": "18626_8960",
     "session_id": "W479",
     "session_type": "Workshop",
     "avatar": "/img/Denis.png",
@@ -41,7 +37,6 @@
     "week": "1"
   },
   {
-    "id": "18626_8960",
     "session_id": "IHS1",
     "session_type": "Workshop",
     "avatar": "/img/Francois.png",
@@ -52,18 +47,15 @@
     "week": "1"
   },
   {
-    "id": "18626_8960",
     "session_id": "W481",
     "session_type": "Workshop",
     "avatar": "/img/Joe.png",
     "title": "Hack Shack: Use Aruba API Yourself",
     "desc": "Get your automation game on with Aruba APIs in this Hands-on Lab session covering Aruba’s wired and wireless portfolio. In this workshop, you’ll learn to manage, configure and automate Aruba products using their REST APIs, and move away from slow and error-prone CLI (command line interface) work. We’re offering a collection of labs tailored to varying skill levels, from coding new-comers to hardcore Pythonistas and everyone in-between. No experience required.s",
     "presenter": "Joe Neville",
-    "role": "TBD",
     "week": "1"
   },
   {
-    "id": "18626_8960",
     "session_id": "T491",
     "session_type": "Session",
     "avatar": "/img/glyn.png",
@@ -74,11 +66,10 @@
     "week": "1"
   },
   {
-    "id": "18626_8960",
     "session_id": "T491",
     "session_type": "Session",
     "avatar": "/img/nanda.png",
-    "title": "Hack Shack Session: What Data Scientists Can Learn From Software Developers",
+    "title": "Hack Shack Session: What Data Scientists Can Learn From Developers",
     "desc": "Developers have been building best practices since the first programs were written, culminating in the DevOps movement. There is plenty to learn about building software on which critical workloads depend (e.g., building resilience or simply accelerating testing and experimentation). We will look at the parallels between the two disciplines, highlighting areas where one can build upon the work of the other and how HPE Container Platform makes that process simpler and more accessible with MLOps.",
     "presenter": "Nanda Vijaydev",
     "role": "Distinguised Technologist, Lead Data Scientist",

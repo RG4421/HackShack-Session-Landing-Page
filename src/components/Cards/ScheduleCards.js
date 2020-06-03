@@ -23,7 +23,7 @@ export const ScheduleCards = ({
       <Box
         align="center"
         fill="horizontal"
-        flex="false"
+        flex={false}
         justify="between"
         direction="row"
       >
@@ -50,7 +50,7 @@ export const ScheduleCards = ({
               <Favorite color="brand" />
             </Avatar>
           )}
-          <Box>
+          <Box justify="center">
             <Text>{presenter}</Text>
             <Text>{role}</Text>
           </Box>

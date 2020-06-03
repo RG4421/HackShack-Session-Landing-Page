@@ -22,7 +22,6 @@ const Schedule = () => {
       <CardGrid>
         {eventSchedule.map(
           ({
-            id,
             session_id,
             session_type,
             avatar,
@@ -33,7 +32,7 @@ const Schedule = () => {
             week,
           }) => (
             <ScheduleCards
-              key={session_id}
+              key={title}
               id={session_id}
               avatar={avatar}
               role={role}
