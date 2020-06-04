@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Box, Button, Heading, Text, Image } from 'grommet';
+import { Link } from 'react-router-dom';
 import { CardImage, Card } from './index';
 
-export const ContentCards = ({ image, title, desc, link, label }) => {
+export const ContentCards = ({ image, title, desc, link, label, path }) => {
   return (
     <Card align="start" background="background">
       <CardImage background="background-front">
@@ -16,13 +17,25 @@ export const ContentCards = ({ image, title, desc, link, label }) => {
           </Heading>
           <Text size="xlarge">{desc}</Text>
         </Box>
-        <Button
-          margin={{ vertical: 'small' }}
-          alignSelf="start"
-          href={link}
-          label={label}
-          primary
-        ></Button>
+        {path && path ? (
+          <Link to={{ pathname: path }}>
+            <Button
+              margin={{ vertical: 'small' }}
+              alignSelf="start"
+              label={label}
+              primary
+            ></Button>
+          </Link>
+        ) : (
+          <Button
+            margin={{ vertical: 'small' }}
+            alignSelf="start"
+            label={label}
+            href={link}
+            target="_blank"
+            primary
+          ></Button>
+        )}
       </Box>
     </Card>
   );

@@ -19,6 +19,7 @@ const Arcade = () => {
             desc={content.desc}
             label={content.label}
             link={content.link}
+            path={content.path}
           />
         ))}
       </CardGrid>
